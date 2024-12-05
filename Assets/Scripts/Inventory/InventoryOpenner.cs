@@ -15,14 +15,23 @@ public class InventoryOpenner : MonoBehaviour
         openInventory.started += OpenCloseInvetoryByKeyboard;
     }
 
+    private void OnEnable()
+    {
+        openInventory.Enable();
+    }
+
+    private void OnDisable()
+    {
+        openInventory.Disable();
+    }
+
     public void OpenCloseInventory()
     {
-        inventory.SetActive(inventory.activeInHierarchy);
+        inventory.SetActive(!inventory.activeInHierarchy);
     }
 
     public void OpenCloseInvetoryByKeyboard(InputAction.CallbackContext ctx)
     {
         OpenCloseInventory();
     }
-
 }

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Linq;
-using System.Linq.Expressions;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -103,7 +102,6 @@ public class Inventory : MonoBehaviour
         }
         AddItemInSlot(slot, -number, slot.GetItem());
     }
-
 
     public void TestAddItem()
     {
