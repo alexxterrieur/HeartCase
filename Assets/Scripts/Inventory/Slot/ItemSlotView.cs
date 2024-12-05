@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine.UI;
 
 public class ItemSlotView
@@ -6,7 +5,11 @@ public class ItemSlotView
     private Image itemImage;
     private ItemSlotData data;
 
-
+    /// <summary>
+    /// constructor
+    /// </summary>
+    /// <param name="data">item slot data</param>
+    /// <param name="itemImage">image that contain the item slot</param>
     public ItemSlotView(ItemSlotData data, Image itemImage)
     {
         this.itemImage = itemImage;

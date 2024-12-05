@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class InventoryInteractions : MonoBehaviour
 {
-    private Inventory inventory;
-
     [Header("drag and drop")]
     [SerializeField] private GraphicRaycaster raycaster;
     [SerializeField] private EventSystem eventSystem;
@@ -27,7 +25,6 @@ public class InventoryInteractions : MonoBehaviour
         inputs = new InputSystem_Actions();
         mouseClick = inputs.UI.Click;
 
-        inventory = GetComponent<Inventory>();
         mouseClick.performed += OnClick;
     }
     private void OnEnable()
@@ -44,10 +41,12 @@ public class InventoryInteractions : MonoBehaviour
     {
         if (!isDraging) { return; }
 
+        //draging
         Vector2 mousePos = Input.mousePosition;
         dragingObjectTransform.position = mousePos;
         if (!Input.GetMouseButtonUp(0)) { return; }
 
+        //drop
         isDraging = false;
         dragingObjectTransform.SetParent(dragingObjectParentTransform);
         dragingObjectTransform.position = dragingObjectParentTransform.position;
@@ -55,12 +54,14 @@ public class InventoryInteractions : MonoBehaviour
         List<RaycastResult> results = new List<RaycastResult>();
         RaycastUI(results);
 
+        //drop switch object in inventory
         if (results.Count > 0)
         {
             ChangeItemBetweenSlots(results);
             return;
         }
 
+        //interact with an object
         InteractWithItem();
     }
 
@@ -75,6 +76,10 @@ public class InventoryInteractions : MonoBehaviour
         StartDraging(results[0].gameObject);
     }
 
+    /// <summary>
+    /// start draging
+    /// </summary>
+    /// <param name="gameObject"> gameobject that will be draged </param>
     private void StartDraging(GameObject gameObject)
     {
         dragingObjectTransform = gameObject.transform;
@@ -101,6 +106,10 @@ public class InventoryInteractions : MonoBehaviour
         raycaster.Raycast(pointerEventData, results);
     }
 
+    /// <summary>
+    /// swap items in inventory
+    /// </summary>
+    /// <param name="results"> list of UIs elements that are currently overing by mouse</param>
     private void ChangeItemBetweenSlots(List<RaycastResult> results)
     {
 
@@ -109,17 +118,18 @@ public class InventoryInteractions : MonoBehaviour
         ItemSlot firstContainer = dragingObjectTransform.parent.GetComponent<ItemSlot>();
         ItemSlot secondContainer = results[0].gameObject.transform.parent.GetComponent<ItemSlot>();
 
+        //swap with an empty slot
         if (!(secondContainer.HasItem() && secondContainer.GetItem().itemName != firstContainer.GetItem().itemName))
         {
-            secondContainer.AddItem(firstContainer.GetItem(), firstContainer.Getnumber());
+            secondContainer.AddItem(firstContainer.GetItem());
             firstContainer.ResetItem();
             return;
         }
 
+        //swap with an other slot that have an item
         Item savedItem = secondContainer.GetItem();
-        int savedNumberItem = secondContainer.Getnumber();
-        secondContainer.AddItem(firstContainer.GetItem(), firstContainer.Getnumber());
-        firstContainer.AddItem(savedItem, savedNumberItem);
+        secondContainer.AddItem(firstContainer.GetItem());
+        firstContainer.AddItem(savedItem);
     }
 
     private Vector2 GetMouseWolrdPosition()
@@ -127,6 +137,9 @@ public class InventoryInteractions : MonoBehaviour
         return (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
+    /// <summary>
+    /// start interact with an item
+    /// </summary>
     private void InteractWithItem()
     {
         RaycastHit2D hit = Physics2D.Raycast(GetMouseWolrdPosition(), Vector2.zero);
@@ -139,6 +152,6 @@ public class InventoryInteractions : MonoBehaviour
             itemSlot.ResetItem();
             return;
         }
-        // faire un truck peut être ?
+        //TODO feedback using wrong item
     }
 }

@@ -1,36 +1,44 @@
 public class ItemSlotData
 {
     private Item itemContained;
-    private int itemNumber;
     private Item defaultItem;
 
+    /// <summary>
+    /// Constructor
+    /// </summary>
+    /// <param name="defaultItem"> the default item ( item when the slot is empty )</param>
     public ItemSlotData(Item defaultItem)
     {
         itemContained = defaultItem;
         this.defaultItem = defaultItem;
     }
 
-    public int GetNumber() {  return itemNumber; }
-
     public Item GetItemContained() { return itemContained; }
     public Item GetDefaultItem() {  return defaultItem; }
 
-    public bool TryAddItem(Item item, int number = 1)
+    /// <summary>
+    /// try to add item and return true if succeeds
+    /// </summary>
+    /// <param name="item"> item to add </param>
+    /// <returns> return true if succeeds </returns>
+    public bool TryAddItem(Item item)
     {
         if (!IsEmpty()) { return false; }
 
-        AddItem(item, number);
+        AddItem(item);
         return true;
     }
 
-    private void AddItem(Item item, int number)
+    /// <summary>
+    /// add the item in the slot
+    /// </summary>
+    /// <param name="item"> item to add </param>
+    private void AddItem(Item item)
     {
         if (IsEmpty())
         {
             itemContained = item;
-            itemNumber = number;
         }
-        else { itemNumber += number; }
     }
 
     private bool IsValidItem(Item item)
@@ -46,6 +54,5 @@ public class ItemSlotData
     public void Reset()
     {
         itemContained = defaultItem;
-        itemNumber = 0;
     }
 }

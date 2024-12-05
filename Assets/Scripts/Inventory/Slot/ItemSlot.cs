@@ -22,11 +22,14 @@ public class ItemSlot : MonoBehaviour
     }
 
     public Item GetItem() { return data.GetItemContained(); }
-    public int Getnumber() { return data.GetNumber(); }
 
-    public void AddItem(Item item, int number)
+    /// <summary>
+    /// add item in the slot and update the image
+    /// </summary>
+    /// <param name="item"> item to add </param>
+    public void AddItem(Item item)
     {
-        if(data.TryAddItem(item, number))
+        if(data.TryAddItem(item))
         {
             view.Update();
         }
