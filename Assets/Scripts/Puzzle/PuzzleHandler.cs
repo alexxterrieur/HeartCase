@@ -7,6 +7,8 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private SO_Puzzle puzzle;
     [SerializeField] private TMP_InputField inputField;
+    
+    private Vector2 guessedPosition = Vector2.zero;
 
     private bool CheckAnswer()
     {
@@ -15,7 +17,12 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
             return TransformText(inputField.text) == puzzle.answerText;
         }
 
-        return ((Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition) - puzzle.answerPosition).magnitude <= puzzle.answerRange;
+        if (guessedPosition == Vector2.zero)
+        {
+            return false;
+        }
+        
+        return (guessedPosition - puzzle.answerPosition).magnitude <= puzzle.answerRange;
     }
 
     private string TransformText(string _text)
@@ -23,8 +30,14 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
         return _text.ToLower();
     }
 
-    private void TryToSolve()
+    public void TryToSolve()
     {
+        if (guessedPosition == Vector2.zero && inputField.text == "")
+        {
+            Debug.Log("Please enter an answer");
+            return;
+        }
+        
         if (CheckAnswer())
         {
             Debug.Log("You answered the puzzle");
@@ -35,15 +48,11 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void OnEndEdit()
-    {
-        if (!puzzle.isTextPuzzle) return;
-        TryToSolve();
-    }
-
     public void OnPointerClick(PointerEventData _)
     {
-        if (puzzle.isTextPuzzle) return;
-        TryToSolve();
+        if (!puzzle.isTextPuzzle)
+        {
+            guessedPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
     }
 }
