@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bdb6998ae27055488a4520fc87ca0ea, type: 3}
-  m_Name: DefaultItem
+  m_Name: Diary
   m_EditorClassIdentifier: 
-  _itemName: DefaultItem
-  _sprite: {fileID: 0}
-  _itemID: 99
+  _itemName: Diary
+  _sprite: {fileID: 4025243291508468552, guid: 6126f23737536c64494737f40144017d, type: 3}
+  _itemID: 3
