@@ -7,7 +7,7 @@ public class SO_Puzzle : ScriptableObject
 {
     public string description; 
     public Sprite background;
-    public bool isTextPuzzle = true;
+    public PuzzleType type;
     
     public Vector2 answerPosition = Vector2.zero;
     public float answerRange = 1;
