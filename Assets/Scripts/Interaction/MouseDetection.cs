@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class MouseDetection : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private Texture2D cursorOnOver;
+    private CursorMode cursorMode = CursorMode.Auto;
+
+
+    public void OnMouseEnter()
     {
-        
+        print("entre");
+        Cursor.SetCursor(cursorOnOver, Vector2.zero, cursorMode);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnMouseExit()
     {
-        
+        print("sort");
+        Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
 }
