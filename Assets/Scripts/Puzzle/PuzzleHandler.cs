@@ -19,6 +19,7 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Image guessedPositionImage;
     [SerializeField] private GameObject informationPanel;
     [SerializeField] private TextMeshProUGUI informationPromptText;
+    [SerializeField] private Image backgroundImage;
     
     [SerializeField] private UnityEvent<float> onPuzzleFail;
     
@@ -51,6 +52,8 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
                 throw new Exception("Invalid puzzle type");
         }
         
+        backgroundImage.sprite = puzzle.background;
+        
         informationPromptText.text = puzzle.description;
         ResetInformationPrompt();
     }
@@ -66,7 +69,11 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
             case PuzzleType.TextPuzzle:
                 return TransformText(inputField.text) == puzzle.answerText;
             case PuzzleType.ClickPuzzle:
-                return (guessedPosition - puzzle.answerPosition).magnitude <= puzzle.answerRange;
+                Debug.Log(puzzle.answerPosition);
+                Debug.Log(guessedPositionImage.transform.position);
+                Debug.Log(puzzle.answerPosition - guessedPosition);
+                Debug.Log((puzzle.answerPosition - guessedPosition).magnitude);
+                return (puzzle.answerPosition - guessedPosition).magnitude <= puzzle.answerRange;
             default:
                 throw new Exception("Invalid puzzle type");
         }
@@ -93,7 +100,6 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
     /// </summary>
     private string TransformText(string _text)
     {
-        
         return _text.ToLower();
     }
 
@@ -158,5 +164,23 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
         guessedPositionImage.rectTransform.anchoredPosition = Vector2.zero;
         guessedPositionImage.gameObject.SetActive(false);
         informationPanel.SetActive(true);
+    }
+
+    /// <summary>
+    /// Dev Tool to set the answer to the current guessed answer
+    /// </summary>
+    public void SetAsAnswer()
+    {
+        switch (puzzle.type)
+        {
+            case PuzzleType.TextPuzzle:
+                puzzle.answerText = inputField.text;
+                break;
+            case PuzzleType.ClickPuzzle:
+                puzzle.answerPosition = guessedPosition;
+                break;
+            default:
+                throw new Exception("Invalid puzzle type");
+        }
     }
 }
