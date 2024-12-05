@@ -32,11 +32,23 @@ public class GameState : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Get boolean
+    /// </summary>
+    /// <param name="boolsIndex"> index of the boolean you want </param>
+    /// <param name="Id"> id of the item / the character ...</param>
+    /// <returns></returns>
     public bool GetBool(int boolsIndex, int Id)
     {
         return hasOption(boolsIndex, Id);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="val">state you want to set the boolean</param>
+    /// <param name="boolsIndex"> index of the boolean you want </param>
+    /// <param name="Id"> id of the item / the character ... </param>
     public void SetBool(bool val, int boolsIndex, int Id)
     {
         if (val)
