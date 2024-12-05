@@ -380,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6879241504664476532, guid: 794fb7312ebc8d446b87b31f59d1bbc1, type: 3}
       propertyPath: m_Name
-      value: DebugPuzzle
+      value: PuzzleCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
