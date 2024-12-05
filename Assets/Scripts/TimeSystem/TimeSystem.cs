@@ -9,7 +9,7 @@ public class TimeSystem : MonoBehaviour
     public void Update()
     {
         time -= Time.deltaTime;
-        timerText.text = "Time Left : " + Mathf.Floor(time).ToString();
+        timerText.text = "Time Left : " + (int)time / 60 + " min " + (int)time % 60 + " seconds";
         if (time <= 0)
         {
             Debug.Log("Time Over");
