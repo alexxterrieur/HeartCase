@@ -22,7 +22,7 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
     
     private Vector2 guessedPosition = Vector2.zero;
 
-    private void Start()
+    private void OnEnable()
     {
         InitPuzzleUI();
     }
