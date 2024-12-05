@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: TEST DESCRIPTION
   background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  type: 0
+  type: 1
   answerPosition: {x: 0, y: 0}
   answerRange: 1
   answerText: answer

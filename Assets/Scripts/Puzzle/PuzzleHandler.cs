@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public enum PuzzleType
@@ -15,7 +16,9 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
     [SerializeField] private SO_Puzzle puzzle;
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private RectTransform submitButtonTransform;
-    [SerializeField] private Image image;
+    [SerializeField] private Image guessedPositionImage;
+    [SerializeField] private GameObject informationPanel;
+    [SerializeField] private TextMeshProUGUI informationPromptText;
     
     private Vector2 guessedPosition = Vector2.zero;
 
@@ -39,6 +42,9 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
             default:
                 throw new Exception("Invalid puzzle type");
         }
+        
+        informationPromptText.text = puzzle.description;
+        ResetInformationPrompt();
     }
 
 
@@ -96,7 +102,7 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
             Debug.Log("You answered the puzzle");
             if (puzzle.type == PuzzleType.ClickPuzzle)
             {
-                image.color = Color.green;
+                guessedPositionImage.color = Color.green;
             }
         }
         else
@@ -104,27 +110,43 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
             Debug.Log("Puzzle could not be solved");
             if (puzzle.type == PuzzleType.ClickPuzzle)
             {
-                image.color = Color.red;
+                guessedPositionImage.color = Color.red;
             }
         }
     }
 
     public void OnPointerClick(PointerEventData _)
     {
-        if (puzzle.type != PuzzleType.ClickPuzzle) return;
-        
-        guessedPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        if (image == null) return;
-        
-        if (guessedPosition == Vector2.zero)
+        if (informationPanel.activeInHierarchy) //if the info prompt is active and you click, it deactivate
         {
-            image.gameObject.SetActive(false);
+            informationPanel.SetActive(false);
             return;
         }
         
-        image.gameObject.SetActive(true);
-        image.color = Color.white;
-        image.rectTransform.anchoredPosition = Input.mousePosition;
+        if (puzzle.type != PuzzleType.ClickPuzzle) return;
+        
+        //Behavior of the Click Puzzle from here
+        
+        guessedPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (guessedPositionImage == null) return;
+        
+        if (guessedPosition == Vector2.zero)
+        {
+            guessedPositionImage.gameObject.SetActive(false);
+            return;
+        }
+        
+        guessedPositionImage.gameObject.SetActive(true);
+        guessedPositionImage.color = Color.white;
+        guessedPositionImage.rectTransform.anchoredPosition = Input.mousePosition;
+    }
+
+    public void ResetInformationPrompt()
+    {
+        guessedPosition = Vector2.zero;
+        guessedPositionImage.rectTransform.anchoredPosition = Vector2.zero;
+        guessedPositionImage.gameObject.SetActive(false);
+        informationPanel.SetActive(true);
     }
 }
