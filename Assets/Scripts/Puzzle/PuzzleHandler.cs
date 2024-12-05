@@ -1,8 +1,8 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public enum PuzzleType
@@ -20,6 +20,8 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
     [SerializeField] private GameObject informationPanel;
     [SerializeField] private TextMeshProUGUI informationPromptText;
     
+    [SerializeField] private UnityEvent<float> onPuzzleFail;
+    
     private Vector2 guessedPosition = Vector2.zero;
 
     private void OnEnable()
@@ -27,6 +29,12 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
         InitPuzzleUI();
     }
 
+    public void StartPuzzle(SO_Puzzle _puzzle)
+    {
+        puzzle = _puzzle;
+        gameObject.SetActive(true);
+    }
+    
     private void InitPuzzleUI()
     {
         switch (puzzle.type)
@@ -112,6 +120,8 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
             {
                 guessedPositionImage.color = Color.red;
             }
+            
+            onPuzzleFail.Invoke(puzzle.timePenalty);
         }
     }
 
