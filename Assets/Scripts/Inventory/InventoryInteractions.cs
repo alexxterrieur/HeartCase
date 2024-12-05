@@ -51,16 +51,26 @@ public class InventoryInteractions : MonoBehaviour
         isDraging = false;
         dragingObjectTransform.SetParent(dragingObjectParentTransform);
         dragingObjectTransform.position = dragingObjectParentTransform.position;
-        ChangeItemBetweenSlots();
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        RaycastUI(results);
+
+        if (results.Count > 0)
+        {
+            ChangeItemBetweenSlots(results);
+            return;
+        }
+
+        InteractWithItem();
     }
 
     private void OnClick(InputAction.CallbackContext ctx)
     {
         if (isDraging) { return; }
-        
+
         List<RaycastResult> results = new List<RaycastResult>();
         RaycastUI(results);
-        
+
         if (!(results.Count > 0 && IsSlot(results[0].gameObject) && SoltHasItem(results[0].gameObject))) { return; }
         StartDraging(results[0].gameObject);
     }
@@ -91,10 +101,9 @@ public class InventoryInteractions : MonoBehaviour
         raycaster.Raycast(pointerEventData, results);
     }
 
-    private void ChangeItemBetweenSlots()
+    private void ChangeItemBetweenSlots(List<RaycastResult> results)
     {
-        List<RaycastResult> results = new List<RaycastResult>();
-        RaycastUI(results);
+
         if (!(results.Count > 0 && results[0].gameObject != null && results[0].gameObject.CompareTag("Slot"))) { return; }
 
         ItemSlot firstContainer = dragingObjectTransform.parent.GetComponent<ItemSlot>();
@@ -113,4 +122,23 @@ public class InventoryInteractions : MonoBehaviour
         firstContainer.AddItem(savedItem, savedNumberItem);
     }
 
+    private Vector2 GetMouseWolrdPosition()
+    {
+        return (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    private void InteractWithItem()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(GetMouseWolrdPosition(), Vector2.zero);
+
+        if (!hit) { return; }
+
+        ItemSlot itemSlot = dragingObjectTransform.parent.GetComponent<ItemSlot>();
+        if (hit.transform.GetComponent<Interactions>().InteractWithItem(itemSlot.GetItem()))
+        {
+            itemSlot.ResetItem();
+            return;
+        }
+        // faire un truck peut être ?
+    }
 }
