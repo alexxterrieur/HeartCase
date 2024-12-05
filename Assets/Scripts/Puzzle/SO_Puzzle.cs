@@ -13,4 +13,6 @@ public class SO_Puzzle : ScriptableObject
     public float answerRange = 1;
     
     public string answerText = "Answer";
+
+    public float timePenalty = 60f;
 }
