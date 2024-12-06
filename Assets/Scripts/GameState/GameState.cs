@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class GameState : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class GameState : MonoBehaviour
     public static GameState Instance { get; private set; }
 
     private List<byte> boolsList = new List<byte>();
-    //0 = objects, 1 = time
+    //0 = objects, 1 = time, 2 objectAlreadyPicked
 
     private void Awake()
     {
@@ -23,19 +24,10 @@ public class GameState : MonoBehaviour
         }
     }
 
-    public void CheckList()
-    {
-        for(int i = 0; i < boolsList.Count;i++)
-        {
-            print("index " + i);
-            print("byte " + boolsList[i]);
-        }
-    }
-
     /// <summary>
     /// Get boolean
     /// </summary>
-    /// <param name="boolsIndex"> index of the boolean you want </param>
+    /// <param name="boolsIndex"> index of the byte you want </param>
     /// <param name="Id"> id of the item / the character ...</param>
     /// <returns></returns>
     public bool GetBool(int boolsIndex, int Id)
@@ -53,36 +45,30 @@ public class GameState : MonoBehaviour
     {
         if (val)
         {
-            print("add");
             addOption(boolsIndex, Id);
             return;
         }
 
-        print("remove");
         removeOption(boolsIndex, Id);
+    }
+
+    public void TestSetBool(int id)
+    {
+        SetBool(true, 2, id);
     }
 
     void addOption(int boolsIndex, int Id)
     {
-        print("params" + boolsIndex + " " + Id);
-        print("avant " + boolsList[boolsIndex]);
         boolsList[boolsIndex] |= (byte)(1 << Id);
-        print("après " + boolsList[boolsIndex]);
     }
 
     void removeOption(int boolsIndex, int Id)
     {
-        print("params" + boolsIndex + " " + Id);
-        print("avant " + boolsList[boolsIndex]);
         boolsList[boolsIndex] &= (byte)(~(1 << Id));
-        print("après " + boolsList[boolsIndex]);
     }
 
     bool hasOption(int boolsIndex, int Id)
     {
-        print("params" + boolsIndex + " " +  Id);
-        print("byte " + boolsList[boolsIndex]);
-        print("bit recherché " + ((1 << Id)));
         return (boolsList[boolsIndex] & (1 << Id)) > 0;
     }
 }
