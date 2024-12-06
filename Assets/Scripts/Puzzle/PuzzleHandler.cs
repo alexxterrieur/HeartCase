@@ -25,15 +25,16 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
     
     private Vector2 guessedPosition = Vector2.zero;
 
-    private void OnEnable()
-    {
-        InitPuzzleUI();
-    }
+    //private void OnEnable()
+    //{
+    //    InitPuzzleUI();
+    //}
 
     public void StartPuzzle(SO_Puzzle _puzzle)
     {
         puzzle = _puzzle;
-        gameObject.SetActive(true);
+        //gameObject.SetActive(true);
+        InitPuzzleUI();
     }
     
     private void InitPuzzleUI()

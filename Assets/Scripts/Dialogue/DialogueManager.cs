@@ -31,6 +31,10 @@ public class DialogueManager : MonoBehaviour
 
     private Dialogue.Postion lastPostion = Dialogue.Postion.Neutral;
 
+    //Puzzle to start
+    [SerializeField] private PuzzleHandler puzzleToStart;
+    [SerializeField] private SO_Puzzle soPuzzle;
+
     private void Start()
     {
         characterNameText = dialogueBox.transform.GetChild(1).GetComponent<TMP_Text>();
@@ -43,15 +47,15 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-        
+
         //Check dialogue conditions
-        
-        SetActiveDialogue();
+
+        SwitchActiveDialogue();
         currentDialogues = dialogues[0].dialogues;
         DisplayDialogue(currentDialogues, currentDialogueIndex);
     }
 
-    private void SetActiveDialogue()
+    private void SwitchActiveDialogue()
     {
         rightInterlocutorImage.gameObject.SetActive(!rightInterlocutorImage.gameObject.activeSelf);
         leftInterlocutorImage.gameObject.SetActive(!leftInterlocutorImage.gameObject.activeSelf);
@@ -169,7 +173,8 @@ public class DialogueManager : MonoBehaviour
 
     private void CallAction()
     {
-        SetActiveDialogue();
+        SwitchActiveDialogue();
+        puzzleToStart.StartPuzzle(soPuzzle);
         Debug.Log("End Dialogue");
     }
 }

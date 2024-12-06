@@ -1,7 +1,16 @@
 public class TestInteraction : Interactions
 {
+
+    public DialogueManager dialogueManager;
+
+    private void Start()
+    {
+        dialogueManager = GetComponent<DialogueManager>();
+    }
+
     public override void Interact()
     {
+        dialogueManager.StartDialogue();
         print("interact");
     }
 

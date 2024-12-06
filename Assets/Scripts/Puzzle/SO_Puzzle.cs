@@ -12,7 +12,7 @@ public class SO_Puzzle : ScriptableObject
     public Vector2 answerPosition = Vector2.zero;
     public float answerRange = 1;
     
-    public string answerText = "Answer";
+    public string answerText;
 
     public float timePenalty = 60f;
 }
