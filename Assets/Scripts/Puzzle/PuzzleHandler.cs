@@ -16,6 +16,7 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
     [SerializeField] private SO_Puzzle puzzle;
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private RectTransform submitButtonTransform;
+    [SerializeField] private GameObject infoButton;
     [SerializeField] private Image guessedPositionImage;
     [SerializeField] private GameObject informationPanel;
     [SerializeField] private TextMeshProUGUI informationPromptText;
@@ -25,28 +26,22 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
     
     private Vector2 guessedPosition = Vector2.zero;
 
-    //private void OnEnable()
-    //{
-    //    InitPuzzleUI();
-    //}
-
     public void StartPuzzle(SO_Puzzle _puzzle)
     {
         puzzle = _puzzle;
-        //gameObject.SetActive(true);
-        InitPuzzleUI();
+        PuzzleSetActive();
     }
     
-    private void InitPuzzleUI()
+    private void PuzzleSetActive(bool isActive = true)
     {
         switch (puzzle.type)
         {
             case PuzzleType.TextPuzzle: //enables text input and submit button
-                inputField.gameObject.SetActive(true);
-                submitButtonTransform.gameObject.SetActive(true);
+                inputField.gameObject.SetActive(isActive);
+                submitButtonTransform.gameObject.SetActive(isActive);
                 break;
             case PuzzleType.ClickPuzzle: //enables and centers the submit button
-                submitButtonTransform.gameObject.SetActive(true);
+                submitButtonTransform.gameObject.SetActive(isActive);
                 submitButtonTransform.anchoredPosition = Vector2.up * submitButtonTransform.anchoredPosition.y;
                 break;
             default:
@@ -54,9 +49,12 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
         }
         
         backgroundImage.sprite = puzzle.background;
+        backgroundImage.enabled = isActive;
+        
+        infoButton.SetActive(isActive);
         
         informationPromptText.text = puzzle.description;
-        ResetInformationPrompt();
+        InformationSetActive(isActive);
     }
 
 
@@ -119,6 +117,8 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
             {
                 guessedPositionImage.color = Color.green;
             }
+
+            PuzzleSetActive(false);
         }
         else
         {
@@ -159,12 +159,12 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
         guessedPositionImage.rectTransform.anchoredPosition = Input.mousePosition;
     }
 
-    public void ResetInformationPrompt()
+    public void InformationSetActive(bool isActive = true)
     {
         guessedPosition = Vector2.zero;
         guessedPositionImage.rectTransform.anchoredPosition = Vector2.zero;
         guessedPositionImage.gameObject.SetActive(false);
-        informationPanel.SetActive(true);
+        informationPanel.SetActive(isActive);
     }
 
     /// <summary>
