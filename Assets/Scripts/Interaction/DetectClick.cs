@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Interactions))]
 public class DetectClick : MonoBehaviour
@@ -13,9 +14,14 @@ public class DetectClick : MonoBehaviour
         interaction = GetComponent<Interactions>();
     }
 
+    public bool IsPointerOverUI()
+    {
+        return EventSystem.current.IsPointerOverGameObject();
+    }
+    
     private void OnMouseUp()
     {
-        if(!isOnObject) { return; }
+        if(!isOnObject || IsPointerOverUI()) { return; }
 
         interaction.Interact();
     }

@@ -12,8 +12,9 @@ public class MouseDetection : MonoBehaviour
         interaction = GetComponent<DetectClick>();
     }
 
-    public void OnMouseEnter()
+    public void OnMouseOver()
     {
+        if (interaction.IsPointerOverUI()) return;
         Cursor.SetCursor(cursorOnOver, Vector2.zero, cursorMode);
         interaction.SetIsOnObject(true);
     }
