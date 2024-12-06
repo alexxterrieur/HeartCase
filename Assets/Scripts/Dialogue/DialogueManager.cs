@@ -32,6 +32,8 @@ public class DialogueManager : MonoBehaviour
     private Dialogue.Postion lastPostion = Dialogue.Postion.Neutral;
 
     //Puzzle to start
+    [Header("Puzzle")]
+    [SerializeField] private UIFadeInFadeOut fade;
     [SerializeField] private PuzzleHandler puzzleToStart;
     [SerializeField] private SO_Puzzle soPuzzle;
 
@@ -174,7 +176,7 @@ public class DialogueManager : MonoBehaviour
     private void CallAction()
     {
         SwitchActiveDialogue();
-        puzzleToStart.StartPuzzle(soPuzzle);
+        fade.CallFade(puzzleToStart.StartPuzzle, soPuzzle);
         Debug.Log("End Dialogue");
     }
 }
