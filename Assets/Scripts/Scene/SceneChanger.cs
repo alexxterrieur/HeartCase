@@ -1,10 +1,10 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class SceneStateManager : MonoBehaviour
 {
-    [SerializeField] private Dropdown sceneDropDown;
+    [SerializeField] private TMP_Dropdown sceneDropDown;
     private int sceneId;
 
     public void ChangeSceneId() 

@@ -1,19 +1,20 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Dropdown))]
+[RequireComponent(typeof(TMP_Dropdown))]
 [DisallowMultipleComponent]
 public class DropDownController : MonoBehaviour, IPointerClickHandler
 {
     public List<int> indexesToDisable = new List<int>();
 
-    private Dropdown dropDown;
+    private TMP_Dropdown dropDown;
 
     private void Awake()
     {
-        dropDown = GetComponent<Dropdown>();
+        dropDown = GetComponent<TMP_Dropdown>();
     }
 
     public void OnPointerClick(PointerEventData eventData)
