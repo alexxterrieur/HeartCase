@@ -12,6 +12,7 @@ public class RewardGiver : MonoBehaviour
         if (rewardSO.reward)
         {
             Inventory.Instance.AddItem(rewardSO.reward);
+            GameState.Instance.SetBool(true, 2, rewardSO.reward.itemID);
         }
 
         if (rewardSO.boolId >= 0 && rewardSO.boolIndex >= 0)

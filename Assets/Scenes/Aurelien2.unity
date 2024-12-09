@@ -199,7 +199,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2965357326601796663, guid: 794fb7312ebc8d446b87b31f59d1bbc1, type: 3}
   m_PrefabInstance: {fileID: 1379528968}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 683185382}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94ad2dc0ebcf6ad4c96599023a3e0b66, type: 3}
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Check GameState
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1311,6 +1311,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &683185382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1358188773113159110, guid: 794fb7312ebc8d446b87b31f59d1bbc1, type: 3}
+  m_PrefabInstance: {fileID: 1379528968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &683185386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683185382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7231339f4de674fb6f2bc65dc3a93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &742453814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,6 +1602,17 @@ MonoBehaviour:
   fade: {fileID: 234774225}
   puzzleToStart: {fileID: 33178060}
   soPuzzle: {fileID: 11400000, guid: db51f22d94f5a6642982f6d8fb6bd639, type: 2}
+--- !u!114 &945237838 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3209075693185468307, guid: ffb959707242f4d4abcd4b85bbc31f31, type: 3}
+  m_PrefabInstance: {fileID: 945237835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945237836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472146d4bf821e642ab0a4e361c1556b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &953272581
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,10 +2140,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 829051303}
         m_TargetAssemblyTypeName: GameState, Assembly-CSharp
-        m_MethodName: TestSetBool
-        m_Mode: 3
+        m_MethodName: DebugShowEveryBools
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2365,6 +2393,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2965357326601796663, guid: 794fb7312ebc8d446b87b31f59d1bbc1, type: 3}
+      propertyPath: reward
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d602798ffbfe7149ace94623bf12143, type: 2}
+    - target: {fileID: 2965357326601796663, guid: 794fb7312ebc8d446b87b31f59d1bbc1, type: 3}
       propertyPath: onPuzzleFail.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
@@ -2379,7 +2411,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1358188773113159110, guid: 794fb7312ebc8d446b87b31f59d1bbc1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 683185386}
   m_SourcePrefab: {fileID: 100100000, guid: 794fb7312ebc8d446b87b31f59d1bbc1, type: 3}
 --- !u!1 &1443464468
 GameObject:
@@ -2464,7 +2499,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 945237838}
         m_TargetAssemblyTypeName: Activator, Assembly-CSharp
         m_MethodName: ActiveOrDesactiveGO
         m_Mode: 1
@@ -2681,7 +2716,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Activate / Desactivate
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2804,9 +2839,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab3ca15495ed9e45966bd5980fd9d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycaster: {fileID: 0}
-  eventSystem: {fileID: 0}
-  canvasRect: {fileID: 0}
+  raycaster: {fileID: 1359538001}
+  eventSystem: {fileID: 88033742}
+  canvasRect: {fileID: 1359538004}
   dragingParent: {fileID: 1574517633}
 --- !u!114 &1786472707
 MonoBehaviour:

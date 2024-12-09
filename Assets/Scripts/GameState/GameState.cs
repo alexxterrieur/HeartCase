@@ -9,7 +9,7 @@ public class GameState : MonoBehaviour
     public static GameState Instance { get; private set; }
 
     private List<byte> boolsList = new List<byte>();
-    //0 = objects, 1 = time, 2 objectAlreadyPicked
+    //0 = dialogues, 1 = time, 2 objectAlreadyPicked
 
     private void Awake()
     {
@@ -55,6 +55,17 @@ public class GameState : MonoBehaviour
     public void TestSetBool(int id)
     {
         SetBool(true, 2, id);
+    }
+
+    public void DebugShowEveryBools()
+    {
+        for (int i = 0; i < boolsNumber; i++)
+        {
+            for(int j = 0; j < 8; j++)
+            {
+                print("Index : " + i + " ID : " + j + " Value : " + GetBool(i, j));
+            }
+        }
     }
 
     void addOption(int boolsIndex, int Id)

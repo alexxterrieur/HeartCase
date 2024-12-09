@@ -32,6 +32,7 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
 
     public void StartPuzzle(SO_Puzzle _puzzle)
     {
+        rewardGiver = GetComponent<RewardGiver>();
         puzzle = _puzzle;
         PuzzleSetActive();
     }
