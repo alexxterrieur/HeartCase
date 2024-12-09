@@ -23,6 +23,10 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Image backgroundImage;
     
     [SerializeField] private UnityEvent<float> onPuzzleFail;
+
+    [Header("Reward")]
+    [SerializeField] private SO_Reward reward;
+    private RewardGiver rewardGiver;
     
     private Vector2 guessedPosition = Vector2.zero;
 
@@ -118,7 +122,14 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
                 guessedPositionImage.color = Color.green;
             }
 
-
+            if(!rewardGiver) 
+            {
+                print("RewardGiver is null, no reward will be gived");
+            }
+            else
+            {
+                rewardGiver.GiveReward(reward);
+            }
 
             PuzzleSetActive(false);
         }
