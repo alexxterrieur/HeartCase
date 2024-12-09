@@ -7,6 +7,6 @@ public class SO_Reward : ScriptableObject
     public Item reward;
 
     [Header("To activate an interaction")]
-    public int boolIndex;
-    public int boolId;
+    public int boolIndex = -1;
+    public int boolId = -1;
 }

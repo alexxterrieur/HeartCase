@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public static Inventory Instance;
+
     public int numberOfSlots;
 
     [SerializeField] private GameObject slot;
@@ -12,6 +14,14 @@ public class Inventory : MonoBehaviour
 
     public Item testItem;
     public Item testItem2;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
 
     void Start()
     {
