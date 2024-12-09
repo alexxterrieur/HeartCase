@@ -1071,6 +1071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CliquableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 2319166192046328995, guid: ffb959707242f4d4abcd4b85bbc31f31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1109,6 +1113,7 @@ MonoBehaviour:
   scaleMultiplier: 1.5
   dialogueBox: {fileID: 1983840713}
   languageManager: {fileID: 2099098937}
+  fade: {fileID: 0}
   puzzleToStart: {fileID: 33178060}
   soPuzzle: {fileID: 11400000, guid: db51f22d94f5a6642982f6d8fb6bd639, type: 2}
 --- !u!224 &1036064084 stripped
