@@ -27,6 +27,9 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
     [Header("Reward")]
     [SerializeField] private SO_Reward reward;
     private RewardGiver rewardGiver;
+
+    [Header("SceneManager")]
+    [SerializeField] private SceneActivatorManager sceneActivatorManager;
     
     private Vector2 guessedPosition = Vector2.zero;
 
@@ -130,6 +133,7 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
             else
             {
                 rewardGiver.GiveReward(reward);
+                sceneActivatorManager.CheckActivateAndDesactivate();
             }
 
             PuzzleSetActive(false);
