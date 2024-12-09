@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4343599489740283357}
   - component: {fileID: 6579341523484084577}
   - component: {fileID: 4286737376567269673}
+  - component: {fileID: 3209075693185468307}
   m_Layer: 0
   m_Name: CliquableObject
   m_TagString: Untagged
@@ -175,3 +176,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNeeded: {fileID: 11400000, guid: 77765e1028180e74ea075f8ec51c7e0f, type: 2}
+  dialogueManager: {fileID: 0}
+--- !u!114 &3209075693185468307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2319166192046328995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472146d4bf821e642ab0a4e361c1556b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsForHide: 0
+  dialoguesForShow: 128
+  itemAlreadyPickedIndex: 2
