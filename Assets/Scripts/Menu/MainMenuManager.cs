@@ -35,4 +35,10 @@ public class MainMenuManager : MonoBehaviour
         CloseAllMenus();
         settingsMenu.SetActive(true);
     }
+    
+    public void CreditsMenu()
+    {
+        CloseAllMenus();
+        creditsMenu.SetActive(true);
+    }
 }
