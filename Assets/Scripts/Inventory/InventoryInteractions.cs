@@ -8,9 +8,8 @@ public class InventoryInteractions : MonoBehaviour
 {
     [Header("drag and drop")]
     [SerializeField] private GraphicRaycaster raycaster;
-    [SerializeField] private EventSystem eventSystem;
-    [SerializeField] private RectTransform canvasRect;
     [SerializeField] private Transform dragingParent;
+    private EventSystem eventSystem;
     private Transform dragingObjectTransform;
     private Transform dragingObjectParentTransform;
     private bool isDraging;
@@ -22,6 +21,8 @@ public class InventoryInteractions : MonoBehaviour
 
     private void Awake()
     {
+        eventSystem = EventSystem.current;
+        
         inputs = new InputSystem_Actions();
         mouseClick = inputs.UI.Click;
 
