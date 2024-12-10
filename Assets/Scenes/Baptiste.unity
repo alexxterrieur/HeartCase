@@ -1127,6 +1127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472146d4bf821e642ab0a4e361c1556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &945237847 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3845472236159125643, guid: ffb959707242f4d4abcd4b85bbc31f31, type: 3}
+  m_PrefabInstance: {fileID: 945237835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1036064084 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1525713198622512059, guid: cd306d2059935c44caa785c83d566796, type: 3}
@@ -2212,7 +2217,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 945237836}
     - target: {fileID: 8481740489799571682, guid: 3243d12fc4e477949a2e4482f6f5aa98, type: 3}
+      propertyPath: onAnimationFinished.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 945237847}
+    - target: {fileID: 8481740489799571682, guid: 3243d12fc4e477949a2e4482f6f5aa98, type: 3}
       propertyPath: onAnimationFinished.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 945237847}
+    - target: {fileID: 8481740489799571682, guid: 3243d12fc4e477949a2e4482f6f5aa98, type: 3}
+      propertyPath: onAnimationFinished.Array.data[1].m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 945237836}
     - target: {fileID: 9138664188269434346, guid: 3243d12fc4e477949a2e4482f6f5aa98, type: 3}
