@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraPositionChanger : MonoBehaviour
 {
+    [SerializeField] private float timeToMove;
     [SerializeField] private List<Transform> camPositions = new List<Transform>();
     private Transform selfTransform;
     private int currentPoint = 0;
@@ -20,10 +21,10 @@ public class CameraPositionChanger : MonoBehaviour
     /// <summary>
     /// Move Camera to the next position
     /// </summary>
-    /// <param name="nextPoint"> 1 for next, -1 for previous </param>
-    public void GoToNextPos(int nextPoint)
+    /// <param name="direction"> 1 for next, -1 for previous </param>
+    public void GoToNextPos(int direction)
     {
-        if (nextPoint != 1 && nextPoint != -1)
+        if (direction != 1 && direction != -1)
         {
             Debug.LogWarning("Warning : param nextPoint can only be 1 or -1 ! Please assign a valide param.");
             return;
@@ -31,7 +32,7 @@ public class CameraPositionChanger : MonoBehaviour
 
         changePositionButtons.SetActive(false);
 
-        currentPoint += nextPoint;
+        currentPoint += direction;
         if ((currentPoint) >= camPositions.Count)
         {
             currentPoint = 0;
@@ -57,5 +58,4 @@ public class CameraPositionChanger : MonoBehaviour
         }
         changePositionButtons.SetActive(true);
     }
-
 }
