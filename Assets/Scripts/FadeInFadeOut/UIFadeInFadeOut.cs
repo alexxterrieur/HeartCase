@@ -13,8 +13,14 @@ public class UIFadeInFadeOut : MonoBehaviour
         StartCoroutine(Fade(time, 50, startEnigm, puzzle));
     }
 
-    private IEnumerator Fade(float time, int steps, Action<SO_Puzzle> startEnigm, SO_Puzzle puzzle)
+    public void CallFade()
     {
+        StartCoroutine(Fade(time, 50));
+    }
+    
+    private IEnumerator Fade(float time, int steps, Action<SO_Puzzle> startEnigm = null, SO_Puzzle puzzle = null)
+    {
+        uiImage.raycastTarget = true;
         float ratio = (255f / (float)steps) / 100f;
         for (int i = 0; i < steps; i++)
         {
@@ -22,7 +28,11 @@ public class UIFadeInFadeOut : MonoBehaviour
             yield return new WaitForSeconds(time / steps);
         }
 
-        startEnigm(puzzle);
+        if (startEnigm != null && puzzle is not null)
+        {
+            startEnigm(puzzle);
+        }
+        
         yield return new WaitForSeconds(0.25f);
 
         for (int i = 0; i < steps; i++)
@@ -30,6 +40,7 @@ public class UIFadeInFadeOut : MonoBehaviour
             AddAlpha(uiImage, -ratio);
             yield return new WaitForSeconds(time / steps);
         }
+        uiImage.raycastTarget = false;
     }
 
     private void AddAlpha(Image image, float alphaToAdd)
