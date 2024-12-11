@@ -8,9 +8,9 @@ public class UIFadeInFadeOut : MonoBehaviour
     [SerializeField] private Image uiImage;
     [SerializeField] private float time;
 
-    public void CallFade(Action<SO_Puzzle> startEnigm, SO_Puzzle puzzle)
+    public void CallFade(Action<SO_PuzzleBase> startEnigm, SO_PuzzleBase puzzleBase)
     {
-        StartCoroutine(Fade(time, 50, startEnigm, puzzle));
+        StartCoroutine(Fade(time, 50, startEnigm, puzzleBase));
     }
 
     public void CallFade()
@@ -18,7 +18,7 @@ public class UIFadeInFadeOut : MonoBehaviour
         StartCoroutine(Fade(time, 50));
     }
     
-    private IEnumerator Fade(float time, int steps, Action<SO_Puzzle> startEnigm = null, SO_Puzzle puzzle = null)
+    private IEnumerator Fade(float time, int steps, Action<SO_PuzzleBase> startEnigm = null, SO_PuzzleBase puzzleBase = null)
     {
         uiImage.raycastTarget = true;
         float ratio = (255f / (float)steps) / 100f;
@@ -28,9 +28,9 @@ public class UIFadeInFadeOut : MonoBehaviour
             yield return new WaitForSeconds(time / steps);
         }
 
-        if (startEnigm != null && puzzle is not null)
+        if (startEnigm != null && puzzleBase is not null)
         {
-            startEnigm(puzzle);
+            startEnigm(puzzleBase);
         }
         
         yield return new WaitForSeconds(0.25f);
