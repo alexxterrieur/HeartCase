@@ -1,11 +1,10 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
 public class Dialogues
 {
-    public Sprite basicRightInterlocutorSprite;
-    public Sprite basicLeftInterlocutorSprite;
+    public Sprite rightInterlocutorSprite;
+    public Sprite leftInterlocutorSprite;
     
-    public List<Dialogue> dialogues = new List<Dialogue>();
+    public Replic dialogue;
 }

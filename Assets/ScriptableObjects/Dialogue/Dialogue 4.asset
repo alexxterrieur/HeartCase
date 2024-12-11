@@ -10,15 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
-  m_Name: Dialogue 2
+  m_Name: Dialogue 4
   m_EditorClassIdentifier: 
   leftCharacterSprite: {fileID: -646372586542309989, guid: 7e1f460876554504aa63b30e404eba5b, type: 3}
   rightCharacterSprite: {fileID: 4025243291508468552, guid: 6126f23737536c64494737f40144017d, type: 3}
   characterName: Mohamed
   characterPostion: 2
-  frenchDialogueText: "Comment \xE7a mon reuf ?"
-  englishDialogueText: What do you mean my brother ?
+  frenchDialogueText: Tu es raciste !
+  englishDialogueText: You're a racist !
   dialogueConditions: 
   possibleNextReply:
-  - reply: Next
-    nextReplic: {fileID: 11400000, guid: 6e1feac41b441c845b4c6ac70f369a41, type: 2}
+  - reply: Finish
+    nextReplic: {fileID: 0}
+    conditions: []
+  - reply: C'est faux !
+    nextReplic: {fileID: 11400000, guid: 160e820fb1796044096fac437cce45e9, type: 2}
+    conditions: []
+  - reply: C'est une singerie
+    nextReplic: {fileID: 11400000, guid: 6ec76f3121ef9f748ba6c6ae2db0613d, type: 2}
+    conditions:
+    - boolListIndex: 2
+      boolId: 0
