@@ -9,7 +9,7 @@ public class GameState : MonoBehaviour
     public static GameState Instance { get; private set; }
 
     private List<byte> boolsList = new List<byte>();
-    //0 = dialogues, 1 = time, 2 objectAlreadyPicked
+    //0 = dialogues, 1 = time, 2 = objectAlreadyPicked, 3 = CinematicsAlreadyDone
 
     private void Awake()
     {

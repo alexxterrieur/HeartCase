@@ -5909,6 +5909,10 @@ PrefabInstance:
       propertyPath: sceneDropDown
       value: 
       objectReference: {fileID: 1657452148}
+    - target: {fileID: 4050666132257605075, guid: 24d958b325339684b8177c2f8f031084, type: 3}
+      propertyPath: boolsNumber
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5476363507362666830, guid: 24d958b325339684b8177c2f8f031084, type: 3}
       propertyPath: timerText
       value: 
