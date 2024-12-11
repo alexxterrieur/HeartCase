@@ -2952,8 +2952,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0d00d3fb306184694c6fa603f51dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - rightInterlocutorSprite: {fileID: -646372586542309989, guid: 7e1f460876554504aa63b30e404eba5b, type: 3}
+  dialogue:
+    rightInterlocutorSprite: {fileID: -646372586542309989, guid: 7e1f460876554504aa63b30e404eba5b, type: 3}
     leftInterlocutorSprite: {fileID: 4025243291508468552, guid: 6126f23737536c64494737f40144017d, type: 3}
     dialogue: {fileID: 11400000, guid: 7fb17c18f19c20b45a7886629ad15506, type: 2}
   optionsButtons:

@@ -12,8 +12,12 @@ public class Inventory : MonoBehaviour
     
     private InventoryData data;
 
+#if UNITY_EDITOR
+
     public Item testItem;
     public Item testItem2;
+
+#endif
 
     private void Awake()
     {
@@ -84,11 +88,13 @@ public class Inventory : MonoBehaviour
     public void TestAddItem()
     {
         AddItem(testItem);
+        GameState.Instance.SetBool(true, 2, testItem.itemID);
     }
 
     public void TestAddItem2()
     {
         AddItem(testItem2);
+        GameState.Instance.SetBool(true, 2, testItem.itemID);
     }
 
 #endif
