@@ -29,11 +29,16 @@ public class CinematicHandler : MonoBehaviour, IPointerClickHandler
         imageRenderer.enabled = false;
     }
     
-    private void Awake()
+    private void Start()
     {
         imageRenderer = GetComponent<Image>();
         parentGameObject = transform.parent.gameObject;
         parentGameObject.SetActive(false);
+
+        if (!GameState.Instance.GetBool(3, 0))
+        {
+            StartCinematic();
+        }
     }
 
     private void Update()
