@@ -1,35 +1,36 @@
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private List<Dialogues> dialogues = new List<Dialogues>();
-    
+    [SerializeField] private Dialogues dialogue;
+    [SerializeField] private List<GameObject> optionsButtons;
+    private Dialogues currentDisplayedDialogue;
+    private Replic currentDisplayedReplic;
+
     //Interlocutor
     [Header("Interlocutors")]
-    [SerializeField] private Image rightInterlocutorImage; 
+    [SerializeField] private Image rightInterlocutorImage;
     [SerializeField] private Image leftInterlocutorImage;
-    
+
     [SerializeField] private float scaleMultiplier;
-    private Vector3 originalRightInterlocutorScale;
-    private Vector3 originalLeftInterlocutorScale;
-    
+
     [Space(10f)]
-    
+
     //Dialogue
     [Header("Dialogue")]
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private LanguageManager languageManager;
 
-    private TMP_Text characterNameText;
-    private TMP_Text dialogueText;
-    
-    private int currentDialogueIndex = 0;
-    private List<Dialogue> currentDialogues;
+    private TextMeshProUGUI characterNameText;
+    private TextMeshProUGUI dialogueText;
 
-    private Dialogue.Postion lastPostion = Dialogue.Postion.Neutral;
+    private Replic CurrentReplic;
+
+    private Replic.Postion lastPostion = Replic.Postion.Neutral;
 
     //Puzzle to start
     [Header("Puzzle")]
@@ -39,109 +40,159 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        characterNameText = dialogueBox.transform.GetChild(1).GetComponent<TMP_Text>();
-        dialogueText = dialogueBox.transform.GetChild(2).GetComponent<TMP_Text>();
+        characterNameText = dialogueBox.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        dialogueText = dialogueBox.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
     }
 
     public void StartDialogue()
     {
-        if (dialogues == null || dialogues.Count == 0)
+        if (dialogue == null)
         {
+            Debug.LogWarning("Invalide dialogue -> check the dialogue");
             return;
         }
 
-        //Check dialogue conditions
-
-        SwitchActiveDialogue();
-        currentDialogues = dialogues[0].dialogues;
-        DisplayDialogue(currentDialogues, currentDialogueIndex);
+        currentDisplayedDialogue = dialogue;
+        currentDisplayedReplic = currentDisplayedDialogue.dialogue;
+        print(currentDisplayedReplic);
+        SetDialogueUIActive(true);
+        InitializeInterlocutorsSprite();
+        CurrentReplic = currentDisplayedDialogue.dialogue;
+        SetReplic();
     }
 
-    private void SwitchActiveDialogue()
+    private void InitializeInterlocutorsSprite()
     {
-        rightInterlocutorImage.gameObject.SetActive(!rightInterlocutorImage.gameObject.activeSelf);
-        leftInterlocutorImage.gameObject.SetActive(!leftInterlocutorImage.gameObject.activeSelf);
-        
-        dialogueBox.gameObject.SetActive(!dialogueBox.gameObject.activeSelf);
+        rightInterlocutorImage.sprite = currentDisplayedDialogue.rightInterlocutorSprite;
+        leftInterlocutorImage.sprite = currentDisplayedDialogue.leftInterlocutorSprite;
     }
 
-    public void DisplayNextDialogue()
+    private void SetDialogueUIActive(bool active)
     {
-        if (currentDialogues == null || currentDialogues.Count == 0)
+        dialogueBox.gameObject.SetActive(active);
+    }
+
+    private void ActivateValidesOptions(Replic replic)
+    {
+        for (int i = 0; i < optionsButtons.Count; i++)
         {
-            Debug.Log("No Dialogue Found");
+            optionsButtons[i].SetActive(false);
+        }
+
+        if (replic.possibleNextReply.Count == 0)
+        {
+            optionsButtons[0].SetActive(true);
+            optionsButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = "Finish";
             return;
         }
-        
-        DisplayDialogue(currentDialogues, currentDialogueIndex);
+
+        int currentOptionsActivate = 0;
+
+        for (int i = 0; i < replic.possibleNextReply.Count; i++)
+        {
+            if (!CanActivateThisReply(replic.possibleNextReply[i])) { continue; }
+
+            optionsButtons[i].SetActive(true);
+            optionsButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = replic.possibleNextReply[i].reply;
+            currentOptionsActivate++;
+        }
+
+        if (currentOptionsActivate > 0) { return; }
+
+        optionsButtons[0].SetActive(true);
+        optionsButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = "Finish";
+        return;
     }
 
-    private void DisplayDialogue(List<Dialogue> _currentDialogues, int _index)
+    private bool CanActivateThisReply(Reply reply)
+    {
+        if(reply.conditions.Count == 0) { return false; }
+        bool rep = false;
+
+        for (int i = 0; i < reply.conditions.Count; i++)
+        {
+
+        }
+
+        return rep;
+    }
+
+    public void DisplayReplic(int choice)
+    {
+        if (CurrentReplic == null)
+        {
+            Debug.Log("No Replic Found");
+            return;
+        }
+
+        DisplayReplicByChoice(choice);
+    }
+
+    private void DisplayReplicByChoice(int choice)
     {
         //Check dialogue count
-        if (_index <= _currentDialogues.Count - 1)
+        if (choice < currentDisplayedReplic.possibleNextReply.Count)
         {
-            SetDialogue(_currentDialogues[_index]);
-            currentDialogueIndex++;
+            currentDisplayedReplic = currentDisplayedReplic.possibleNextReply[choice].nextReplic;
+            SetReplic();
         }
         else
         {
             CallAction();
-            currentDialogueIndex = 0;
-            currentDialogues = null;
         }
     }
-    
-    private void SetDialogue(Dialogue _currentDialogue)
+
+    private void SetReplic()
     {
-        SetDialogueBox(_currentDialogue);
-        SetDialogueBoxLanguage(_currentDialogue);
+        SetDialogueBox(currentDisplayedReplic);
+        SetDialogueBoxLanguage(currentDisplayedReplic);
+        ActivateValidesOptions(currentDisplayedReplic);
     }
 
-    private void SetDialogueBox(Dialogue _currentDialogue)
+    private void SetDialogueBox(Replic _currentDialogue)
     {
         characterNameText.text = _currentDialogue.characterName;
-        Debug.Log($"Current character position: {_currentDialogue.characterPostion}");
-        
+
         //Set Position
         switch (_currentDialogue.characterPostion)
         {
-            case Dialogue.Postion.Right:
-                if (lastPostion == Dialogue.Postion.Right)
+            case Replic.Postion.Right:
+                if (lastPostion == Replic.Postion.Right)
                 {
                     rightInterlocutorImage.sprite = _currentDialogue.rightCharacterSprite;
                 }
-                else if (lastPostion == Dialogue.Postion.Neutral)
+                else if (lastPostion == Replic.Postion.Neutral)
                 {
                     SpeakInterlocutor(rightInterlocutorImage);
                     leftInterlocutorImage.color = Color.grey;
                 }
                 else
                 {
-                    SetInterlocutors(rightInterlocutorImage, leftInterlocutorImage);
+                    SetSpeekingInterlocutor(rightInterlocutorImage, leftInterlocutorImage);
                 }
-                lastPostion = Dialogue.Postion.Right;
+                lastPostion = Replic.Postion.Right;
                 break;
-            case Dialogue.Postion.Left:
-                if (lastPostion == Dialogue.Postion.Left)
+
+            case Replic.Postion.Left:
+                if (lastPostion == Replic.Postion.Left)
                 {
                     leftInterlocutorImage.sprite = _currentDialogue.leftCharacterSprite;
                 }
-                else if (lastPostion == Dialogue.Postion.Neutral)
+                else if (lastPostion == Replic.Postion.Neutral)
                 {
                     SpeakInterlocutor(leftInterlocutorImage);
                     rightInterlocutorImage.color = Color.grey;
                 }
                 else
                 {
-                    SetInterlocutors(leftInterlocutorImage, rightInterlocutorImage);
+                    SetSpeekingInterlocutor(leftInterlocutorImage, rightInterlocutorImage);
                 }
-                lastPostion = Dialogue.Postion.Left;
+                lastPostion = Replic.Postion.Left;
                 break;
         }
     }
 
-    private void SetDialogueBoxLanguage(Dialogue _currentDialogue)
+    private void SetDialogueBoxLanguage(Replic _currentDialogue)
     {
         //Set language
         switch (languageManager.language)
@@ -154,20 +205,20 @@ public class DialogueManager : MonoBehaviour
                 break;
         }
     }
-    
+
     private void SpeakInterlocutor(Image _interlocutorImageToSpeak)
     {
         _interlocutorImageToSpeak.color = Color.white;
         _interlocutorImageToSpeak.transform.localScale *= scaleMultiplier;
     }
-    
+
     private void HideInterlocutor(Image _interlocutorImageToHide)
     {
         _interlocutorImageToHide.color = Color.grey;
         _interlocutorImageToHide.transform.localScale /= scaleMultiplier;
     }
-    
-    private void SetInterlocutors(Image _interlocutorImageToSpeak, Image _interlocutorImageToHide)
+
+    private void SetSpeekingInterlocutor(Image _interlocutorImageToSpeak, Image _interlocutorImageToHide)
     {
         SpeakInterlocutor(_interlocutorImageToSpeak);
         HideInterlocutor(_interlocutorImageToHide);
@@ -175,8 +226,9 @@ public class DialogueManager : MonoBehaviour
 
     private void CallAction()
     {
-        SwitchActiveDialogue();
-        fade.CallFade(puzzleToStart.StartPuzzle, soPuzzle);
-        Debug.Log("End Dialogue");
+        Debug.Log("FINI Start Action");
+
+        SetDialogueUIActive(false);
+        //fade.CallFade(puzzleToStart.StartPuzzle, soPuzzle);
     }
 }
