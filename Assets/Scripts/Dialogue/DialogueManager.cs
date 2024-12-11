@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -107,7 +106,7 @@ public class DialogueManager : MonoBehaviour
 
     private bool CanActivateThisReply(Reply reply)
     {
-        if(reply.conditions.Count == 0) { return true; }
+        if (reply.conditions.Count == 0) { return true; }
 
         for (int i = 0; i < reply.conditions.Count; i++)
         {
@@ -144,22 +143,27 @@ public class DialogueManager : MonoBehaviour
 
     private void SetReplic()
     {
+        if (currentDisplayedReplic == null)
+        {
+            CallAction();
+            return;
+        }
         SetDialogueBox(currentDisplayedReplic);
         SetDialogueBoxLanguage(currentDisplayedReplic);
         ActivateValidesOptions(currentDisplayedReplic);
     }
 
-    private void SetDialogueBox(Replic _currentDialogue)
+    private void SetDialogueBox(Replic currentReplic)
     {
-        characterNameText.text = _currentDialogue.characterName;
+        characterNameText.text = currentReplic.characterName;
 
         //Set Position
-        switch (_currentDialogue.characterPostion)
+        switch (currentReplic.characterPostion)
         {
             case Replic.Postion.Right:
                 if (lastPostion == Replic.Postion.Right)
                 {
-                    rightInterlocutorImage.sprite = _currentDialogue.rightCharacterSprite;
+                    rightInterlocutorImage.sprite = currentReplic.rightCharacterSprite;
                 }
                 else if (lastPostion == Replic.Postion.Neutral)
                 {
@@ -176,7 +180,7 @@ public class DialogueManager : MonoBehaviour
             case Replic.Postion.Left:
                 if (lastPostion == Replic.Postion.Left)
                 {
-                    leftInterlocutorImage.sprite = _currentDialogue.leftCharacterSprite;
+                    leftInterlocutorImage.sprite = currentReplic.leftCharacterSprite;
                 }
                 else if (lastPostion == Replic.Postion.Neutral)
                 {

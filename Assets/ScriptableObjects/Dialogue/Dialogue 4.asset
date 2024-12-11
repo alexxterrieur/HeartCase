@@ -20,6 +20,9 @@ MonoBehaviour:
   englishDialogueText: You're a racist !
   dialogueConditions: 
   possibleNextReply:
+  - reply: Finish
+    nextReplic: {fileID: 0}
+    conditions: []
   - reply: C'est faux !
     nextReplic: {fileID: 11400000, guid: 160e820fb1796044096fac437cce45e9, type: 2}
     conditions: []

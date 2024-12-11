@@ -19,4 +19,7 @@ MonoBehaviour:
   frenchDialogueText: C'est une singerie !
   englishDialogueText: Its a singerie !
   dialogueConditions: 
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 4666227808f552845a2af1b23aa40a7c, type: 2}
+    conditions: []
