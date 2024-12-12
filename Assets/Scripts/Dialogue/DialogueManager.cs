@@ -1,7 +1,7 @@
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -34,8 +34,10 @@ public class DialogueManager : MonoBehaviour
     //Puzzle to start
     [Header("Puzzle")]
     [SerializeField] private UIFadeInFadeOut fade;
-    [SerializeField] private PuzzleHandler puzzleToStart;
-    [FormerlySerializedAs("soPuzzle")] [SerializeField] private SO_PuzzleBase soPuzzleBase;
+    [SerializeField] private PuzzleHandler puzzleHandler;
+    private ScriptableObject argument;
+
+
 
     private void Start()
     {
@@ -53,7 +55,11 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+
         currentDisplayedDialogue = displayedDialogue;
+
+        argument = currentDisplayedDialogue.argument;
+
         currentDisplayedReplic = currentDisplayedDialogue.dialogue;
         print(currentDisplayedReplic);
         SetDialogueUIActive(true);
@@ -237,9 +243,27 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("FINI Start Action");
 
         SetDialogueUIActive(false);
-        if(soPuzzleBase != null)
+        if (argument != null)
         {
-            fade.CallFade(puzzleToStart.StartPuzzle, soPuzzleBase);
+            if (argument is Item)
+            {
+                fade.CallFade(AddItem, (Item)argument);
+            }
+            else if (argument is SO_PuzzleBase) 
+            {
+                fade.CallFade(StartPuzzle, (SO_PuzzleBase)argument);
+            }
         }
     }
+
+    private void AddItem(Item item)
+    {
+        Inventory.Instance.AddItem(item);
+        GameState.Instance.SetBool(true, 2, item.itemID);
+    }
+
+    private void StartPuzzle(SO_PuzzleBase puzzle)
+    {
+        puzzleHandler.StartPuzzle(puzzle);
+    } 
 }
