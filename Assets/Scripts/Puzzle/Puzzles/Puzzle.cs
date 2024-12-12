@@ -66,6 +66,7 @@ public abstract class Puzzle : MonoBehaviour, IPointerClickHandler
         else
         {
             Debug.Log("Puzzle could not be solved");
+            Debug.Log(onPuzzleFail);
             
             onPuzzleFail();
         }
