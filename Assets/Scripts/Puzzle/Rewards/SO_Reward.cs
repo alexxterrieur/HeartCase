@@ -9,4 +9,7 @@ public class SO_Reward : ScriptableObject
     [Header("To activate an interaction")]
     public int boolIndex = -1;
     public int boolId = -1;
+    
+    [Header("To unlock a scene")]
+    public string sceneName = "";
 }

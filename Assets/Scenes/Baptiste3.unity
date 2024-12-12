@@ -855,7 +855,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mise en commun
+  m_text: MiseEnCommun
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4073,13 +4073,13 @@ MonoBehaviour:
   m_MultiSelect: 0
   m_Options:
     m_Options:
-    - m_Text: Mise en commun
+    - m_Text: MiseEnCommun
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Aurelien
+    - m_Text: Baptiste3
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Aurelien2
+    - m_Text: Aurelien3
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
@@ -4087,7 +4087,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4976006426544868630}
         m_TargetAssemblyTypeName: SceneStateManager, Assembly-CSharp
-        m_MethodName: ChangeSceneId
+        m_MethodName: ChangeSceneName
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
