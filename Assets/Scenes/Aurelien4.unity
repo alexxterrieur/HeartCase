@@ -1757,7 +1757,7 @@ MonoBehaviour:
     leftInterlocutorSprite: {fileID: 4025243291508468552, guid: 6126f23737536c64494737f40144017d, type: 3}
     dialogue: {fileID: 11400000, guid: 7fb17c18f19c20b45a7886629ad15506, type: 2}
     conditions: []
-    argument: {fileID: 11400000, guid: 9b3f4df83da3b97488288c5591e9c492, type: 2}
+    argument: {fileID: 11400000, guid: 77765e1028180e74ea075f8ec51c7e0f, type: 2}
   dialogueManager: {fileID: 1759780421}
 --- !u!1 &790003648
 GameObject:
