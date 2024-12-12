@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public abstract class Puzzle : MonoBehaviour, IPointerClickHandler
 {
     public Action onPuzzleSolved;
-    public Action onPuzzleFail;
     
     public SO_PuzzleBase puzzle;
     
@@ -66,9 +65,6 @@ public abstract class Puzzle : MonoBehaviour, IPointerClickHandler
         else
         {
             Debug.Log("Puzzle could not be solved");
-            Debug.Log(onPuzzleFail);
-            
-            onPuzzleFail();
         }
     }
 

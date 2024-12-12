@@ -40,8 +40,8 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        characterNameText = dialogueBox.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-        dialogueText = dialogueBox.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
+        characterNameText = dialogueBox.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
+        dialogueText = dialogueBox.transform.GetChild(3).GetComponent<TextMeshProUGUI>();
     }
 
     public void StartDialogue()
@@ -149,6 +149,7 @@ public class DialogueManager : MonoBehaviour
             CallAction();
             return;
         }
+        print(currentDisplayedReplic);
         SetDialogueBox(currentDisplayedReplic);
         SetDialogueBoxLanguage(currentDisplayedReplic);
         ActivateValidesOptions(currentDisplayedReplic);
@@ -156,6 +157,7 @@ public class DialogueManager : MonoBehaviour
 
     private void SetDialogueBox(Replic currentReplic)
     {
+        print(characterNameText);
         characterNameText.text = currentReplic.characterName;
 
         //Set Position
@@ -199,16 +201,18 @@ public class DialogueManager : MonoBehaviour
 
     private void SetDialogueBoxLanguage(Replic _currentDialogue)
     {
-        //Set language
-        switch (languageManager.language)
-        {
-            case LanguageManager.Languages.English:
-                dialogueText.text = _currentDialogue.englishDialogueText;
-                break;
-            case LanguageManager.Languages.French:
-                dialogueText.text = _currentDialogue.frenchDialogueText;
-                break;
-        }
+        dialogueText.text = _currentDialogue.englishDialogueText;
+
+        ////Set language
+        //switch (languageManager.language)
+        //{
+        //    case LanguageManager.Languages.English:
+        //        dialogueText.text = _currentDialogue.englishDialogueText;
+        //        break;
+        //    case LanguageManager.Languages.French:
+        //        dialogueText.text = _currentDialogue.frenchDialogueText;
+        //        break;
+        //}
     }
 
     private void SpeakInterlocutor(Image _interlocutorImageToSpeak)
@@ -234,6 +238,9 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("FINI Start Action");
 
         SetDialogueUIActive(false);
-        fade.CallFade(puzzleToStart.StartPuzzle, soPuzzleBase);
+        if(soPuzzleBase != null)
+        {
+            fade.CallFade(puzzleToStart.StartPuzzle, soPuzzleBase);
+        }
     }
 }

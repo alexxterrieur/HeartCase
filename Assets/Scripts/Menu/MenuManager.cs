@@ -19,7 +19,7 @@ public class MenuManager : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("MiseEnCommun");
+        SceneManager.LoadScene("MiseEnCommun2");
     }
 
     public void Quit()

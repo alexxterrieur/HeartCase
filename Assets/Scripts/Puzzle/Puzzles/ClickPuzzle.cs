@@ -59,8 +59,6 @@ public class ClickPuzzle : Puzzle
             Debug.Log("Puzzle could not be solved");
             
             guessedPositionImage.color = Color.red;
-            
-            onPuzzleFail();
         }
     }
     

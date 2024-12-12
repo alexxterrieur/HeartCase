@@ -8,8 +8,6 @@ using UnityEngine.UI;
 public class PuzzleHandler : MonoBehaviour
 {
     [FormerlySerializedAs("puzzle")] [SerializeField] private SO_PuzzleBase puzzleBase;
-    
-    [SerializeField] private UnityEvent<float> onPuzzleFail;
 
     [Header("SceneManager")]
     [SerializeField] private SceneActivatorManager sceneActivatorManager;
@@ -22,13 +20,7 @@ public class PuzzleHandler : MonoBehaviour
         Puzzle puzzle = Instantiate(puzzleBase.puzzlePrefab, transform).GetComponent<Puzzle>();
         
         puzzle.puzzle = puzzleBase;
-        puzzle.onPuzzleFail = PuzzleFail;
         puzzle.onPuzzleSolved = PuzzleSuccess;
-    }
-
-    private void PuzzleFail()
-    {
-        onPuzzleFail.Invoke(puzzleBase.timePenalty);
     }
 
     private void PuzzleSuccess()
