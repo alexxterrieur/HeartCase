@@ -234,6 +234,6 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("FINI Start Action");
 
         SetDialogueUIActive(false);
-        fade.CallFade(puzzleToStart.StartPuzzle, soPuzzle);
+        fade.CallFade(puzzleToStart.StartPuzzle, soPuzzleBase);
     }
 }
