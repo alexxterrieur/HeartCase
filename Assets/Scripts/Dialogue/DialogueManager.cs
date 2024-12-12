@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -35,7 +36,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Puzzle")]
     [SerializeField] private UIFadeInFadeOut fade;
     [SerializeField] private PuzzleHandler puzzleToStart;
-    [SerializeField] private SO_Puzzle soPuzzle;
+    [FormerlySerializedAs("soPuzzle")] [SerializeField] private SO_PuzzleBase soPuzzleBase;
 
     private void Start()
     {
@@ -233,6 +234,6 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("FINI Start Action");
 
         SetDialogueUIActive(false);
-        //fade.CallFade(puzzleToStart.StartPuzzle, soPuzzle);
+        fade.CallFade(puzzleToStart.StartPuzzle, soPuzzle);
     }
 }

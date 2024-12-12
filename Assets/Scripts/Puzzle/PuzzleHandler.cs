@@ -2,114 +2,77 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public enum PuzzleType
+public class PuzzleHandler : MonoBehaviour
 {
-    TextPuzzle,
-    ClickPuzzle
-}
-
-public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
-{
-    [SerializeField] private SO_Puzzle puzzle;
-    [SerializeField] private TMP_InputField inputField;
-    [SerializeField] private RectTransform submitButtonTransform;
-    [SerializeField] private GameObject infoButton;
-    [SerializeField] private Image guessedPositionImage;
-    [SerializeField] private GameObject informationPanel;
-    [SerializeField] private TextMeshProUGUI informationPromptText;
-    [SerializeField] private Image backgroundImage;
+    [FormerlySerializedAs("puzzle")] [SerializeField] private SO_PuzzleBase puzzleBase;
     
     [SerializeField] private UnityEvent<float> onPuzzleFail;
 
-    [Header("Reward")]
-    [SerializeField] private SO_Reward reward;
-    private RewardGiver rewardGiver;
-
     [Header("SceneManager")]
     [SerializeField] private SceneActivatorManager sceneActivatorManager;
-    
-    private Vector2 guessedPosition = Vector2.zero;
 
-    public void StartPuzzle(SO_Puzzle _puzzle)
+    public void StartPuzzle(SO_PuzzleBase puzzleBase)
     {
-        rewardGiver = GetComponent<RewardGiver>();
-        puzzle = _puzzle;
-        PuzzleSetActive();
-    }
-    
-    private void PuzzleSetActive(bool isActive = true)
-    {
-        switch (puzzle.type)
-        {
-            case PuzzleType.TextPuzzle: //enables text input and submit button
-                inputField.gameObject.SetActive(isActive);
-                submitButtonTransform.gameObject.SetActive(isActive);
-                break;
-            case PuzzleType.ClickPuzzle: //enables and centers the submit button
-                submitButtonTransform.gameObject.SetActive(isActive);
-                submitButtonTransform.anchoredPosition = Vector2.up * submitButtonTransform.anchoredPosition.y;
-                break;
-            default:
-                throw new Exception("Invalid puzzle type");
-        }
+        this.puzzleBase = puzzleBase;
         
-        backgroundImage.sprite = puzzle.background;
-        backgroundImage.enabled = isActive;
+        //Instantiate the new puzzleBase from SO Here (and associate Events)
+        Puzzle puzzle = Instantiate(puzzleBase.puzzlePrefab, transform).GetComponent<Puzzle>();
         
-        infoButton.SetActive(isActive);
-        
-        informationPromptText.text = puzzle.description;
-        InformationSetActive(isActive);
+        puzzle.puzzle = puzzleBase;
+        puzzle.onPuzzleFail = PuzzleFail;
+        puzzle.onPuzzleSolved = PuzzleSuccess;
     }
 
+    private void PuzzleFail()
+    {
+        onPuzzleFail.Invoke(puzzleBase.timePenalty);
+    }
 
+    private void PuzzleSuccess()
+    {
+        sceneActivatorManager.CheckActivateAndDesactivate();
+    }
+
+    /*
     /// <summary>
-    /// Verifies the answer inputted by the player depending on the type of puzzle
+    /// Verifies the answer inputted by the player depending on the type of puzzleBase
     /// </summary>
     private bool CheckAnswer()
     {
-        switch (puzzle.type)
+        switch (puzzleBase.type)
         {
-            case PuzzleType.TextPuzzle:
-                return TransformText(inputField.text) == puzzle.answerText;
             case PuzzleType.ClickPuzzle:
-                Debug.Log(puzzle.answerPosition);
-                Debug.Log(guessedPositionImage.transform.position);
-                Debug.Log(puzzle.answerPosition - guessedPosition);
-                Debug.Log((puzzle.answerPosition - guessedPosition).magnitude);
-                return (puzzle.answerPosition - guessedPosition).magnitude <= puzzle.answerRange;
+                return TransformText(inputField.text) == puzzleBase.answerText;
+            case PuzzleType.ClickPuzzle:
+                return (puzzleBase.answerPosition - guessedPosition).magnitude <= puzzleBase.answerRange;
             default:
-                throw new Exception("Invalid puzzle type");
+                throw new Exception("Invalid puzzleBase type");
         }
     }
-
+    */
+    
+    /*
     /// <summary>
     /// Checks if the answer is valid (exemple : if the position of the guessedAnswer is exactly the center, then it's not valid)
     /// </summary>
     private bool IsAnswerValid()
     {
-        switch (puzzle.type)
+        switch (puzzleBase.type)
         {
-            case PuzzleType.TextPuzzle:
+            case PuzzleType.ClickPuzzle:
                 return inputField.text != "";
             case PuzzleType.ClickPuzzle:
                 return guessedPosition != Vector2.zero;
             default:
-                throw new Exception("Invalid puzzle type");
+                throw new Exception("Invalid puzzleBase type");
         }
     }
+    */
     
-    /// <summary>
-    /// Modify the text to avoid typos (uppercase instead of lowercase, too many space ...)
-    /// </summary>
-    private string TransformText(string _text)
-    {
-        return _text.ToLower();
-    }
-
+    /*
     public void TryToSolve()
     {
         if (!IsAnswerValid())
@@ -120,8 +83,8 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
         
         if (CheckAnswer())
         {
-            Debug.Log("You answered the puzzle");
-            if (puzzle.type == PuzzleType.ClickPuzzle)
+            Debug.Log("You answered the puzzleBase");
+            if (puzzleBase.type == PuzzleType.ClickPuzzle)
             {
                 guessedPositionImage.color = Color.green;
             }
@@ -136,70 +99,20 @@ public class PuzzleHandler : MonoBehaviour, IPointerClickHandler
                 sceneActivatorManager.CheckActivateAndDesactivate();
             }
 
-            PuzzleSetActive(false);
+            //PuzzleSetActive(false);
         }
         else
         {
             Debug.Log("Puzzle could not be solved");
-            if (puzzle.type == PuzzleType.ClickPuzzle)
+            if (puzzleBase.type == PuzzleType.ClickPuzzle)
             {
                 guessedPositionImage.color = Color.red;
             }
             
-            onPuzzleFail.Invoke(puzzle.timePenalty);
+            onPuzzleFail.Invoke(puzzleBase.timePenalty);
         }
     }
-
-    public void OnPointerClick(PointerEventData _)
-    {
-        if (informationPanel.activeInHierarchy) //if the info prompt is active and you click, it deactivate
-        {
-            informationPanel.SetActive(false);
-            return;
-        }
-        
-        if (puzzle.type != PuzzleType.ClickPuzzle) return;
-        
-        //Behavior of the Click Puzzle from here
-        
-        guessedPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        if (guessedPositionImage == null) return;
-        
-        if (guessedPosition == Vector2.zero)
-        {
-            guessedPositionImage.gameObject.SetActive(false);
-            return;
-        }
-        
-        guessedPositionImage.gameObject.SetActive(true);
-        guessedPositionImage.color = Color.white;
-        guessedPositionImage.rectTransform.anchoredPosition = Input.mousePosition;
-    }
-
-    public void InformationSetActive(bool isActive = true)
-    {
-        guessedPosition = Vector2.zero;
-        guessedPositionImage.rectTransform.anchoredPosition = Vector2.zero;
-        guessedPositionImage.gameObject.SetActive(false);
-        informationPanel.SetActive(isActive);
-    }
-
-    /// <summary>
-    /// Dev Tool to set the answer to the current guessed answer
-    /// </summary>
-    public void SetAsAnswer()
-    {
-        switch (puzzle.type)
-        {
-            case PuzzleType.TextPuzzle:
-                puzzle.answerText = inputField.text;
-                break;
-            case PuzzleType.ClickPuzzle:
-                puzzle.answerPosition = guessedPosition;
-                break;
-            default:
-                throw new Exception("Invalid puzzle type");
-        }
-    }
+    */
+    
+    
 }
