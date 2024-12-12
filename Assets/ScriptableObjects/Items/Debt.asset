@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Debt
   m_EditorClassIdentifier: 
   _itemName: Debt
-  _sprite: {fileID: -646372586542309989, guid: 7e1f460876554504aa63b30e404eba5b, type: 3}
+  _sprite: {fileID: 21300000, guid: 0474c0df5c1c3ab4bbbafdba56ec102a, type: 3}
   _itemID: 1

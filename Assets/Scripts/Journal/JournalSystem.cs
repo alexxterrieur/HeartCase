@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -8,15 +10,15 @@ using UnityEngine.UI;
 public class JournalSystem : MonoBehaviour
 {
     private List<string> texts = new List<string>();
-    public TMP_InputField leftPage;
-    public TMP_InputField rightPage;
-    public Button previousPageButton;
-    public Button nextPageButton;
+    [SerializeField] private TMP_InputField leftPage;
+    [SerializeField] private TMP_InputField rightPage;
+    [SerializeField] private Button previousPageButton;
+    [SerializeField] private Button nextPageButton;
     
-    public Transform openedPosition;
-    public Transform closedPosition;
+    [SerializeField] private Transform openedPosition;
+    [SerializeField] private Transform closedPosition;
 
-    public float moveSpeed = 100;
+    [SerializeField] private float moveSpeed = 100;
     
     private Transform journal;
     private bool isMoving = false;
@@ -60,9 +62,9 @@ public class JournalSystem : MonoBehaviour
     /// <summary>
     /// Loads the pages at currentPage - pageIndex
     /// </summary>
-    public void ChangePage(int pageIndex)
+    public void ChangePage(int _pageIndex)
     {
-        currentPage = Mathf.Clamp(currentPage + pageIndex * 2, 0, maxPage - 2);
+        currentPage = Mathf.Clamp(currentPage + _pageIndex * 2, 0, maxPage - 2);
 
         previousPageButton.interactable = (currentPage > 0);
         nextPageButton.interactable = (currentPage < maxPage - 2);
@@ -78,7 +80,7 @@ public class JournalSystem : MonoBehaviour
             ? MoveJournalCoroutine(closedPosition.position)
             : MoveJournalCoroutine(openedPosition.position));
     }
-
+    
     private IEnumerator MoveJournalCoroutine(Vector3 _position)
     {
         isMoving = true;
