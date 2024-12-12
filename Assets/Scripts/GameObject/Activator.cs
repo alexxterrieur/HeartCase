@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -14,25 +15,21 @@ public class Activator : MonoBehaviour
         ActiveOrDesactiveGO();
     }
 
+
     /// <summary>
     /// Active or desactive the gamobject
     /// </summary>
     public void ActiveOrDesactiveGO()
     {
-        if (!itemsForHide.HasFlag(ItemsForHide.None))
+        if (HasConditions(itemsForHide))
         {
-            if(ToggleActiveByConditions(itemsForHide, false))
+            if(ToggleActiveByConditions(itemsForHide, false, itemAlreadyPickedIndex))
             {
                 return;
             }
         }
 
-        if (dialoguesForShow.HasFlag(DialoguesForShow.None))
-        {
-            return;
-        }
-
-        if (ToggleActiveByConditions(dialoguesForShow, true))
+        if (HasConditions(dialoguesForShow) || ToggleActiveByConditions(dialoguesForShow, true, 0))
         {
             return;
         }
@@ -41,25 +38,26 @@ public class Activator : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// return true if all condition flags are checked
     /// </summary>
     /// <typeparam name="EnumType"> enum type</typeparam>
     /// <param name="currentEnum"> current enum you want to check </param>
     /// <param name="activate"> you want to activate or desactivate </param>
     /// <returns> return true if job is done </returns>
-    private bool ToggleActiveByConditions<EnumType>(EnumType currentEnum, bool activate) where EnumType : Enum
+    private bool ToggleActiveByConditions<EnumType>(EnumType currentEnum, bool activate, int boolIndexInGameState) where EnumType : Enum
     {
-        int totalFlagsActive = CountActiveFlags(itemsForHide);
+        int totalFlagsActive = CountActiveFlags(currentEnum);
         int goodFlags = 0;
         foreach (EnumType flag in Enum.GetValues(typeof(EnumType)))
         {
-            if (itemsForHide.HasFlag(flag) && GameState.Instance.GetBool(itemAlreadyPickedIndex, Convert.ToInt32(flag))) 
+            if (currentEnum.HasFlag(flag) && GameState.Instance.GetBool(boolIndexInGameState, GetItemID(flag))) 
             { 
                 print(flag);
                 goodFlags++;
             }
         }
 
+        print(goodFlags + " =? " + totalFlagsActive);
         if (goodFlags == totalFlagsActive)
         {
             gameObject.SetActive(activate);
@@ -68,30 +66,58 @@ public class Activator : MonoBehaviour
         return false;
     }
 
-    int CountActiveFlags<EnumType>(EnumType flags) where EnumType : Enum
+    private bool HasConditions<EnumType>(EnumType currentEnum) where EnumType : Enum
     {
-        return Enum.GetValues(typeof(EnumType))
-                   .Cast<EnumType>()
-                   .Count(flag => flags.HasFlag(flag));
+        return !(itemsForHide == ItemsForHide.None);
+    }
+
+    private int GetItemID<EnumType>(EnumType flag) where EnumType : Enum
+    {
+        return Convert.ToInt32(flag) == 128 ? 0 : Convert.ToInt32(flag);
+    }
+
+    private int CountActiveFlags<EnumType>(EnumType currentEnum) where EnumType : Enum
+    {
+        if (!Enum.IsDefined(typeof(EnumType), 0))
+        {
+            throw new ArgumentException($"L'énumération {typeof(EnumType).Name} doit avoir une valeur 'None' égale à 0.");
+        }
+
+        EnumType noneValue = (EnumType)Enum.ToObject(typeof(EnumType), 0);
+
+        if (EqualityComparer<EnumType>.Default.Equals(currentEnum, noneValue))
+        {
+            return 0;
+        }
+
+        int count = 0;
+        foreach (EnumType flag in Enum.GetValues(typeof(EnumType)))
+        {
+            if (!EqualityComparer<EnumType>.Default.Equals(flag, noneValue) && itemsForHide.HasFlag(flag))
+            {
+                count++;
+            }
+        }
+        return count;
     }
 }
 
 [Flags]
 public enum ItemsForHide
 {
-    None = 128,
-    Key = 0,
+    None = 0,
     Debt = 1,
     Necklace = 2,
     Diary = 4,
+    Key = 128,
 }
 
 [Flags]
 public enum DialoguesForShow
 {
-    None = 128,
-    Dialogue1 = 0,
+    None = 0,
     Dialogue2 = 1,
     Dialogue3 = 2,
     Dialogue4 = 4,
+    Dialogue1 = 128,
 }
