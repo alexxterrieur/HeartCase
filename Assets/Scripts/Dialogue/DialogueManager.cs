@@ -6,9 +6,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private Dialogues dialogue;
     [SerializeField] private List<GameObject> optionsButtons;
-    private Dialogues currentDisplayedDialogue;
+    private Dialogue currentDisplayedDialogue;
     private Replic currentDisplayedReplic;
 
     //Interlocutor
@@ -44,15 +43,17 @@ public class DialogueManager : MonoBehaviour
         dialogueText = dialogueBox.transform.GetChild(3).GetComponent<TextMeshProUGUI>();
     }
 
-    public void StartDialogue()
+    public void StartDialogue(Dialogue displayedDialogue)
     {
-        if (dialogue == null)
+        print("start");
+        print("dialogue : " + displayedDialogue);
+        if (displayedDialogue == null)
         {
             Debug.LogWarning("Invalide dialogue -> check the dialogue");
             return;
         }
 
-        currentDisplayedDialogue = dialogue;
+        currentDisplayedDialogue = displayedDialogue;
         currentDisplayedReplic = currentDisplayedDialogue.dialogue;
         print(currentDisplayedReplic);
         SetDialogueUIActive(true);
@@ -90,7 +91,6 @@ public class DialogueManager : MonoBehaviour
 
         for (int i = 0; i < replic.possibleNextReply.Count; i++)
         {
-            print(CanActivateThisReply(replic.possibleNextReply[i]));
             if (!CanActivateThisReply(replic.possibleNextReply[i])) { continue; }
 
             optionsButtons[i].SetActive(true);
@@ -157,7 +157,6 @@ public class DialogueManager : MonoBehaviour
 
     private void SetDialogueBox(Replic currentReplic)
     {
-        print(characterNameText);
         characterNameText.text = currentReplic.characterName;
 
         //Set Position
