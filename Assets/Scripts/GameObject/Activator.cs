@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -14,13 +15,13 @@ public class Activator : MonoBehaviour
         ActiveOrDesactiveGO();
     }
 
+
     /// <summary>
     /// Active or desactive the gamobject
     /// </summary>
     public void ActiveOrDesactiveGO()
     {
-        print("none item ? " + itemsForHide.HasFlag(ItemsForHide.None));
-        if (!itemsForHide.HasFlag(ItemsForHide.None))
+        if (HasConditions(itemsForHide))
         {
             if(ToggleActiveByConditions(itemsForHide, false, itemAlreadyPickedIndex))
             {
@@ -28,7 +29,7 @@ public class Activator : MonoBehaviour
             }
         }
 
-        if (dialoguesForShow.HasFlag(DialoguesForShow.None) || ToggleActiveByConditions(dialoguesForShow, true, 0))
+        if (HasConditions(dialoguesForShow) || ToggleActiveByConditions(dialoguesForShow, true, 0))
         {
             return;
         }
@@ -55,6 +56,7 @@ public class Activator : MonoBehaviour
                 goodFlags++;
             }
         }
+
         print(goodFlags + " =? " + totalFlagsActive);
         if (goodFlags == totalFlagsActive)
         {
@@ -64,16 +66,39 @@ public class Activator : MonoBehaviour
         return false;
     }
 
+    private bool HasConditions<EnumType>(EnumType currentEnum) where EnumType : Enum
+    {
+        return !(itemsForHide == ItemsForHide.None);
+    }
+
     private int GetItemID<EnumType>(EnumType flag) where EnumType : Enum
     {
         return Convert.ToInt32(flag) == 128 ? 0 : Convert.ToInt32(flag);
     }
 
-    int CountActiveFlags<EnumType>(EnumType flags) where EnumType : Enum
+    private int CountActiveFlags<EnumType>(EnumType currentEnum) where EnumType : Enum
     {
-        return Enum.GetValues(typeof(EnumType))
-                   .Cast<EnumType>()
-                   .Count(flag => flags.HasFlag(flag));
+        if (!Enum.IsDefined(typeof(EnumType), 0))
+        {
+            throw new ArgumentException($"L'énumération {typeof(EnumType).Name} doit avoir une valeur 'None' égale à 0.");
+        }
+
+        EnumType noneValue = (EnumType)Enum.ToObject(typeof(EnumType), 0);
+
+        if (EqualityComparer<EnumType>.Default.Equals(currentEnum, noneValue))
+        {
+            return 0;
+        }
+
+        int count = 0;
+        foreach (EnumType flag in Enum.GetValues(typeof(EnumType)))
+        {
+            if (!EqualityComparer<EnumType>.Default.Equals(flag, noneValue) && itemsForHide.HasFlag(flag))
+            {
+                count++;
+            }
+        }
+        return count;
     }
 }
 
