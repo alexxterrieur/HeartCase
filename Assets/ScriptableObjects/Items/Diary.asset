@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Diary
   m_EditorClassIdentifier: 
   _itemName: Diary
-  _sprite: {fileID: 4025243291508468552, guid: 6126f23737536c64494737f40144017d, type: 3}
+  _sprite: {fileID: 21300000, guid: 8b82d9a260b424444907df7c56aa5d08, type: 3}
   _itemID: 3
