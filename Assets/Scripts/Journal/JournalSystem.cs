@@ -1,19 +1,19 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class JournalSystem : MonoBehaviour
+public class JournalSystem : MonoBehaviour, IPointerEnterHandler
 {
     private List<string> texts = new List<string>();
     [SerializeField] private TMP_InputField leftPage;
     [SerializeField] private TMP_InputField rightPage;
     [SerializeField] private Button previousPageButton;
     [SerializeField] private Button nextPageButton;
+    
+    [SerializeField] private Button openCloseButton;
     
     [SerializeField] private Transform openedPosition;
     [SerializeField] private Transform closedPosition;
@@ -93,5 +93,13 @@ public class JournalSystem : MonoBehaviour
         }
         isMoving = false;
         yield return null;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (eventData.pointerCurrentRaycast.gameObject == openCloseButton &&  openCloseButton != null)
+        {
+            
+        }
     }
 }
