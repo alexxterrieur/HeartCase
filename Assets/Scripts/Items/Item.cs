@@ -6,6 +6,7 @@ public class Item : ScriptableObject, IItem
     [SerializeField] private string _itemName;
     [SerializeField] private Sprite _sprite;
     [SerializeField] private int _itemID;
+    public string itemDescription;
 
     public string itemName { get => _itemName; set => _itemName = value; }
     public Sprite visual { get => _sprite; set => _sprite = value; }
