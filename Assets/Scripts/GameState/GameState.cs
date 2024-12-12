@@ -8,7 +8,7 @@ public class GameState : MonoBehaviour
     public static GameState Instance { get; private set; }
 
     private List<byte> boolsList = new List<byte>();
-    //0 = objects, 1 = time
+    //0 = dialogues, 1 = time, 2 = objectAlreadyPicked, 3 = CinematicsAlreadyDone
 
     private void Awake()
     {
@@ -20,57 +20,70 @@ public class GameState : MonoBehaviour
             {
                 boolsList.Add(0);
             }
+            DontDestroyOnLoad(gameObject);
         }
-    }
-
-    public void CheckList()
-    {
-        for(int i = 0; i < boolsList.Count;i++)
+        else
         {
-            print("index " + i);
-            print("byte " + boolsList[i]);
+            Destroy(gameObject);
         }
     }
 
+    /// <summary>
+    /// Get boolean
+    /// </summary>
+    /// <param name="boolsIndex"> index of the byte you want </param>
+    /// <param name="Id"> id of the item / the character ...</param>
+    /// <returns></returns>
     public bool GetBool(int boolsIndex, int Id)
     {
         return hasOption(boolsIndex, Id);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="val">state you want to set the boolean</param>
+    /// <param name="boolsIndex"> index of the boolean you want </param>
+    /// <param name="Id"> id of the item / the character ... </param>
     public void SetBool(bool val, int boolsIndex, int Id)
     {
         if (val)
         {
-            print("add");
             addOption(boolsIndex, Id);
             return;
         }
 
-        print("remove");
         removeOption(boolsIndex, Id);
+    }
+
+    public void TestSetBool(int id)
+    {
+        SetBool(true, 2, id);
+    }
+
+    public void DebugShowEveryBools()
+    {
+        for (int i = 0; i < boolsNumber; i++)
+        {
+            for(int j = 0; j < 8; j++)
+            {
+                print("Index : " + i + " ID : " + j + " Value : " + GetBool(i, j));
+            }
+        }
     }
 
     void addOption(int boolsIndex, int Id)
     {
-        print("params" + boolsIndex + " " + Id);
-        print("avant " + boolsList[boolsIndex]);
         boolsList[boolsIndex] |= (byte)(1 << Id);
-        print("après " + boolsList[boolsIndex]);
     }
 
     void removeOption(int boolsIndex, int Id)
     {
-        print("params" + boolsIndex + " " + Id);
-        print("avant " + boolsList[boolsIndex]);
         boolsList[boolsIndex] &= (byte)(~(1 << Id));
-        print("après " + boolsList[boolsIndex]);
     }
 
     bool hasOption(int boolsIndex, int Id)
     {
-        print("params" + boolsIndex + " " +  Id);
-        print("byte " + boolsList[boolsIndex]);
-        print("bit recherché " + ((1 << Id)));
         return (boolsList[boolsIndex] & (1 << Id)) > 0;
     }
 }

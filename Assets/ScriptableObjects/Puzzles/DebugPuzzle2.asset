@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c6a5056fe75e243956f620b662e339, type: 3}
+  m_Name: DebugPuzzle2
+  m_EditorClassIdentifier: 
+  description: Find the Key to the vault
+  background: {fileID: 3105513459563497018, guid: 07d4428e246f5fe48beccd766e39a4aa, type: 3}
+  type: 0
+  answerPosition: {x: 3.4760785, y: 1.1105883}
+  answerRange: 2
+  answerText: 3
+  timePenalty: 60

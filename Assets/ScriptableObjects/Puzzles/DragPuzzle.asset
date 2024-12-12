@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059e6f8f83b6ca04a98ec22f0deb4410, type: 3}
+  m_Name: DragPuzzle
+  m_EditorClassIdentifier: 
+  description: 
+  background: {fileID: -7246439415143383016, guid: 2f3b8593b112a0243a765914f44a156b, type: 3}
+  puzzlePrefab: {fileID: 7423918969143948849, guid: 25cf8e53065a377489f9e3dea6c25f9b, type: 3}
+  timePenalty: 60
+  reward: {fileID: 11400000, guid: 6d602798ffbfe7149ace94623bf12143, type: 2}
