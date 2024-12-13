@@ -57,7 +57,6 @@ public class Activator : MonoBehaviour
             }
         }
 
-        print(goodFlags + " =? " + totalFlagsActive);
         if (goodFlags == totalFlagsActive)
         {
             gameObject.SetActive(activate);
