@@ -1,19 +1,19 @@
-            using TMPro;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneStateManager : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown sceneDropDown;
-    private int sceneId;
+    private string sceneName;
 
-    public void ChangeSceneId() 
+    public void ChangeSceneName() 
     {
-        sceneId = sceneDropDown.value;
+        sceneName = sceneDropDown.options[sceneDropDown.value].text;
     }
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene(sceneId);
+        SceneManager.LoadScene(sceneName);
     }
 }
