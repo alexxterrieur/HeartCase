@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class StartDialogueInteraction : Interactions
 {
@@ -42,6 +43,6 @@ public class StartDialogueInteraction : Interactions
 
     public override bool InteractWithItem(Item itemGived)
     {
-        return true;
+        return false;
     }
 }
