@@ -31,7 +31,7 @@ public class DragPuzzle : Puzzle, IDragHandler, IBeginDragHandler, IEndDragHandl
     {
         GameObject draggedObject = eventData.pointerCurrentRaycast.gameObject;
         if (draggedObject == gameObject || draggedObject.GetComponent<TextMeshProUGUI>() != null) return;
-        ChangeCurrentObjectUI(draggedObject);
+        //ChangeCurrentObjectUI(draggedObject);
         currentObject = draggedObject;
         isDraging = true;
     }
@@ -49,7 +49,7 @@ public class DragPuzzle : Puzzle, IDragHandler, IBeginDragHandler, IEndDragHandl
         
         GameObject draggedObject = eventData.pointerCurrentRaycast.gameObject;
         if (draggedObject == gameObject || draggedObject.GetComponent<TextMeshProUGUI>() != null) return;
-        ChangeCurrentObjectUI(draggedObject);
+        //ChangeCurrentObjectUI(draggedObject);
         currentObject = draggedObject;
     }
 
