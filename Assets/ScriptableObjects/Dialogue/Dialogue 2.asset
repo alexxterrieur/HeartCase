@@ -16,9 +16,10 @@ MonoBehaviour:
   rightCharacterSprite: {fileID: 4025243291508468552, guid: 6126f23737536c64494737f40144017d, type: 3}
   characterName: Mohamed
   characterPostion: 2
-  frenchDialogueText: "Comment \xE7a mon reuf ?"
-  englishDialogueText: What do you mean my brother ?
+  frenchDialogueText: Dialogue2
+  englishDialogueText: Dialogue2
   dialogueConditions: 
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 6e1feac41b441c845b4c6ac70f369a41, type: 2}
+    conditions: []

@@ -16,8 +16,8 @@ MonoBehaviour:
   rightCharacterSprite: {fileID: 4025243291508468552, guid: 6126f23737536c64494737f40144017d, type: 3}
   characterName: Buzz
   characterPostion: 1
-  frenchDialogueText: C'est faux je suis pas rasicte!
-  englishDialogueText: That's not true, I'm not rasicte!
+  frenchDialogueText: Dialogue5
+  englishDialogueText: Dialogue5
   dialogueConditions: 
   possibleNextReply:
   - reply: Next

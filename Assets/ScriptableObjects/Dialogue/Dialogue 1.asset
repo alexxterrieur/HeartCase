@@ -16,9 +16,10 @@ MonoBehaviour:
   rightCharacterSprite: {fileID: 4025243291508468552, guid: 6126f23737536c64494737f40144017d, type: 3}
   characterName: Buzz
   characterPostion: 1
-  frenchDialogueText: Dehors
-  englishDialogueText: Go out
+  frenchDialogueText: Dialogue1
+  englishDialogueText: Dialogue1
   dialogueConditions: 
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 42f75a661ffb8c74e91a87b0b2b73b9e, type: 2}
+    conditions: []

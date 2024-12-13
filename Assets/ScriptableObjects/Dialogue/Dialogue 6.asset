@@ -16,8 +16,8 @@ MonoBehaviour:
   rightCharacterSprite: {fileID: 4025243291508468552, guid: 6126f23737536c64494737f40144017d, type: 3}
   characterName: Buzz
   characterPostion: 1
-  frenchDialogueText: C'est une singerie !
-  englishDialogueText: Its a singerie !
+  frenchDialogueText: Dialogue6
+  englishDialogueText: Dialogue6
   dialogueConditions: 
   possibleNextReply:
   - reply: Next
