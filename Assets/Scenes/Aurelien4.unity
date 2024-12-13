@@ -4742,6 +4742,10 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1759780421}
+    - target: {fileID: 1204496994644327002, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: cursorOnOver
+      value: 
+      objectReference: {fileID: 2800000, guid: 7847eeb6548ebeb4889a87d42502475f, type: 3}
     - target: {fileID: 1284124735551250345, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.04
@@ -4986,6 +4990,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1502625388161574415, guid: bf74ae379a22fc24fbd4a075189cdedc, type: 3}
+      propertyPath: itemGived
+      value: 
+      objectReference: {fileID: 11400000, guid: 1109dead8dd2e4048beeb56d0c2cd384, type: 2}
+    - target: {fileID: 1502625388161574415, guid: bf74ae379a22fc24fbd4a075189cdedc, type: 3}
       propertyPath: itemInspector
       value: 
       objectReference: {fileID: 900661229}
@@ -4993,6 +5001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CliquableObject Key
       objectReference: {fileID: 0}
+    - target: {fileID: 5098107566301998814, guid: bf74ae379a22fc24fbd4a075189cdedc, type: 3}
+      propertyPath: cursorOnOver
+      value: 
+      objectReference: {fileID: 2800000, guid: 7847eeb6548ebeb4889a87d42502475f, type: 3}
     - target: {fileID: 6579767168562228081, guid: bf74ae379a22fc24fbd4a075189cdedc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.08
