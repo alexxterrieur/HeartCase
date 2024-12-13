@@ -24,8 +24,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private LanguageManager languageManager;
 
-    private TextMeshProUGUI characterNameText;
-    private TextMeshProUGUI dialogueText;
+    [SerializeField] private TextMeshProUGUI characterNameText;
+    [SerializeField] private TextMeshProUGUI dialogueText;
 
     private Replic CurrentReplic;
 
@@ -37,13 +37,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private PuzzleHandler puzzleHandler;
     private ScriptableObject argument;
 
-
-
-    private void Start()
-    {
-        characterNameText = dialogueBox.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
-        dialogueText = dialogueBox.transform.GetChild(3).GetComponent<TextMeshProUGUI>();
-    }
 
     public void StartDialogue(Dialogue displayedDialogue)
     {

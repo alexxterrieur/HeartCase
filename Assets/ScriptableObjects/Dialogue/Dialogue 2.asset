@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
   m_Name: Dialogue 2
   m_EditorClassIdentifier: 
-  leftCharacterSprite: {fileID: -646372586542309989, guid: 7e1f460876554504aa63b30e404eba5b, type: 3}
-  rightCharacterSprite: {fileID: 4025243291508468552, guid: 6126f23737536c64494737f40144017d, type: 3}
-  characterName: Mohamed
+  leftCharacterSprite: {fileID: 21300000, guid: 4dd85e3fba21e8e4aa61abf2026bd460, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: 6490f50192854994a9b5830f131e52cb, type: 3}
+  characterName: Detective
   characterPostion: 2
   frenchDialogueText: "Comment \xE7a mon reuf ?"
   englishDialogueText: What do you mean my brother ?
@@ -22,3 +22,4 @@ MonoBehaviour:
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 6e1feac41b441c845b4c6ac70f369a41, type: 2}
+    conditions: []

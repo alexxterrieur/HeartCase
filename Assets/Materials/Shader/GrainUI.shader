@@ -1,14 +1,26 @@
-Shader "Custom/GrainEffect"
+Shader "UI/GrainEffect"
 {
     Properties
     {
         _MainTex ("Sprite Texture", 2D) = "white" {}
-        _GrainIntensity ("Grain Intensity", Range(0, 1)) = 0.5
+        _GrainIntensity ("Grain Intensity", Range(0, 0.1)) = 0.05
+        _SeedX ("Grain Seed X", Float) = 12.9898
+        _SeedY ("Grain Seed Y", Float) = 78.233
+        _Amplification ("Grain Amplification", Float) = 43758.5453
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
-        LOD 100
+        Tags
+        {
+            "Queue"="Overlay"
+            "IgnoreProjector"="True"
+            "RenderType"="Transparent"
+        }
+        Blend SrcAlpha OneMinusSrcAlpha
+        Cull Off
+        Lighting Off
+        ZWrite Off
+        ZTest Always
 
         Pass
         {
@@ -32,6 +44,9 @@ Shader "Custom/GrainEffect"
             sampler2D _MainTex;
             float4 _MainTex_ST;
             float _GrainIntensity;
+            float _SeedX;
+            float _SeedY;
+            float _Amplification;
 
             v2f vert (appdata_t v)
             {
@@ -45,7 +60,8 @@ Shader "Custom/GrainEffect"
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
 
-                float grain = frac(sin(dot(i.uv, float2(12.9898, 78.233))) * 43758.5453);
+                float grain = frac(sin(dot(i.uv, float2(_SeedX, _SeedY))) * _Amplification);
+
                 col.rgb += grain * _GrainIntensity;
 
                 return col;
