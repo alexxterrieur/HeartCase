@@ -1,14 +1,13 @@
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private Dialogues dialogue;
     [SerializeField] private List<GameObject> optionsButtons;
-    private Dialogues currentDisplayedDialogue;
+    private Dialogue currentDisplayedDialogue;
     private Replic currentDisplayedReplic;
 
     //Interlocutor
@@ -35,8 +34,10 @@ public class DialogueManager : MonoBehaviour
     //Puzzle to start
     [Header("Puzzle")]
     [SerializeField] private UIFadeInFadeOut fade;
-    [SerializeField] private PuzzleHandler puzzleToStart;
-    [FormerlySerializedAs("soPuzzle")] [SerializeField] private SO_PuzzleBase soPuzzleBase;
+    [SerializeField] private PuzzleHandler puzzleHandler;
+    private ScriptableObject argument;
+
+
 
     private void Start()
     {
@@ -44,15 +45,21 @@ public class DialogueManager : MonoBehaviour
         dialogueText = dialogueBox.transform.GetChild(3).GetComponent<TextMeshProUGUI>();
     }
 
-    public void StartDialogue()
+    public void StartDialogue(Dialogue displayedDialogue)
     {
-        if (dialogue == null)
+        print("start");
+        print("dialogue : " + displayedDialogue);
+        if (displayedDialogue == null)
         {
             Debug.LogWarning("Invalide dialogue -> check the dialogue");
             return;
         }
 
-        currentDisplayedDialogue = dialogue;
+
+        currentDisplayedDialogue = displayedDialogue;
+
+        argument = currentDisplayedDialogue.argument;
+
         currentDisplayedReplic = currentDisplayedDialogue.dialogue;
         print(currentDisplayedReplic);
         SetDialogueUIActive(true);
@@ -90,7 +97,6 @@ public class DialogueManager : MonoBehaviour
 
         for (int i = 0; i < replic.possibleNextReply.Count; i++)
         {
-            print(CanActivateThisReply(replic.possibleNextReply[i]));
             if (!CanActivateThisReply(replic.possibleNextReply[i])) { continue; }
 
             optionsButtons[i].SetActive(true);
@@ -157,7 +163,6 @@ public class DialogueManager : MonoBehaviour
 
     private void SetDialogueBox(Replic currentReplic)
     {
-        print(characterNameText);
         characterNameText.text = currentReplic.characterName;
 
         //Set Position
@@ -238,9 +243,27 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("FINI Start Action");
 
         SetDialogueUIActive(false);
-        if(soPuzzleBase != null)
+        if (argument != null)
         {
-            fade.CallFade(puzzleToStart.StartPuzzle, soPuzzleBase);
+            if (argument is Item)
+            {
+                fade.CallFade(AddItem, (Item)argument);
+            }
+            else if (argument is SO_PuzzleBase) 
+            {
+                fade.CallFade(StartPuzzle, (SO_PuzzleBase)argument);
+            }
         }
     }
+
+    private void AddItem(Item item)
+    {
+        Inventory.Instance.AddItem(item);
+        GameState.Instance.SetBool(true, 2, item.itemID);
+    }
+
+    private void StartPuzzle(SO_PuzzleBase puzzle)
+    {
+        puzzleHandler.StartPuzzle(puzzle);
+    } 
 }

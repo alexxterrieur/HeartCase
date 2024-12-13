@@ -10,7 +10,7 @@ public class TestInteraction : Interactions
 
     public override void Interact()
     {
-        dialogueManager.StartDialogue();
+        //dialogueManager.StartDialogue();
         print("interact");
     }
 
