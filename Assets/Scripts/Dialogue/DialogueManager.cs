@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -41,7 +40,6 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue displayedDialogue)
     {
         print("start");
-        print("dialogue : " + displayedDialogue);
         if (displayedDialogue == null)
         {
             Debug.LogWarning("Invalide dialogue -> check the dialogue");
@@ -54,7 +52,6 @@ public class DialogueManager : MonoBehaviour
         argument = currentDisplayedDialogue.argument;
 
         currentDisplayedReplic = currentDisplayedDialogue.dialogue;
-        print(currentDisplayedReplic);
         SetDialogueUIActive(true);
         InitializeInterlocutorsSprite();
         CurrentReplic = currentDisplayedDialogue.dialogue;
@@ -82,25 +79,33 @@ public class DialogueManager : MonoBehaviour
         if (replic.possibleNextReply.Count == 0)
         {
             optionsButtons[0].SetActive(true);
-            optionsButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = "Finish";
             return;
         }
 
         int currentOptionsActivate = 0;
 
+        if(replic.possibleNextReply.Count == 1 && replic.possibleNextReply[0].reply == "Next")
+        {
+            optionsButtons[0].SetActive(true);
+        }
+
         for (int i = 0; i < replic.possibleNextReply.Count; i++)
         {
-            if (!CanActivateThisReply(replic.possibleNextReply[i])) { continue; }
+            if(i == 0 && (replic.possibleNextReply[i].reply == "Next" || replic.possibleNextReply[i].reply == "Finish"))
+            {
+                optionsButtons[0].SetActive(true);
+                continue;
+            }
 
-            optionsButtons[i].SetActive(true);
-            optionsButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = replic.possibleNextReply[i].reply;
+            if (!CanActivateThisReply(replic.possibleNextReply[i])) { continue; }
+            optionsButtons[i + 1].SetActive(true);
+            optionsButtons[i + 1].GetComponentInChildren<TextMeshProUGUI>().text = replic.possibleNextReply[i].reply;
             currentOptionsActivate++;
         }
 
         if (currentOptionsActivate > 0) { return; }
 
         optionsButtons[0].SetActive(true);
-        optionsButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = "Finish";
         return;
     }
 
@@ -148,7 +153,7 @@ public class DialogueManager : MonoBehaviour
             CallAction();
             return;
         }
-        print(currentDisplayedReplic);
+
         SetDialogueBox(currentDisplayedReplic);
         SetDialogueBoxLanguage(currentDisplayedReplic);
         ActivateValidesOptions(currentDisplayedReplic);
