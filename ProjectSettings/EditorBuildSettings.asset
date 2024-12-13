@@ -11,9 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiseEnCommun2.unity
     guid: f9bc3dde2b4640247bc8bf83d3790ff9
-  - enabled: 1c7033b596424aaf02d9b4bcf21d9
+  - enabled: 1
     path: Assets/Electro-Menu-Package/Scene/TemplateGameMenu.unity
     guid: b3b11ec91ad4e9645a5e2bdc3445faf2
+  - enabled: 1
+    path: Assets/Scenes/Baptiste3.unity
+    guid: ea2dc0ffba6637a46b83c6a4be87ae5c
+  - enabled: 1
+    path: Assets/Scenes/TestChangeScene.unity
+    guid: b218c7033b596424aaf02d9b4bcf21d9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
