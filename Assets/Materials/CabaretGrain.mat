@@ -46,7 +46,7 @@ Material:
     m_Ints: []
     m_Floats:
     - Amplification: 43829
-    - GrainIntensity: 0.032
+    - GrainIntensity: 0.031
     - GrainSize: 1441.06
     - SeedX: 209
     - SeedY: 52.8

@@ -1513,6 +1513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JournalContainer
       objectReference: {fileID: 0}
+    - target: {fileID: 277471428691521338, guid: 8ee55523ef86f764da7f52a2132fffe6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -240
+      objectReference: {fileID: 0}
     - target: {fileID: 7916136790015670229, guid: 8ee55523ef86f764da7f52a2132fffe6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1948,7 +1952,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 400, y: 85}
-  m_SizeDelta: {x: 450, y: 1100}
+  m_SizeDelta: {x: 500, y: 1100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &801276294
 MonoBehaviour:
@@ -1970,7 +1974,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6490f50192854994a9b5830f131e52cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2894,7 +2898,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -400, y: 85}
-  m_SizeDelta: {x: 450, y: 1100}
+  m_SizeDelta: {x: 500, y: 1100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1268911694
 MonoBehaviour:
@@ -2916,7 +2920,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4dd85e3fba21e8e4aa61abf2026bd460, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4906,11 +4910,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4212453776155477495, guid: b33d3c9604ac7fd4f86bf9dc2ae7edee, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 828
+      value: 813
       objectReference: {fileID: 0}
     - target: {fileID: 4212453776155477495, guid: b33d3c9604ac7fd4f86bf9dc2ae7edee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 387
+      value: 370
       objectReference: {fileID: 0}
     - target: {fileID: 4734609615156403989, guid: b33d3c9604ac7fd4f86bf9dc2ae7edee, type: 3}
       propertyPath: raycaster
@@ -4922,11 +4926,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6120830633847099973, guid: b33d3c9604ac7fd4f86bf9dc2ae7edee, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 878
+      value: 863
       objectReference: {fileID: 0}
     - target: {fileID: 6120830633847099973, guid: b33d3c9604ac7fd4f86bf9dc2ae7edee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 278.00003
+      value: 261.00006
       objectReference: {fileID: 0}
     - target: {fileID: 7744459410597133569, guid: b33d3c9604ac7fd4f86bf9dc2ae7edee, type: 3}
       propertyPath: m_Horizontal
@@ -4991,19 +4995,19 @@ PrefabInstance:
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].leftInterlocutorSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4dd85e3fba21e8e4aa61abf2026bd460, type: 3}
+      objectReference: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[1].leftInterlocutorSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4dd85e3fba21e8e4aa61abf2026bd460, type: 3}
+      objectReference: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].rightInterlocutorSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6490f50192854994a9b5830f131e52cb, type: 3}
+      objectReference: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[1].rightInterlocutorSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6490f50192854994a9b5830f131e52cb, type: 3}
+      objectReference: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
     - target: {fileID: 1204496994644327002, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: cursorOnOver
       value: 
