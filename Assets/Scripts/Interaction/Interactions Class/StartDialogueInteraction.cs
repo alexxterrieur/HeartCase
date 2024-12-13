@@ -42,6 +42,6 @@ public class StartDialogueInteraction : Interactions
 
     public override bool InteractWithItem(Item itemGived)
     {
-        return false;
+        return true;
     }
 }

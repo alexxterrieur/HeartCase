@@ -146,7 +146,6 @@ public class InventoryInteractions : MonoBehaviour
     private void InteractWithItem()
     {
         RaycastHit2D hit = Physics2D.Raycast(GetMouseWolrdPosition(), Vector2.zero);
-
         if (!hit) { return; }
 
         ItemSlot itemSlot = dragingObjectTransform.parent.GetComponent<ItemSlot>();
@@ -155,6 +154,5 @@ public class InventoryInteractions : MonoBehaviour
             itemSlot.ResetItem();
             return;
         }
-        //TODO feedback using wrong item
     }
 }

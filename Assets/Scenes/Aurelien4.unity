@@ -1744,7 +1744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82206fb937084804baf4a20bf556d0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemNeeded: {fileID: 0}
+  itemNeeded: {fileID: 11400000, guid: 77765e1028180e74ea075f8ec51c7e0f, type: 2}
   dialogues:
   - rightInterlocutorSprite: {fileID: -646372586542309989, guid: 7e1f460876554504aa63b30e404eba5b, type: 3}
     leftInterlocutorSprite: {fileID: 4025243291508468552, guid: 6126f23737536c64494737f40144017d, type: 3}
