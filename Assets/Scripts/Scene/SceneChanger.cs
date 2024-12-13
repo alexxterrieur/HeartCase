@@ -9,7 +9,7 @@ public class SceneStateManager : MonoBehaviour
 
     public void ChangeSceneName() 
     {
-        sceneName = sceneDropDown.name;
+        sceneName = sceneDropDown.options[sceneDropDown.value].text;
     }
 
     public void ChangeScene()
