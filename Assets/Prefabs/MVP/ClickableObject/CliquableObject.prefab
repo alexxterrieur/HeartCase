@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f17d9cc5999d5f34eac1f6487d639962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorOnOver: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
+  cursorOnOver: {fileID: 2800000, guid: 7847eeb6548ebeb4889a87d42502475f, type: 3}
 --- !u!114 &6579341523484084577
 MonoBehaviour:
   m_ObjectHideFlags: 0

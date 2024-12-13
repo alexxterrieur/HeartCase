@@ -14,10 +14,16 @@ public class ItemSlotView
     {
         this.itemImage = itemImage;
         this.data = data;
+        Update();
     }
 
     public void Update()
     {
+        itemImage.color = new UnityEngine.Color(255, 255, 255, 1);
         itemImage.sprite = data.GetItemContained().visual;
+        if (data.GetItemContained() == data.GetDefaultItem())
+        {
+            itemImage.color = new UnityEngine.Color(255, 255, 255, 0);
+        }
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 public class MouseDetection : MonoBehaviour
 {
     [SerializeField] private Texture2D cursorOnOver;
-    private CursorMode cursorMode = CursorMode.Auto;
     private DetectClick interaction;
 
     private void Awake()
@@ -15,13 +14,13 @@ public class MouseDetection : MonoBehaviour
     public void OnMouseOver()
     {
         if (interaction.IsPointerOverUI()) return;
-        Cursor.SetCursor(cursorOnOver, Vector2.zero, cursorMode);
+        Cursor.SetCursor(cursorOnOver, new Vector2(cursorOnOver.width / 2, 0), CursorMode.ForceSoftware);
         interaction.SetIsOnObject(true);
     }
 
     public void OnMouseExit()
     {
-        Cursor.SetCursor(null, Vector2.zero, cursorMode);
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         interaction.SetIsOnObject(false);
     }
 }
