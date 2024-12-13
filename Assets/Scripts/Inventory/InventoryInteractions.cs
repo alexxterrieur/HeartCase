@@ -119,6 +119,8 @@ public class InventoryInteractions : MonoBehaviour
         ItemSlot firstContainer = dragingObjectTransform.parent.GetComponent<ItemSlot>();
         ItemSlot secondContainer = results[0].gameObject.transform.parent.GetComponent<ItemSlot>();
 
+        if(firstContainer == secondContainer) { return; }
+
         //swap with an empty slot
         if (!(secondContainer.HasItem() && secondContainer.GetItem().itemName != firstContainer.GetItem().itemName))
         {
