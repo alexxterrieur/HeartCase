@@ -15,7 +15,7 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: -646372586542309989, guid: 7e1f460876554504aa63b30e404eba5b, type: 3}
   rightCharacterSprite: {fileID: 4025243291508468552, guid: 6126f23737536c64494737f40144017d, type: 3}
   characterName: Buzz
-  characterPostion: 1
+  characterPostion: 2
   frenchDialogueText: Dialogue1
   englishDialogueText: Dialogue1
   dialogueConditions: 
