@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class SO_PuzzleBase : ScriptableObject
 {
@@ -6,5 +8,5 @@ public class SO_PuzzleBase : ScriptableObject
     public Sprite background;
     public GameObject puzzlePrefab;
     public float timePenalty = 60f;
-    public SO_Reward reward;
+    public List<SO_Reward> rewards;
 }

@@ -52,11 +52,11 @@ public abstract class Puzzle : MonoBehaviour, IPointerClickHandler
 
             if(!rewardGiver) 
             {
-                print("RewardGiver is null, no reward will be gived");
+                print("RewardGiver is null, no rewards will be gived");
             }
             else
             {
-                rewardGiver.GiveReward(puzzle.reward);
+                rewardGiver.GiveReward(puzzle.rewards);
                 onPuzzleSolved();
             }
             
