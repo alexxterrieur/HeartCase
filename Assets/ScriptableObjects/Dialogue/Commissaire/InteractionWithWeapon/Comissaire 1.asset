@@ -10,16 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
-  m_Name: BarmanInfos 3
+  m_Name: Comissaire 1
   m_EditorClassIdentifier: 
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
-  rightCharacterSprite: {fileID: 21300000, guid: 447310a9c2ad8fb4496acae30193d507, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
   characterName: Detective
   characterPostion: 2
-  frenchDialogueText: "Seule, ou accompagn\xE9e ?"
-  englishDialogueText: Alone or accompanied?
+  frenchDialogueText: "Vous cherchez l\u2019arme ? C\u2019est elle. La lame correspond
+    exactement \xE0 la blessure. La victime n\u2019a m\xEAme pas eu une chance de
+    se d\xE9fendre. Un coup propre."
+  englishDialogueText: Looking for the weapon? This is the weapon. The blade matches
+    the wound exactly. The victim didn't even have a chance to defend himself. A
+    clean hit.
   dialogueConditions: 
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 1f51b1ec67c6a4a42a067a67a2c07731, type: 2}
+    nextReplic: {fileID: 11400000, guid: dfa1f1ffb77354942ad6d9112c1bc7d1, type: 2}
     conditions: []

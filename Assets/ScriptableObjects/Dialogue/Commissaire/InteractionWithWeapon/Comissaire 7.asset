@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
-  m_Name: BarmanInfos 3
+  m_Name: Comissaire 7
   m_EditorClassIdentifier: 
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
-  rightCharacterSprite: {fileID: 21300000, guid: 447310a9c2ad8fb4496acae30193d507, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
   characterName: Detective
   characterPostion: 2
-  frenchDialogueText: "Seule, ou accompagn\xE9e ?"
-  englishDialogueText: Alone or accompanied?
+  frenchDialogueText: "Un verre pour d\xE9lier la Baronne\u2026 Pourquoi est-ce que
+    j\u2019ai l\u2019impression que \xE7a va me co\xFBter plus cher qu\u2019une tourn\xE9e
+    ?"
+  englishDialogueText: A drink to loosen the Baroness up... Why do I have the feeling
+    that this is going to cost me more than a round of drinks?
   dialogueConditions: 
   possibleNextReply:
-  - reply: Next
-    nextReplic: {fileID: 11400000, guid: 1f51b1ec67c6a4a42a067a67a2c07731, type: 2}
+  - reply: Finish
+    nextReplic: {fileID: 0}
     conditions: []

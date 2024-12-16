@@ -22,5 +22,5 @@ MonoBehaviour:
   dialogueConditions: 
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 34fb069851a6e924cbf79f715189c2cf, type: 2}
+    nextReplic: {fileID: 0}
     conditions: []
