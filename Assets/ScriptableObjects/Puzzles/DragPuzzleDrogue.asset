@@ -20,5 +20,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bf9a0099f1d6a1d419bc0dca45181a59, type: 2}
   - {fileID: 11400000, guid: f41a6d51ea2f3d1448219de33a07dfa4, type: 2}
   objectsSprites:
-  - {fileID: 21300000, guid: e9b5fcf2e4ef0ac4d8ebe81d78970db5, type: 3}
+  - {fileID: 21300000, guid: 6303d5bffa6be344287b02350e4c7b5d, type: 3}
   - {fileID: 21300000, guid: 8d7b3fc7490b3a343a59a4f1f2e42fe7, type: 3}

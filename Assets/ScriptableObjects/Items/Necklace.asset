@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Necklace
   m_EditorClassIdentifier: 
   _itemName: Necklace
-  _sprite: {fileID: 21300000, guid: 6c870683096cdfc4e81aabef22673be8, type: 3}
+  _sprite: {fileID: 21300000, guid: be2027ae7b287b649b747a1bf588a577, type: 3}
   _itemID: 2
+  itemDescription: 

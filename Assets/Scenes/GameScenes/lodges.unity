@@ -3155,7 +3155,7 @@ PrefabInstance:
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].puzzle
       value: 
-      objectReference: {fileID: 11400000, guid: 9b3f4df83da3b97488288c5591e9c492, type: 2}
+      objectReference: {fileID: 11400000, guid: 6ad6a2dde0940674badc57a62ec86d97, type: 2}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].dialogue
       value: 

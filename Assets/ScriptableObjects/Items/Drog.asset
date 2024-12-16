@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Drog
   m_EditorClassIdentifier: 
   _itemName: Drog
-  _sprite: {fileID: 21300000, guid: e9b5fcf2e4ef0ac4d8ebe81d78970db5, type: 3}
+  _sprite: {fileID: 21300000, guid: 6303d5bffa6be344287b02350e4c7b5d, type: 3}
   _itemID: 4
+  itemDescription: 
