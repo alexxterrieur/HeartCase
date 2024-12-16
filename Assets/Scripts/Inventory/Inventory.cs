@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class Inventory : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class Inventory : MonoBehaviour
         data = new(slot, slotsPanel);
         data.Initialize(numberOfSlots);
         transform.GetChild(0).gameObject.SetActive(false);
+
+        InventorySaver.Instance.RestorInventory();
     }
 
     /// <summary>
@@ -46,7 +49,20 @@ public class Inventory : MonoBehaviour
         if (itemSlot != null)
         {
             itemSlot.AddItem(item);
+            InventorySaver.Instance.AddSavedItem(item);
         }
+    }
+
+    public void RestorItem(Item item)
+    {
+        ItemSlot itemSlot = data.GetItemContainerList()
+            .Where(slot => !slot.HasItem())
+            .FirstOrDefault();
+        if (itemSlot != null)
+        {
+            itemSlot.AddItem(item);
+        }
+
     }
 
     /// <summary>
@@ -74,6 +90,14 @@ public class Inventory : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public void UpdateVisuals()
+    {
+        foreach(ItemSlot slot in data.GetItemContainerList())
+        {
+            slot.UpdateVisual();
+        }
     }
 
     public void RemoveItemFromSlot(ItemSlot slot)

@@ -35,6 +35,11 @@ public class ItemSlot : MonoBehaviour
         }
     }
 
+    public void UpdateVisual()
+    {
+        view.Update();
+    }
+
     public bool HasItem()
     {
         return data.GetItemContained() != data.GetDefaultItem();
