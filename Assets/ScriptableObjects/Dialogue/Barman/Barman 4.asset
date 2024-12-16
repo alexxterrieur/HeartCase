@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: Barman 4
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: 447310a9c2ad8fb4496acae30193d507, type: 3}
+  characterName: Barman
+  characterPostion: 1
+  frenchDialogueText: "D\xE9sol\xE9, \xE7a me dit rien comme \xE7a. Mais si vous
+    avez une photo, \xE7a m\u2019aiderait \xE0 la reconna\xEEtre."
+  englishDialogueText: Sorry, it doesn't ring a bell. But if you have a picture,
+    it would help me recognize it.
+  dialogueConditions: 
+  possibleNextReply:
+  - reply: I don't have one
+    nextReplic: {fileID: 11400000, guid: a8dcd6a605cba3847af694137754c32a, type: 2}
+    conditions: []
+  - reply: Here it is
+    nextReplic: {fileID: 11400000, guid: 439a485cd4056e74484eb4cb66c36e19, type: 2}
+    conditions:
+    - boolListIndex: 2
+      boolId: 8
