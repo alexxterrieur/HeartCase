@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: QuestionLocation 1
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: ba05774c579fe224aa3cffd6af0b9dd4, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+  characterName: Midas Dawson
+  characterPostion: 2
+  frenchDialogueText: "\xC0 l\u2019autre bout de la ville. J\u2019ai re\xE7u une
+    amende pour exc\xE8s de vitesse ce soir-l\xE0. Vous pouvez v\xE9rifier aupr\xE8s
+    des autorit\xE9s."
+  englishDialogueText: Across town. I got a speeding ticket that night. You can check
+    with the authorities.
+  dialogueConditions: 
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 24a5777cf088b1c4b97cca19e8109693, type: 2}
+    conditions: []
