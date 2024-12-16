@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -6,14 +7,45 @@ using UnityEngine.UI;
 public class DragPuzzle : Puzzle, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     [Header("Puzzle Elements")]
-    [SerializeField] private GameObject objectifObject;
+    [SerializeField] private List<GameObject> objectifObjects = new();
+    [SerializeField] private List<GameObject> objectifObjectsFound = new();
     
     private GameObject currentObject;
-    private bool isDraging = false;
+    private bool isDraging;
+
+    protected override void Start()
+    {
+        base.Start();
+        objectifObjectsFound = objectifObjects;
+    }
+
+    protected override void InitPuzzleUI()
+    {
+        base.InitPuzzleUI();
+        if (puzzle is not SO_DragPuzzle dragPuzzle) return;
+        for (int i = 0; i < objectifObjects.Count; i++)
+        {
+            if (i >= objectifObjects.Count || i >= dragPuzzle.objectsSprites.Count) continue;
+            objectifObjects[i].GetComponent<Image>().sprite = dragPuzzle.objectsSprites[i];
+            objectifObjects[i].GetComponent<Image>().SetNativeSize();
+        }
+    }
     
+    public override void TryToSolve()
+    {
+        if (!CheckAnswer()) return;
+        if(rewardGiver)
+        {
+            rewardGiver.GiveReward(puzzle.rewards);
+            onPuzzleSolved();
+        }
+            
+        Destroy(gameObject);
+    }
+
     protected override bool CheckAnswer()
     {
-        return currentObject == objectifObject;
+        return objectifObjectsFound.Count == 0;
     }
 
     protected override bool IsAnswerValid()
@@ -31,7 +63,15 @@ public class DragPuzzle : Puzzle, IDragHandler, IBeginDragHandler, IEndDragHandl
     {
         GameObject draggedObject = eventData.pointerCurrentRaycast.gameObject;
         if (draggedObject == gameObject || draggedObject.GetComponent<TextMeshProUGUI>() != null) return;
-        //ChangeCurrentObjectUI(draggedObject);
+
+        if (objectifObjectsFound.Contains(draggedObject))
+        {
+            objectifObjectsFound.Remove(draggedObject);
+            draggedObject.SetActive(false);
+            TryToSolve();
+            return;
+        }
+        
         currentObject = draggedObject;
         isDraging = true;
     }
@@ -49,20 +89,15 @@ public class DragPuzzle : Puzzle, IDragHandler, IBeginDragHandler, IEndDragHandl
         
         GameObject draggedObject = eventData.pointerCurrentRaycast.gameObject;
         if (draggedObject == gameObject || draggedObject.GetComponent<TextMeshProUGUI>() != null) return;
-        //ChangeCurrentObjectUI(draggedObject);
-        currentObject = draggedObject;
-    }
-
-    private void ChangeCurrentObjectUI(GameObject newObject)
-    {
-        if (currentObject != null && currentObject.TryGetComponent(out Image image))
+        
+        if (objectifObjectsFound.Contains(draggedObject))
         {
-            Color color = image.color;
-            image.color = new Color(color.r, color.g, color.b, 1f);
+            objectifObjectsFound.Remove(draggedObject);
+            draggedObject.SetActive(false);
+            TryToSolve();
+            return;
         }
-
-        if (newObject == null || !newObject.TryGetComponent(out Image newImage)) return;
-        Color newColor = newImage.color;
-        newImage.color = new Color(newColor.r, newColor.g, newColor.b, 0.5f);
+        
+        currentObject = draggedObject;
     }
 }

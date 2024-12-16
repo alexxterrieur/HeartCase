@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RewardGiver : MonoBehaviour
@@ -8,7 +9,7 @@ public class RewardGiver : MonoBehaviour
     {
         if (rewardSO == null)
         {
-            throw new System.Exception("The reward Scriptable object is null, no reward can be gived");
+            throw new System.Exception("The rewards Scriptable object is null, no rewards can be gived");
         }
 
         if (rewardSO.reward)
@@ -25,6 +26,14 @@ public class RewardGiver : MonoBehaviour
                 return;
             }
             GameState.Instance.SetBool(true, rewardSO.boolIndex, rewardSO.boolId);
+        }
+    }
+
+    public void GiveReward(List<SO_Reward> _rewards)
+    {
+        foreach (SO_Reward reward in _rewards)
+        {
+            GiveReward(reward);
         }
     }
 }

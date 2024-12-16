@@ -10,10 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 059e6f8f83b6ca04a98ec22f0deb4410, type: 3}
-  m_Name: DragPuzzle
+  m_Name: DragPuzzleMatchs
   m_EditorClassIdentifier: 
   description: 
   background: {fileID: 21300000, guid: a744b6d2914e9c340adf8de072a9aeb1, type: 3}
   puzzlePrefab: {fileID: 7423918969143948849, guid: 25cf8e53065a377489f9e3dea6c25f9b, type: 3}
   timePenalty: 60
-  reward: {fileID: 11400000, guid: 6d602798ffbfe7149ace94623bf12143, type: 2}
+  rewards:
+  - {fileID: 11400000, guid: 95f042c31f69b854ca4afde8dd6d7937, type: 2}
+  - {fileID: 11400000, guid: 001f03bd9e510744d85ed07ccb88ed35, type: 2}
+  objectsSprites:
+  - {fileID: 21300000, guid: a07125e7be2fab441a229d42026b4501, type: 3}
+  - {fileID: 21300000, guid: 963ea2928c577c6429d4f92871468b43, type: 3}

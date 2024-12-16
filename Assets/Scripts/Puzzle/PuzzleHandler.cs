@@ -83,11 +83,11 @@ public class PuzzleHandler : MonoBehaviour
 
             if(!rewardGiver) 
             {
-                print("RewardGiver is null, no reward will be gived");
+                print("RewardGiver is null, no rewards will be gived");
             }
             else
             {
-                rewardGiver.GiveReward(reward);
+                rewardGiver.GiveReward(rewards);
                 sceneActivatorManager.CheckActivateAndDesactivate();
             }
 
