@@ -28,3 +28,6 @@ MonoBehaviour:
   - reply: What is your relationship with the victim?
     nextReplic: {fileID: 11400000, guid: f4adca42210568e4290087c7d5aa28c4, type: 2}
     conditions: []
+  - reply: "O\xF9 \xE9tiez-vous au moment du meurtre ?"
+    nextReplic: {fileID: 11400000, guid: 3d52eb28964c460469c40a471140e800, type: 2}
+    conditions: []

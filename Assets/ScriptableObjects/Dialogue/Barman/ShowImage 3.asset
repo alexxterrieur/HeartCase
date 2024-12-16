@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: ShowImage 3
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: 447310a9c2ad8fb4496acae30193d507, type: 3}
+  characterName: Barman
+  characterPostion: 1
+  frenchDialogueText: "La plupart du temps seule, mais pas toujours. Elle \xE9tait
+    discr\xE8te, sauf quand elle avait un ou deux verres dans le nez\u2026 L\xE0,
+    elle parlait un peu plus. Mais jamais trop. Je me souviens d\u2019un type qui
+    la rejoignait parfois. Parce qu\u2019ils \xE9taient\u2026 proches."
+  englishDialogueText: Mostly alone, but not always. She was discreet, except when
+    she had a drink or two up her sleeve... Then she talked a bit more. But never
+    too much. I remember a guy who sometimes joined her. Because they were... close.
+  dialogueConditions: 
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: aa43a18128614a94cb8ccafe922d3b27, type: 2}
+    conditions: []
