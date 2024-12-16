@@ -23,6 +23,9 @@ MonoBehaviour:
     must have something. Without that, there's nothing I can do for you, old chap.
   dialogueConditions: 
   possibleNextReply:
-  - reply: Finish
+  - reply: I don't have it
     nextReplic: {fileID: 0}
+    conditions: []
+  - reply: Here it is
+    nextReplic: {fileID: 11400000, guid: 69a8ec0856d009e46ac5a7d2951272a6, type: 2}
     conditions: []
