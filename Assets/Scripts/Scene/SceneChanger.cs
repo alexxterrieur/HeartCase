@@ -16,4 +16,9 @@ public class SceneStateManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void AddOption(string option, bool displayPopUp = true, bool gameStateCheck = true)
+    {
+        sceneDropDown.GetComponent<DropDownController>().AddOption(option, displayPopUp, gameStateCheck);
+    }
 }
