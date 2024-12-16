@@ -24,7 +24,6 @@ public class MenuEventsManager : MonoBehaviour
     }
     private void Start()
     {
-        //Screen.SetResolution(1920, 1080, true);
         Time.timeScale = 1.0f;
         GetResolution();
         
@@ -65,6 +64,11 @@ public class MenuEventsManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(name);
+        if (name == "TemplateMainMenu")
+        {
+            Destroy(GameState.Instance.gameObject);
+        }
+        
         if (AudioManager.Instance.IsSoundInList(AudioManager.Instance._musicSounds, name))
         {
             AudioManager.Instance.PlayMusic(name);

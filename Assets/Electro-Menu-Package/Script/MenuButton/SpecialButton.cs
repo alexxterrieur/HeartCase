@@ -99,13 +99,12 @@ public class SpecialButton: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
         for (int t = 0; t < _textList.Length; t++)
         {
-            if (_textList[t] != null)
-                continue;
+            if (_textList[t] == null)
+                return;
 
             switch (interactionType)
             {
                 case "Enter":
-                    Debug.Log("Enter");
                     ApplyTextModification(_textList[t]._text, _textList[t]._enterColor);
                     break;
                 case "Exit":
@@ -121,7 +120,6 @@ public class SpecialButton: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private void ApplyTextModification(TMP_Text text, List<Color> colors)
     {
         Multicolor multicolorText = text.GetComponent<Multicolor>();
-        Debug.Log("Enter 2");
 
         if (colors != null && colors.Count > 0)
         {

@@ -171,7 +171,7 @@ RectTransform:
   m_GameObject: {fileID: 494429986603467001}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7818802392279496024}
@@ -207,6 +207,18 @@ MonoBehaviour:
   _onClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 8558858990562067844}
+        m_TargetAssemblyTypeName: MenuEventsManager, Assembly-CSharp
+        m_MethodName: UnPauseScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 8558858990562067844}
         m_TargetAssemblyTypeName: MenuEventsManager, Assembly-CSharp
         m_MethodName: ChangeMenuSection
@@ -355,7 +367,7 @@ RectTransform:
   m_GameObject: {fileID: 1078045838475532458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7577896838973364006}
@@ -1880,7 +1892,7 @@ RectTransform:
   m_GameObject: {fileID: 2886553827156884919}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6152852784594125046}
@@ -2308,7 +2320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 15, y: -15}
+  m_AnchoredPosition: {x: -12.5, y: -15}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6466123764469679586
@@ -2602,7 +2614,7 @@ RectTransform:
   m_GameObject: {fileID: 3754692559426400040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.75}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8211392611841219393}
@@ -2971,7 +2983,7 @@ RectTransform:
   m_GameObject: {fileID: 3926271409150753227}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1878194070352056663}
@@ -4240,7 +4252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0, y: 175.0001}
+  m_AnchoredPosition: {x: -0, y: 175.02515}
   m_SizeDelta: {x: 7.5, y: 360}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &6145338280670486460
@@ -4455,6 +4467,30 @@ MonoBehaviour:
   _onClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 8558858990562067844}
+        m_TargetAssemblyTypeName: MenuEventsManager, Assembly-CSharp
+        m_MethodName: UnPauseScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: TemplateMainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8558858990562067844}
+        m_TargetAssemblyTypeName: MenuEventsManager, Assembly-CSharp
+        m_MethodName: PlayScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: TemplateMainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 8558858990562067844}
         m_TargetAssemblyTypeName: MenuEventsManager, Assembly-CSharp
         m_MethodName: PlayScene
@@ -5031,8 +5067,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1641638233458578970}
   m_HandleRect: {fileID: 4217927636413612799}
   m_Direction: 2
-  m_Value: -0.0000007847377
-  m_Size: 0.5138889
+  m_Value: -0.0001436942
+  m_Size: 0.4358975
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5076,7 +5112,7 @@ RectTransform:
   m_GameObject: {fileID: 7630860142391818308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2106766099848222667}
@@ -5519,7 +5555,7 @@ RectTransform:
   m_Father: {fileID: 3971626156961502220}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.5138889}
+  m_AnchorMax: {x: 1, y: 0.4358975}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5663,14 +5699,14 @@ RectTransform:
   m_GameObject: {fileID: 8697001135817396350}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8698108610596879844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5, y: 280}
+  m_AnchoredPosition: {x: 0.5, y: 300}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &784855852249791615
@@ -6144,7 +6180,7 @@ RectTransform:
   m_GameObject: {fileID: 9094067017292430977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 911209858197762003}
