@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
-  m_Name: StartCabaret
+  m_Name: QuestionArgue 2
   m_EditorClassIdentifier: 
-  leftCharacterSprite: {fileID: 21300000, guid: ba05774c579fe224aa3cffd6af0b9dd4, type: 3}
+  leftCharacterSprite: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
   characterName: Detective
   characterPostion: 1
-  frenchDialogueText: "Monsieur Dawson, je suis le d\xE9tective charg\xE9 de l\u2019enqu\xEAte
-    sur le meurtre de Iris Ristovski"
-  englishDialogueText: Mr Dawson, I'm the detective in charge of the Iris Ristovski
-    murder investigation.
+  frenchDialogueText: "Rien de plus ? Vous ne pensez pas que cette dispute pourrait
+    \xEAtre li\xE9e \xE0 sa mort ?"
+  englishDialogueText: Nothing more? You don't think this argument could be linked
+    to his death?
   dialogueConditions: 
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 04be9afffdb504144b8fe5da59da1f2e, type: 2}
+    nextReplic: {fileID: 11400000, guid: b15efbd67dba61b4a84929e4e08e607f, type: 2}
     conditions: []
