@@ -10,7 +10,7 @@ public class GameState : MonoBehaviour
 
     public static GameState Instance { get; private set; }
 
-    private List<byte> boolsList = new List<byte>();
+    private List<int> boolsList = new List<int>();
     //0 = dialogues, 1 = SceneUnlocked, 2 = objectAlreadyPicked, 3 = CinematicsAlreadyDone
 
     private void Awake()
@@ -81,12 +81,12 @@ public class GameState : MonoBehaviour
 
     void addOption(int boolsIndex, int Id)
     {
-        boolsList[boolsIndex] |= (byte)(1 << Id);
+        boolsList[boolsIndex] |= (1 << Id);
     }
 
     void removeOption(int boolsIndex, int Id)
     {
-        boolsList[boolsIndex] &= (byte)(~(1 << Id));
+        boolsList[boolsIndex] &= (~(1 << Id));
     }
 
     bool hasOption(int boolsIndex, int Id)

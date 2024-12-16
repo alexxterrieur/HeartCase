@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: Comissaire 5
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
+  characterName: Commissioner
+  characterPostion: 1
+  frenchDialogueText: "Et ne me faites pas regretter de vous filer un coup de main,
+    Ramiro. Je garde un \u0153il sur vous."
+  englishDialogueText: And don't make me regret giving you a hand, Ramiro. I'll be
+    keeping an eye on you.
+  dialogueConditions: 
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 9eb151df980d3734ca42ae48fbb4a0bc, type: 2}
+    conditions: []
