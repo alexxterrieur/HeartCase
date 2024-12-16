@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: Ezra Last 2
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: 21f57d5fc8802174b9e39d61611398f7, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+  characterName: Ezra
+  characterPostion: 2
+  frenchDialogueText: "[H\xE9site, puis r\xE9pond s\xE8chement] Chez moi. Tout seul."
+  englishDialogueText: '[Hesitates, then answers curtly] At home. On my own.'
+  dialogueConditions: 
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: d3164b9f52df8b741a9a0f9768579eef, type: 2}
+    conditions: []
