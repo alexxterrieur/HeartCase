@@ -11,6 +11,8 @@ using UnityEngine.UI;
 [DisallowMultipleComponent]
 public class DropDownController : MonoBehaviour, IPointerClickHandler
 {
+    [SerializeField] private PopupManager popupManager;
+    
     [FormerlySerializedAs("indexesToDisable")] public List<string> namesToDisable = new List<string>();
 
     [SerializeField] List<string> scenesNames = new List<string>();
@@ -78,7 +80,7 @@ public class DropDownController : MonoBehaviour, IPointerClickHandler
         if (displayPopUp)
         {
             //Add POPUP Here //
-            
+            popupManager.DisplayPopUp(option);
         }
     }
     
