@@ -9,7 +9,7 @@ public class Dialogue
     
     public Replic dialogue;
 
-    public List<ConditionForDialogue> conditions = new();
+    public List<Condition> conditions = new();
 
     public SO_PuzzleBase puzzle;
     public SO_Reward reward;

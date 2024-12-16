@@ -25,7 +25,7 @@ public class PuzzleHandler : MonoBehaviour
 
     private void PuzzleSuccess()
     {
-        sceneActivatorManager.CheckActivateAndDesactivate();
+        //sceneActivatorManager.ActivateOrDesactivate();
     }
 
     /*

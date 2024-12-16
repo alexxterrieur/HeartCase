@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class RewardGiver : MonoBehaviour
 {
+    [SerializeField] private DropDownController DropDownController;
+
     public void GiveReward(SO_Reward rewardSO)
     {
         if (rewardSO == null)
@@ -17,6 +19,11 @@ public class RewardGiver : MonoBehaviour
 
         if (rewardSO.boolId >= 0 && rewardSO.boolIndex >= 0)
         {
+            if (rewardSO.boolIndex == 1 && DropDownController)
+            {
+                DropDownController.AddOptionByIndex(rewardSO.boolId);
+                return;
+            }
             GameState.Instance.SetBool(true, rewardSO.boolIndex, rewardSO.boolId);
         }
     }

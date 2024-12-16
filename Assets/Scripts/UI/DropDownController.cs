@@ -35,7 +35,7 @@ public class DropDownController : MonoBehaviour, IPointerClickHandler
     {
         for (int i = 0; i < scenesNames.Count; i++)
         {
-            if (SceneManager.GetActiveScene().name == scenesNames[i] || !GameState.Instance.GetBool(i, SceneUnlockedIndex)) continue;
+            if (SceneManager.GetActiveScene().name == scenesNames[i] || !GameState.Instance.GetBool(SceneUnlockedIndex, i)) continue;
             AddOption(scenesNames[i], false, false);
         }
 
@@ -64,14 +64,12 @@ public class DropDownController : MonoBehaviour, IPointerClickHandler
 
     public void AddOption(string option, bool displayPopUp, bool gameStateCheck)
     {
-        Debug.Log(option);
-        Debug.Log(scenesNames.Contains(option));
-        if (!scenesNames.Contains(option) || (gameStateCheck && GameState.Instance.GetBool(scenesNames.IndexOf(option), SceneUnlockedIndex))) return;
+        if (!scenesNames.Contains(option) || (gameStateCheck && GameState.Instance.GetBool(SceneUnlockedIndex, scenesNames.IndexOf(option)))) return;
 
         dropDown.AddOptions(new List<string> { option });
         options.Add(option);
         
-        GameState.Instance.SetBool(true, scenesNames.IndexOf(option), SceneUnlockedIndex);
+        GameState.Instance.SetBool(true, SceneUnlockedIndex, scenesNames.IndexOf(option));
         
         if (options.Count == 1)
         {
@@ -93,7 +91,11 @@ public class DropDownController : MonoBehaviour, IPointerClickHandler
     }
     //
 
-    
+    public void AddOptionByIndex(int index)
+    {
+        AddOption(scenesNames[index], true, true);
+    }
+
     /// <summary>
     /// Anytime change a value by index
     /// </summary>

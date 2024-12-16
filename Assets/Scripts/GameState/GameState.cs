@@ -1,14 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameState : MonoBehaviour
 {
     [SerializeField] private int boolsNumber;
 
+    public UnityEvent OnStateChange;
+
     public static GameState Instance { get; private set; }
 
     private List<byte> boolsList = new List<byte>();
-    //0 = dialogues, 1 = time, 2 = objectAlreadyPicked, 3 = CinematicsAlreadyDone, 4 SceneUnlocked
+    //0 = dialogues, 1 = SceneUnlocked, 2 = objectAlreadyPicked, 3 = CinematicsAlreadyDone
 
     private void Awake()
     {
@@ -16,7 +19,7 @@ public class GameState : MonoBehaviour
         {
             Instance = this;
 
-            for(int i = 0; i < boolsNumber; i++)
+            for (int i = 0; i < boolsNumber; i++)
             {
                 boolsList.Add(0);
             }
@@ -24,6 +27,7 @@ public class GameState : MonoBehaviour
         }
         else
         {
+            Instance.OnStateChange.RemoveAllListeners();
             Destroy(gameObject);
         }
     }
@@ -50,10 +54,12 @@ public class GameState : MonoBehaviour
         if (val)
         {
             addOption(boolsIndex, Id);
-            return;
         }
-
-        removeOption(boolsIndex, Id);
+        else
+        {
+            removeOption(boolsIndex, Id);
+        }
+        OnStateChange.Invoke();
     }
 
     public void TestSetBool(int id)
@@ -65,7 +71,7 @@ public class GameState : MonoBehaviour
     {
         for (int i = 0; i < boolsNumber; i++)
         {
-            for(int j = 0; j < 8; j++)
+            for (int j = 0; j < 8; j++)
             {
                 print("Index : " + i + " ID : " + j + " Value : " + GetBool(i, j));
             }

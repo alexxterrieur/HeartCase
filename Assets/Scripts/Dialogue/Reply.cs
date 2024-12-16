@@ -5,5 +5,5 @@ public class Reply
 {
     public string reply;
     public Replic nextReplic;
-    public List<ConditionForDialogue> conditions = new();
+    public List<Condition> conditions = new();
 }

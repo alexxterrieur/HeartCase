@@ -1,5 +1,5 @@
 [System.Serializable]
-public class ConditionForDialogue
+public class Condition
 {
     public int boolListIndex;
     public int boolId;

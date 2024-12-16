@@ -47,7 +47,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue displayedDialogue)
     {
-        print("start");
         if (displayedDialogue == null)
         {
             Debug.LogWarning("Invalide dialogue -> check the dialogue");
@@ -247,19 +246,14 @@ public class DialogueManager : MonoBehaviour
 
     private void CallAction()
     {
-        Debug.Log("FINI Start Action");
-
         SetDialogueUIActive(false);
-        if (puzzle != null)
+        if (rewardGived != null)
         {
-            if (rewardGived != null)
-            {
-                rewardGiver.GiveReward(rewardGived);
-            }
-            else if (puzzle != null) 
-            {
-                fade.CallFade(StartPuzzle, puzzle);
-            }
+            rewardGiver.GiveReward(rewardGived);
+        }
+        else if (puzzle != null)
+        {
+            fade.CallFade(StartPuzzle, puzzle);
         }
     }
 

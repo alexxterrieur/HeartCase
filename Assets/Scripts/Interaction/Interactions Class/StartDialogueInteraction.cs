@@ -20,7 +20,7 @@ public class StartDialogueInteraction : Interactions
             }
 
             int conditionsCheck = 0;
-            foreach(ConditionForDialogue condition in dialogue.conditions) 
+            foreach(Condition condition in dialogue.conditions) 
             {
                 if (!GameState.Instance.GetBool(condition.boolListIndex, condition.boolId))
                 {
@@ -36,7 +36,6 @@ public class StartDialogueInteraction : Interactions
             }
         }
 
-        print("interact");
         Dialogue displayedDialogue = dialogues[dialogueIndex];
         dialogueManager.StartDialogue(displayedDialogue);
     }
