@@ -11,6 +11,8 @@ using UnityEngine.UI;
 [DisallowMultipleComponent]
 public class DropDownController : MonoBehaviour, IPointerClickHandler
 {
+    [SerializeField] private int SceneUnlockedIndex = 1;
+
     [SerializeField] private PopupManager popupManager;
     
     [FormerlySerializedAs("indexesToDisable")] public List<string> namesToDisable = new List<string>();
@@ -33,7 +35,7 @@ public class DropDownController : MonoBehaviour, IPointerClickHandler
     {
         for (int i = 0; i < scenesNames.Count; i++)
         {
-            if (SceneManager.GetActiveScene().name == scenesNames[i] || !GameState.Instance.GetBool(i, 4)) continue;
+            if (SceneManager.GetActiveScene().name == scenesNames[i] || !GameState.Instance.GetBool(i, SceneUnlockedIndex)) continue;
             AddOption(scenesNames[i], false, false);
         }
 
@@ -64,12 +66,12 @@ public class DropDownController : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log(option);
         Debug.Log(scenesNames.Contains(option));
-        if (!scenesNames.Contains(option) || (gameStateCheck && GameState.Instance.GetBool(scenesNames.IndexOf(option), 4))) return;
+        if (!scenesNames.Contains(option) || (gameStateCheck && GameState.Instance.GetBool(scenesNames.IndexOf(option), SceneUnlockedIndex))) return;
 
         dropDown.AddOptions(new List<string> { option });
         options.Add(option);
         
-        GameState.Instance.SetBool(true, scenesNames.IndexOf(option), 4);
+        GameState.Instance.SetBool(true, scenesNames.IndexOf(option), SceneUnlockedIndex);
         
         if (options.Count == 1)
         {

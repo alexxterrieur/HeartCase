@@ -34,8 +34,16 @@ public class DialogueManager : MonoBehaviour
     [Header("Puzzle")]
     [SerializeField] private UIFadeInFadeOut fade;
     [SerializeField] private PuzzleHandler puzzleHandler;
-    private ScriptableObject argument;
+    private SO_PuzzleBase puzzle;
 
+    [Header("Reward")]
+    private SO_Reward rewardGived;
+    private RewardGiver rewardGiver;
+
+    private void Start()
+    {
+        rewardGiver = GetComponent<RewardGiver>();
+    }
 
     public void StartDialogue(Dialogue displayedDialogue)
     {
@@ -49,7 +57,8 @@ public class DialogueManager : MonoBehaviour
 
         currentDisplayedDialogue = displayedDialogue;
 
-        argument = currentDisplayedDialogue.argument;
+        puzzle = currentDisplayedDialogue.puzzle;
+        rewardGived = currentDisplayedDialogue.reward;
 
         currentDisplayedReplic = currentDisplayedDialogue.dialogue;
         SetDialogueUIActive(true);
@@ -241,23 +250,17 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("FINI Start Action");
 
         SetDialogueUIActive(false);
-        if (argument != null)
+        if (puzzle != null)
         {
-            if (argument is Item)
+            if (rewardGived != null)
             {
-                fade.CallFade(AddItem, (Item)argument);
+                rewardGiver.GiveReward(rewardGived);
             }
-            else if (argument is SO_PuzzleBase) 
+            else if (puzzle != null) 
             {
-                fade.CallFade(StartPuzzle, (SO_PuzzleBase)argument);
+                fade.CallFade(StartPuzzle, puzzle);
             }
         }
-    }
-
-    private void AddItem(Item item)
-    {
-        Inventory.Instance.AddItem(item);
-        GameState.Instance.SetBool(true, 2, item.itemID);
     }
 
     private void StartPuzzle(SO_PuzzleBase puzzle)

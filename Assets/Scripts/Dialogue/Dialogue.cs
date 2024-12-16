@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 [System.Serializable]
 public class Dialogue
@@ -12,5 +11,6 @@ public class Dialogue
 
     public List<ConditionForDialogue> conditions = new();
 
-    public ScriptableObject argument;
+    public SO_PuzzleBase puzzle;
+    public SO_Reward reward;
 }
