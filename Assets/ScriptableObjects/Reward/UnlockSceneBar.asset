@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reward: {fileID: 0}
   boolIndex: 1
-  boolId: 1
+  boolId: 2

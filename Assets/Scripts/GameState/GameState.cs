@@ -23,6 +23,7 @@ public class GameState : MonoBehaviour
             {
                 boolsList.Add(0);
             }
+            SetBool(true, 1, 0);
             DontDestroyOnLoad(gameObject);
         }
         else
