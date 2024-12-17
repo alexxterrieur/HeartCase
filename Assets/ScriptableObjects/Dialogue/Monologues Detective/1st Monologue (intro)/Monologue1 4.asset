@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: Monologue1 4
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 0}
+  rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+  characterName: Detective
+  characterPostion: 1
+  frenchDialogueText: "J\u2019ai remis la main sur votre carte. Merci encore d\u2019avoir
+    aid\xE9 mon fr\xE8re. Cette fois, c\u2019est pour moi que j\u2019aimerais faire
+    appel \xE0 vos services. "
+  englishDialogueText: 'I got my hands on your card again. Thank you again for helping
+    my brother. This time, I''d like to use your services for myself.  '
+  dialogueConditions: 
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: c7b6a598e72f6e24288d6190e4606b04, type: 2}
+    conditions: []

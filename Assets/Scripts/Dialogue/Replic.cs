@@ -15,7 +15,6 @@ public class Replic : ScriptableObject
     [Header("Dialogue Properties")]
     public string frenchDialogueText;
     public string englishDialogueText;
-    public List<byte> dialogueConditions = new();
     public List<Reply> possibleNextReply = new();
     
     

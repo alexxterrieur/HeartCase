@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: Midas Know 1
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: ba05774c579fe224aa3cffd6af0b9dd4, type: 3}
+  characterName: Midas
+  characterPostion: 2
+  frenchDialogueText: "Je n\u2019ai rien \xE0 cacher, d\xE9tective. Je fr\xE9quentais
+    ce cabaret, comme beaucoup d\u2019autres. Mais avec les \xE9lections en vue,
+    je ne voulais pas qu\u2019un scandale vienne entacher ma r\xE9putation. J\u2019ai
+    pris mes distances d\xE8s que cette affaire a \xE9clat\xE9."
+  englishDialogueText: I have nothing to hide, Detective. I used to frequent this
+    cabaret, like many others. But with the elections coming up, I didn't want a
+    scandal to tarnish my reputation. I distanced myself as soon as the affair broke.
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: b504787fdd7d0dd4daa36d0939c05c91, type: 2}
+    conditions: []
