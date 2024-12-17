@@ -67,6 +67,7 @@ public class MenuEventsManager : MonoBehaviour
         if (name == "TemplateMainMenu")
         {
             Destroy(GameState.Instance.gameObject);
+            Destroy(InventorySaver.Instance.gameObject);
         }
         
         if (AudioManager.Instance.IsSoundInList(AudioManager.Instance._musicSounds, name))
