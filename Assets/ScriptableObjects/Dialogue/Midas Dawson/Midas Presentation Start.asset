@@ -20,8 +20,8 @@ MonoBehaviour:
     sur le meurtre de Iris Ristovski."
   englishDialogueText: 'Mr Dawson, I''m the detective investigating the murder of
     Iris Ristovski. '
-  dialogueConditions: 
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: d118dc5341d49214f92d268706eed443, type: 2}
+    nextReplic: {fileID: 11400000, guid: 08d9de91259d79c4983d530facee7199, type: 2}
     conditions: []
+  reward: {fileID: 0}
