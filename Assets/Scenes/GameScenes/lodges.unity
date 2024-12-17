@@ -809,6 +809,8 @@ MonoBehaviour:
   restOfUI: {fileID: 1531556321}
   itemImage: {fileID: 1687647742}
   itemDescription: {fileID: 987267966}
+  possibleRewards: []
+  rewardGiver: {fileID: 0}
 --- !u!1 &917885308 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8945059348566865959, guid: 57ecc3a82677882439410e0e3f2b8c78, type: 3}
@@ -2128,6 +2130,14 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1759780421}
+    - target: {fileID: 5907886409334903696, guid: 57ecc3a82677882439410e0e3f2b8c78, type: 3}
+      propertyPath: scenesNames.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907886409334903696, guid: 57ecc3a82677882439410e0e3f2b8c78, type: 3}
+      propertyPath: 'scenesNames.Array.data[3]'
+      value: Manager's Office
+      objectReference: {fileID: 0}
     - target: {fileID: 6249995336179193102, guid: 57ecc3a82677882439410e0e3f2b8c78, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
