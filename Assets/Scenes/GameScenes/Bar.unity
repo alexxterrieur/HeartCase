@@ -801,6 +801,17 @@ PolygonCollider2D:
       - {x: -0.099999994, y: -5.39}
       - {x: -0.13, y: -5.23}
   m_UseDelaunayMesh: 0
+--- !u!114 &513638323 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3496431711298320531, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+  m_PrefabInstance: {fileID: 513638319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513638321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472146d4bf821e642ab0a4e361c1556b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,6 +1287,17 @@ PolygonCollider2D:
       - {x: 1.14, y: -5.45}
       - {x: 1.23, y: -5.41}
   m_UseDelaunayMesh: 0
+--- !u!114 &601352345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3496431711298320531, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+  m_PrefabInstance: {fileID: 601352341}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601352343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472146d4bf821e642ab0a4e361c1556b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &610823184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2975,16 +2997,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7334519727118172408, guid: d4177e147d3ef3947afac9fc97475a25, type: 3}
       propertyPath: interactibleObjects.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7334519727118172408, guid: d4177e147d3ef3947afac9fc97475a25, type: 3}
       propertyPath: 'interactibleObjects.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 601352345}
     - target: {fileID: 7334519727118172408, guid: d4177e147d3ef3947afac9fc97475a25, type: 3}
       propertyPath: 'interactibleObjects.Array.data[1]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 513638323}
     - target: {fileID: 7334519727118172408, guid: d4177e147d3ef3947afac9fc97475a25, type: 3}
       propertyPath: 'interactibleObjects.Array.data[2]'
       value: 
