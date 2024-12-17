@@ -1517,7 +1517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3496431711298320531, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: forHide.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3496431711298320531, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: forHide.Array.data[0].boolId
