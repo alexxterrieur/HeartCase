@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbcad944bd582474e8458d519b2db91f, type: 3}
-  m_Name: Test2
+  m_Name: ColleagueDialogue
   m_EditorClassIdentifier: 
   reward: {fileID: 0}
   boolIndex: 0
-  boolId: 1
+  boolId: 0

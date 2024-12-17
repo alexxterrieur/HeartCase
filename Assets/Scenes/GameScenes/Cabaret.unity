@@ -1039,6 +1039,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ba05774c579fe224aa3cffd6af0b9dd4, type: 3}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: itemNeeded
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1759780421}
@@ -1049,7 +1053,7 @@ PrefabInstance:
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].reward
       value: 
-      objectReference: {fileID: 11400000, guid: f1a612a1b03771e43bd52f516ab0e634, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].argument
       value: 
@@ -1057,7 +1061,7 @@ PrefabInstance:
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: 7fb17c18f19c20b45a7886629ad15506, type: 2}
+      objectReference: {fileID: 11400000, guid: 0f8ae80e13ca43542b53bc200264e98e, type: 2}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].conditions.Array.size
       value: 0
@@ -1542,6 +1546,10 @@ PrefabInstance:
       propertyPath: dialogues.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: dialogues.Array.data[0].reward
+      value: 
+      objectReference: {fileID: 11400000, guid: f1a612a1b03771e43bd52f516ab0e634, type: 2}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].dialogue
       value: 
@@ -2207,7 +2215,7 @@ PrefabInstance:
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].reward
       value: 
-      objectReference: {fileID: 11400000, guid: 6ba3368bff647974d9ef90b040148046, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].argument
       value: 
@@ -2215,7 +2223,7 @@ PrefabInstance:
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: 7fb17c18f19c20b45a7886629ad15506, type: 2}
+      objectReference: {fileID: 11400000, guid: aabbf6b9d4768c34ba4c7d5eb6175342, type: 2}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].conditions.Array.size
       value: 0
@@ -2223,7 +2231,7 @@ PrefabInstance:
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].leftInterlocutorSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
+      objectReference: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[1].leftInterlocutorSprite
       value: 
@@ -2314,9 +2322,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4609973650088989072, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+    - {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8852919365687263948, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1411476058}
     - targetCorrespondingSourceObject: {fileID: 8852919365687263948, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1411476057}
@@ -2539,6 +2551,42 @@ PolygonCollider2D:
       - {x: 0.099999994, y: -5.44}
       - {x: 0.25, y: -5.3399997}
   m_UseDelaunayMesh: 0
+--- !u!114 &1411476058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411476052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e6e404280d36142aaba9a49736dda6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemNeeded: {fileID: 11400000, guid: e1442dfcf15ec0d41a58a30f0ed1d9a8, type: 2}
+  dialogueWhenDontHaveItem:
+  - rightInterlocutorSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+    leftInterlocutorSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
+    dialogue: {fileID: 11400000, guid: 6d977a397b252684eb43d14b2096cd1f, type: 2}
+    conditions:
+    - boolListIndex: 0
+      boolId: 3
+    puzzle: {fileID: 0}
+    reward: {fileID: 0}
+  - rightInterlocutorSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+    leftInterlocutorSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
+    dialogue: {fileID: 11400000, guid: aabbf6b9d4768c34ba4c7d5eb6175342, type: 2}
+    conditions: []
+    puzzle: {fileID: 0}
+    reward: {fileID: 0}
+  dialogues:
+  - rightInterlocutorSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+    leftInterlocutorSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
+    dialogue: {fileID: 11400000, guid: e34213fe6bdee7b4fa1b1aa1ca02d96d, type: 2}
+    conditions: []
+    puzzle: {fileID: 0}
+    reward: {fileID: 0}
+  dialogueManager: {fileID: 1759780421}
 --- !u!1 &1430119851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,7 +3160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemNeeded: {fileID: 11400000, guid: ca2126fbb5c6c4c41a246bd2ac7d8f2c, type: 2}
   dialogueWhenDontHaveItem:
-    rightInterlocutorSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+  - rightInterlocutorSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
     leftInterlocutorSprite: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
     dialogue: {fileID: 11400000, guid: de0c51dbe68a9f548bce7c44d24919fe, type: 2}
     conditions: []
@@ -3121,12 +3169,12 @@ MonoBehaviour:
   dialogues:
   - rightInterlocutorSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
     leftInterlocutorSprite: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
-    dialogue: {fileID: 11400000, guid: 7221c28dbbf19a944a3817f1909fd779, type: 2}
+    dialogue: {fileID: 11400000, guid: c543e3d0c50d6954c86b4b7f3ff6343f, type: 2}
     conditions:
     - boolListIndex: 3
       boolId: 1
     puzzle: {fileID: 0}
-    reward: {fileID: 0}
+    reward: {fileID: 11400000, guid: 42eb2b2efa15aa74f823618f8eb001b7, type: 2}
   - rightInterlocutorSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
     leftInterlocutorSprite: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
     dialogue: {fileID: 11400000, guid: 7221c28dbbf19a944a3817f1909fd779, type: 2}
