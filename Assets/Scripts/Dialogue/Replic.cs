@@ -16,6 +16,8 @@ public class Replic : ScriptableObject
     public string frenchDialogueText;
     public string englishDialogueText;
     public List<Reply> possibleNextReply = new();
+
+    public SO_Reward reward;
     
     
     public enum Postion

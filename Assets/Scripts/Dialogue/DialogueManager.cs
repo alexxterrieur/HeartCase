@@ -274,6 +274,10 @@ public class DialogueManager : MonoBehaviour
         {
             rewardGiver.GiveReward(rewardGived);
         }
+        else if (CurrentReplic.reward != null)
+        {
+            rewardGiver.GiveReward(CurrentReplic.reward);
+        }
         else if (puzzle != null)
         {
             fade.CallFade(StartPuzzle, puzzle);

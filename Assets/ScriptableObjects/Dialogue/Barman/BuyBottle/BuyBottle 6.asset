@@ -22,3 +22,4 @@ MonoBehaviour:
   - reply: Finish
     nextReplic: {fileID: 0}
     conditions: []
+  reward: {fileID: 11400000, guid: a8275d31ac0b0d04cbdcc329c239e987, type: 2}
