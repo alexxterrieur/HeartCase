@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: Ezra Cracking 10
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: 21f57d5fc8802174b9e39d61611398f7, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+  characterName: Detective
+  characterPostion: 1
+  frenchDialogueText: "Mais elle aurait pu en savoir trop. Vous le savez aussi bien
+    que moi. Si quelqu\u2019un voulait s\u2019assurer qu\u2019elle ne parle pas\u2026"
+  englishDialogueText: But she could have known too much. You know as well as I do.
+    If anyone wanted to make sure she didn't talk...
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 12d4dea89b3c93940ba2b79d912feb8a, type: 2}
+    conditions: []

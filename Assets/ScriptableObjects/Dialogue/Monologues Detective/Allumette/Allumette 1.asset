@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: Allumette 1
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 0}
+  rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+  characterName: Detective
+  characterPostion: 0
+  frenchDialogueText: "Un bar\u2026 \"The Last Drop\". Ces allumettes n\u2019ont
+    rien \xE0 faire l\xE0, \xE0 moins qu\u2019Iris n\u2019y soit all\xE9e. Ou peut-\xEAtre
+    qu\u2019elle y ait rencontr\xE9 quelqu\u2019un."
+  englishDialogueText: A bar... The Last Drop. These matches don't belong there,
+    unless Iris was there. Or maybe she met someone there.
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 052b6ecb9deb8724a998d2cef4853986, type: 2}
+    conditions: []

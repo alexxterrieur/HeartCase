@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: Collegue 3
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
+  characterName: Anna Morel
+  characterPostion: 2
+  frenchDialogueText: "Iris\u2026 Pauvre fille. C\u2019est tellement horrible ce
+    qui lui est arriv\xE9. Vous pensez vraiment pouvoir trouver qui a fait \xE7a
+    ?"
+  englishDialogueText: Iris... Poor girl. It's so horrible what happened to her.
+    Do you really think you can find out who did this?
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 1b9a4b1ecea0b2c449e04b9a45dfd04b, type: 2}
+    conditions: []

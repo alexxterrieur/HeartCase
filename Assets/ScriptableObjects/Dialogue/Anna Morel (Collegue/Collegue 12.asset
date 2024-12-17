@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: Collegue 12
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
+  characterName: Detective
+  characterPostion: 1
+  frenchDialogueText: "Merci pour l\u2019information. Passons \xE0 autre chose. La
+    nuit du meurtre\u2026 Avez-vous remarqu\xE9 quelque chose d\u2019inhabituel ?"
+  englishDialogueText: Thanks for the information. Moving on. The night of the murder...
+    did you notice anything unusual?
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 179be5956cbb57b4dab0c2e7c06c53d6, type: 2}
+    conditions: []

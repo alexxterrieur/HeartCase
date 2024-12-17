@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: EdenDrug 15
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+  characterName: Eden Denoncourt
+  characterPostion: 2
+  frenchDialogueText: "Bien s\xFBr que je le savais. Une fille enceinte ne rapporte
+    plus rien dans ce m\xE9tier. Mais ce n\u2019\xE9tait pas \xE7a, le probl\xE8me.
+    Ce qui l\u2019a perdue, c\u2019est son choix d\u2019homme. Vous savez ce que
+    c\u2019est, Ramiro, d\u2019aimer quelqu\u2019un qui peut vous tuer sans m\xEAme
+    s\u2019en rendre compte ?"
+  englishDialogueText: Of course I knew that. A pregnant girl doesn't make any money
+    in this business. But that wasn't the problem. What lost her was her choice of
+    man. Do you know what it's like, Ramiro, to love someone who can kill you without
+    even realising it?
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: ec56b2a105bbf7a4497b21ac23cd95e5, type: 2}
+    conditions: []

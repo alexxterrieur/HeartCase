@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: Ezra Cracking 23
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: 21f57d5fc8802174b9e39d61611398f7, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+  characterName: Ezra
+  characterPostion: 2
+  frenchDialogueText: "Oui\u2026 Elle ne voulait pas me le dire au d\xE9but. Elle
+    avait peur que je la laisse tomber. Mais je l\u2019aimais. On devait partir ensemble.
+    Quitter cette ville pourrie et tout recommencer. Mais ils l\u2019ont tu\xE9e
+    avant qu\u2019on ait eu le temps de s\u2019enfuir."
+  englishDialogueText: Yes... She didn't want to tell me at first. She was afraid
+    I'd let her down. But I loved her. We had to go away together. Leave this rotten
+    town and start again. But they killed her before we could get away.
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 889f6383a91cd4547900a5e33a342bae, type: 2}
+    conditions: []

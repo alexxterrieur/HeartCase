@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: Ezra Cracking 4
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: 21f57d5fc8802174b9e39d61611398f7, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+  characterName: Detective
+  characterPostion: 1
+  frenchDialogueText: "Vraiment ? Parce qu\u2019il y a des choses qui ne collent
+    pas. Vous \xEAtes un flic, et je sais que des affaires de drogue tournent autour
+    de ce cabaret. Alors je vais \xEAtre clair, est-ce que la drogue pourrait \xEAtre
+    le mobile du meurtre d\u2019Iris ?"
+  englishDialogueText: Is that so? Because some things don't add up. You're a cop,
+    and I know there's drug activity around that cabaret. So let me get this straight.
+    Could drugs have been the motive for Iris's murder?
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 7d4559abeb1e9cd459012d315142f9e1, type: 2}
+    conditions: []

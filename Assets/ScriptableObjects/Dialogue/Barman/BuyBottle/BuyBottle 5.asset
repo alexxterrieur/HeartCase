@@ -10,20 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
-  m_Name: StartBmBar
+  m_Name: BuyBottle 5
   m_EditorClassIdentifier: 
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 447310a9c2ad8fb4496acae30193d507, type: 3}
   characterName: Barman
   characterPostion: 1
-  frenchDialogueText: "H\xE9, vous cherchez quelque chose, l\u2019ami ?"
-  englishDialogueText: Hey, looking for something, buddy?
+  frenchDialogueText: "Voil\xE0. Un Bordeaux, 1924. Pas donn\xE9, mais il respire
+    l\u2019\xE9l\xE9gance et la classe."
+  englishDialogueText: This is it. A Bordeaux, 1924. Not cheap, but it exudes elegance
+    and class.
   possibleNextReply:
-  - reply: Ask about the victim
-    nextReplic: {fileID: 11400000, guid: 3d5d96e27143bd647b9bb19f0072ed84, type: 2}
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 55b7f6f7b55301843801635220051312, type: 2}
     conditions: []
-  - reply: Buy a bottle of wine
-    nextReplic: {fileID: 11400000, guid: 0afb205deca155f42a88884ac2bcf3dc, type: 2}
-    conditions:
-    - boolListIndex: 0
-      boolId: 1
