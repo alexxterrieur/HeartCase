@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
+  m_Name: EdenDrug 8
+  m_EditorClassIdentifier: 
+  leftCharacterSprite: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
+  rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+  characterName: Detective
+  characterPostion: 1
+  frenchDialogueText: "Et ces \"int\xE9r\xEAts\", ils incluaient quoi ? La drogue
+    ? L\u2019argent qu\u2019elle vous devait ? Ou bien la peur qu\u2019elle commence
+    \xE0 parler une fois partie ?"
+  englishDialogueText: "And what did these \u2018interests\u2019 include? The drugs?
+    The money she owed you? Or the fear that once she left, she'd start talking?"
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 4d69fcc75a31157459ee42026ac5f2f6, type: 2}
+    conditions: []

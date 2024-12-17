@@ -10,14 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
-  m_Name: WithoutBottle 1
+  m_Name: EdenDrug 17
   m_EditorClassIdentifier: 
   leftCharacterSprite: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
   characterName: Eden Denoncourt
   characterPostion: 2
-  frenchDialogueText: "Je ne re\xE7ois personne sans rendez-vous, surtout \xE0 cette
-    heure."
-  englishDialogueText: I don't see anyone without an appointment, especially at this
-    time of day.
-  possibleNextReply: []
+  frenchDialogueText: "Vous commencez \xE0 comprendre. Elle m\u2019a parl\xE9 d\u2019un
+    homme. Un habitu\xE9 du cabaret."
+  englishDialogueText: You're beginning to understand. She told me about a man. A
+    regular at the cabaret.
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 71d96f82fe64b1b47a6bbab26d6faed1, type: 2}
+    conditions: []
