@@ -12,6 +12,7 @@ using UnityEngine.UI;
 public class DropDownController : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private int SceneUnlockedIndex = 1;
+    [SerializeField] private DialogueManager dialogueManager;
 
     [SerializeField] private PopupManager popupManager;
     
@@ -73,6 +74,7 @@ public class DropDownController : MonoBehaviour, IPointerClickHandler
         
         if (options.Count == 1)
         {
+            dialogueManager.changeSceneActive = true;
             transform.parent.gameObject.SetActive(true);
             dropDown.onValueChanged.Invoke(0);
         }
