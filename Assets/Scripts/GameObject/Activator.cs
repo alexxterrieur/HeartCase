@@ -6,8 +6,6 @@ public class Activator : MonoBehaviour
     [SerializeField] private List<Condition> forHide;
     [SerializeField] private List<Condition> forShow;
 
-    [SerializeField] private int itemAlreadyPickedIndex = 2;
-
     private void Start()
     {
         ActiveOrDesactiveGO();
