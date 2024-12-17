@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> optionsButtons;
+    [SerializeField] private GameObject characters;
+    [SerializeField] private GameObject changeScene;
+    [HideInInspector] public bool changeSceneActive = false;
+    
     private Dialogue currentDisplayedDialogue;
     private Replic currentDisplayedReplic;
 
@@ -53,7 +57,16 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-
+        if (characters != null)
+        {
+            characters.SetActive(false);
+        }
+        
+        if (changeSceneActive)
+        {
+            changeScene.SetActive(false);
+        }
+        
         currentDisplayedDialogue = displayedDialogue;
 
         puzzle = currentDisplayedDialogue.puzzle;
@@ -159,6 +172,16 @@ public class DialogueManager : MonoBehaviour
         if (currentDisplayedReplic == null)
         {
             CallAction();
+            if (characters != null)
+            {
+                characters.SetActive(true);
+            }
+
+            if (changeSceneActive)
+            {
+                changeScene.SetActive(true);
+            }
+            
             return;
         }
 
