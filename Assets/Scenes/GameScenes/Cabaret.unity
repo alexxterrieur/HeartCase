@@ -3282,7 +3282,7 @@ MonoBehaviour:
     conditions: []
     puzzle: {fileID: 0}
     reward: {fileID: 0}
-  dialogueManager: {fileID: 0}
+  dialogueManager: {fileID: 1759780421}
 --- !u!1 &1769311996
 GameObject:
   m_ObjectHideFlags: 0
