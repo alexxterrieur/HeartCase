@@ -30,8 +30,3 @@ MonoBehaviour:
     conditions:
     - boolListIndex: 0
       boolId: 2
-  - reply: What were the gloves in your office?
-    nextReplic: {fileID: 11400000, guid: 24b457e282e0ab04b8ee54c388465796, type: 2}
-    conditions:
-    - boolListIndex: 3
-      boolId: 1

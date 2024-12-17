@@ -21,4 +21,7 @@ MonoBehaviour:
     sur la victime."
   englishDialogueText: Good evening, madam. I'm Detective Ramiro, hired to investigate
     this crime. I'd like to ask you a few questions about the victim.
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 62b008d37ef2e2045a458a37049aef12, type: 2}
+    conditions: []
