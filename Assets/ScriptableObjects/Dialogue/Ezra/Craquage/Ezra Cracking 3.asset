@@ -20,5 +20,5 @@ MonoBehaviour:
   englishDialogueText: I've already told you everything I know.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 2929572dcc51c6e41a88a08bc511812b, type: 2}
+    nextReplic: {fileID: 11400000, guid: b7c16c95e385335498ada1b0de497bfc, type: 2}
     conditions: []

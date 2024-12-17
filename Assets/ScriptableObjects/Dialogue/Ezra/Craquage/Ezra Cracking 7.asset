@@ -20,5 +20,5 @@ MonoBehaviour:
   englishDialogueText: You don't know anything about it.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 2929572dcc51c6e41a88a08bc511812b, type: 2}
+    nextReplic: {fileID: 11400000, guid: 8c19daaeec684064ea9568184c2dabd4, type: 2}
     conditions: []

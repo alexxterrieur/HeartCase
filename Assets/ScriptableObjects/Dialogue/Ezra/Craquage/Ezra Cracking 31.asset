@@ -16,15 +16,9 @@ MonoBehaviour:
   rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
   characterName: Ezra
   characterPostion: 2
-  frenchDialogueText: "Aussi s\xFBr que je respire. Elle fait en sorte de garder
-    les apparences, mais tout le monde sait qu\u2019elle contr\xF4le tout. Iris s\u2019\xE9tait
-    mise \xE0 fouiner pour moi. Elle savait des choses qu\u2019elle n\u2019aurait
-    pas d\xFB savoir. La Baronne a d\xFB s\u2019en rendre compte, et elle l\u2019a
-    fait taire."
-  englishDialogueText: As sure as I breathe. She keeps up appearances, but everyone
-    knows she's in control. Iris had started snooping for me. She knew things she
-    shouldn't have. The Baroness must have realised this and shut her up.
+  frenchDialogueText: "Faites ce que vous avez \xE0 faire. Iris m\xE9rite justice."
+  englishDialogueText: Do what you have to do. Iris deserves justice.
   possibleNextReply:
-  - reply: Next
-    nextReplic: {fileID: 11400000, guid: 2929572dcc51c6e41a88a08bc511812b, type: 2}
+  - reply: Finish
+    nextReplic: {fileID: 0}
     conditions: []

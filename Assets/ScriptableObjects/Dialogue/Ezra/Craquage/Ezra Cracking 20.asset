@@ -21,5 +21,5 @@ MonoBehaviour:
   englishDialogueText: Do you think someone killed her because she was your informant?
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: d3164b9f52df8b741a9a0f9768579eef, type: 2}
+    nextReplic: {fileID: 11400000, guid: 60146ec324672f7409a45be4fb45ee10, type: 2}
     conditions: []

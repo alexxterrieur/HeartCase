@@ -21,5 +21,5 @@ MonoBehaviour:
   englishDialogueText: Why didn't you tell me this from the start?
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: d3164b9f52df8b741a9a0f9768579eef, type: 2}
+    nextReplic: {fileID: 11400000, guid: d270ca8b4aa535245899b0111a6425e7, type: 2}
     conditions: []

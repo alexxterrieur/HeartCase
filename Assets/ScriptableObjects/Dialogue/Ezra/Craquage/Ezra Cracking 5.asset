@@ -20,5 +20,5 @@ MonoBehaviour:
   englishDialogueText: Drugs? You're way off.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 2929572dcc51c6e41a88a08bc511812b, type: 2}
+    nextReplic: {fileID: 11400000, guid: dbd78a3bfc983a34abf7b6244a8eceee, type: 2}
     conditions: []

@@ -25,5 +25,5 @@ MonoBehaviour:
     town and start again. But they killed her before we could get away.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 2929572dcc51c6e41a88a08bc511812b, type: 2}
+    nextReplic: {fileID: 11400000, guid: 889f6383a91cd4547900a5e33a342bae, type: 2}
     conditions: []

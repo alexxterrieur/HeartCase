@@ -20,5 +20,5 @@ MonoBehaviour:
   englishDialogueText: So explain it to me. Why Iris? Why her?
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: d3164b9f52df8b741a9a0f9768579eef, type: 2}
+    nextReplic: {fileID: 11400000, guid: 365250e3ec91323459c3a189c19ec843, type: 2}
     conditions: []

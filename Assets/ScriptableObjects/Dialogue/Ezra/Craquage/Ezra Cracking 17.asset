@@ -22,5 +22,5 @@ MonoBehaviour:
     closer. She meant everything to me.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 2929572dcc51c6e41a88a08bc511812b, type: 2}
+    nextReplic: {fileID: 11400000, guid: 419fcc0da5637a64e9b999c70a4c2102, type: 2}
     conditions: []
