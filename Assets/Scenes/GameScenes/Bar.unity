@@ -2609,7 +2609,7 @@ PrefabInstance:
       objectReference: {fileID: 610823186}
     - target: {fileID: 5602156964780627475, guid: 57ecc3a82677882439410e0e3f2b8c78, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -294.99997
+      value: -423.5
       objectReference: {fileID: 0}
     - target: {fileID: 5907886409334903696, guid: 57ecc3a82677882439410e0e3f2b8c78, type: 3}
       propertyPath: popupManager
