@@ -1,15 +1,11 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class JournalSystem : MonoBehaviour
 {
-    private List<string> texts = new List<string>();
+    private JournalSaver journalSaver;
     [SerializeField] private TMP_InputField leftPage;
     [SerializeField] private TMP_InputField rightPage;
     [SerializeField] private Button previousPageButton;
@@ -23,29 +19,40 @@ public class JournalSystem : MonoBehaviour
     private Transform journal;
     private bool isMoving = false;
     
-    private int currentPage = 0;
-    [SerializeField] private int maxPage = 10;
-
-    private void Awake()
+    private int maxPage;
+    private int currentPage;
+    
+    private void Start()
     {
+        journalSaver = JournalSaver.Instance;
         journal = transform;
         
         //Verifies that there is at least 2 pages and the number of pages is pair
-        if (maxPage < 2)
+        if (journalSaver.maxPage < 2)
         {
-            maxPage = 2;
+            journalSaver.maxPage = 2;
         }
-        else if (maxPage % 2 == 1)
+        else if (journalSaver.maxPage % 2 == 1)
         {
-            maxPage++;
+            journalSaver.maxPage++;
+        }
+        
+        maxPage = journalSaver.maxPage;
+        currentPage = journalSaver.currentPage;
+
+        if (journalSaver.texts.Count > 1)
+        {
+            //Init the buttons for next and previous page
+            ChangePage(currentPage);
+            return;
         }
         
         //Adds all the pages to the journal
         for (int i = 0; i < maxPage; i++)
         {
-            texts.Add("");
+            journalSaver.texts.Add("");
         }
-
+        
         //Init the buttons for next and previous page
         ChangePage(0);
     }
@@ -56,7 +63,7 @@ public class JournalSystem : MonoBehaviour
     public void ChangeText(int pageIndex)
     {
         string text = (pageIndex == 0) ? leftPage.text : rightPage.text;
-        texts[currentPage + pageIndex] = text;
+        journalSaver.texts[currentPage + pageIndex] = text;
     }
 
     /// <summary>
@@ -64,13 +71,14 @@ public class JournalSystem : MonoBehaviour
     /// </summary>
     public void ChangePage(int _pageIndex)
     {
-        currentPage = Mathf.Clamp(currentPage + _pageIndex * 2, 0, maxPage - 2);
-
+        journalSaver.currentPage = Mathf.Clamp(journalSaver.currentPage + _pageIndex * 2, 0, maxPage - 2);
+        currentPage = journalSaver.currentPage;
+        
         previousPageButton.interactable = (currentPage > 0);
         nextPageButton.interactable = (currentPage < maxPage - 2);
             
-        leftPage.text = texts[currentPage];
-        rightPage.text = texts[currentPage + 1];
+        leftPage.text = journalSaver.texts[currentPage];
+        rightPage.text = journalSaver.texts[currentPage + 1];
     }
 
     public void MoveJournal()
