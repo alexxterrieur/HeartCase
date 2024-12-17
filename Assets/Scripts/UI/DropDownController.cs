@@ -82,7 +82,7 @@ public class DropDownController : MonoBehaviour, IPointerClickHandler
         if (displayPopUp)
         {
             //Add POPUP Here //
-            popupManager.DisplayPopUp(option);
+            popupManager.DisplayPopUp(/*option*/);
         }
     }
     

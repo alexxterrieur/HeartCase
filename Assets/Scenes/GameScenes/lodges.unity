@@ -1708,6 +1708,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.49056602
       objectReference: {fileID: 0}
+    - target: {fileID: 5496036039117319897, guid: bf74ae379a22fc24fbd4a075189cdedc, type: 3}
+      propertyPath: forHide.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5496036039117319897, guid: bf74ae379a22fc24fbd4a075189cdedc, type: 3}
+      propertyPath: forHide.Array.data[0].boolId
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5496036039117319897, guid: bf74ae379a22fc24fbd4a075189cdedc, type: 3}
+      propertyPath: forHide.Array.data[0].boolListIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6579767168562228081, guid: bf74ae379a22fc24fbd4a075189cdedc, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5

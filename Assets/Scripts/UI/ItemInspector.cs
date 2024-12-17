@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,9 @@ public class ItemInspector : MonoBehaviour
 
     [SerializeField] private Image itemImage;
     [SerializeField] private TextMeshProUGUI itemDescription;
+
+    [HideInInspector] public List<SO_Reward> possibleRewards = new();
+    [HideInInspector] public RewardGiver rewardGiver;
 
     private Item itemInspected;
 
@@ -29,6 +33,14 @@ public class ItemInspector : MonoBehaviour
 
         itemInspectorGameObject.SetActive(false);
         restOfUI.SetActive(true);
+
+        if(possibleRewards.Count > 0)
+        {
+            foreach(SO_Reward reward in possibleRewards)
+            {
+                rewardGiver.GiveReward(reward);
+            }
+        }
     }
 
 }

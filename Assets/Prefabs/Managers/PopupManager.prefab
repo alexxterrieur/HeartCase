@@ -45,5 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popup: {fileID: 0}
+  popupAnimator: {fileID: 0}
   popupText: {fileID: 0}
-  customText: 'You unlocked a new zone : '
+  customText: You unlocked a new zone !

@@ -9,11 +9,11 @@ public class PopupManager : MonoBehaviour
     
     [SerializeField] private string customText;
     
-    public void DisplayPopUp(string _popUpText)
+    public void DisplayPopUp(/*string _popUpText*/)
     {
         if (popupText == null || popupText == null) return;
         
-        popupText.text = customText + _popUpText;
+        popupText.text = customText /*+ _popUpText*/;
         popup.SetActive(true);
         popupAnimator.SetBool("Slide", true);
     }
