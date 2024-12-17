@@ -12,8 +12,8 @@ public class PickUpObjectInteraction : Interactions
 
     public override void Interact()
     {
-        itemInspector.InspectItem(itemGived);
         print("interact");
+        itemInspector.InspectItem(itemGived);
     }
 
     public override bool InteractWithItem(Item itemGived)
