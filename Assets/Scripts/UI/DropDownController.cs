@@ -26,7 +26,9 @@ public class DropDownController : MonoBehaviour, IPointerClickHandler
     private void Start()
     {
         dropDown = GetComponent<TMP_Dropdown>();
-        if (GameState.Instance)
+        transform.parent.gameObject.SetActive(false);
+        options.Clear();
+        if (GameState.Instance is not null)
         {
             InitDropDown();
         }
@@ -70,9 +72,11 @@ public class DropDownController : MonoBehaviour, IPointerClickHandler
         dropDown.AddOptions(new List<string> { option });
         options.Add(option);
         
-        GameState.Instance.SetBool(true, SceneUnlockedIndex, scenesNames.IndexOf(option));
         
-        if (options.Count == 1)
+        if (gameStateCheck)
+            GameState.Instance.SetBool(true, SceneUnlockedIndex, scenesNames.IndexOf(option));
+        
+        if (options.Count >= 1)
         {
             dialogueManager.changeSceneActive = true;
             transform.parent.gameObject.SetActive(true);
