@@ -20,5 +20,6 @@ MonoBehaviour:
   englishDialogueText: I'm all ears.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 1269d97593523ab43972e412b840b4d5, type: 2}
+    nextReplic: {fileID: 11400000, guid: ec5ca05078dc42d4182002cd0fb2aa41, type: 2}
     conditions: []
+  reward: {fileID: 0}

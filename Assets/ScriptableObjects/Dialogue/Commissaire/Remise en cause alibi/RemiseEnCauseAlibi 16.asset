@@ -20,5 +20,6 @@ MonoBehaviour:
   englishDialogueText: All right, then. You've done a good job, Ramiro.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 1269d97593523ab43972e412b840b4d5, type: 2}
+    nextReplic: {fileID: 11400000, guid: 72852a1fd1cce994d9741d0e5efd8d04, type: 2}
     conditions: []
+  reward: {fileID: 0}

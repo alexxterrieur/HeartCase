@@ -21,4 +21,8 @@ MonoBehaviour:
     trouv\xE9 un semblant de refuge."
   englishDialogueText: A life marked by choices she never really had. Sex, drugs...
     you get the picture. But here, she had found a semblance of refuge.
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 985a32a3993b5384b912e74ecd4d37cf, type: 2}
+    conditions: []
+  reward: {fileID: 0}

@@ -22,5 +22,6 @@ MonoBehaviour:
     he wasn't there that night.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 1269d97593523ab43972e412b840b4d5, type: 2}
+    nextReplic: {fileID: 11400000, guid: 0d9c160808c2a0248b95b94f703fdc10, type: 2}
     conditions: []
+  reward: {fileID: 0}

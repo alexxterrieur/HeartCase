@@ -19,8 +19,8 @@ MonoBehaviour:
   frenchDialogueText: "Et alors ? Depuis quand \xEAtre seul chez soi est-il un crime
     ?"
   englishDialogueText: What's the big deal? Since when is being alone at home a crime?
-  dialogueConditions: 
   possibleNextReply:
-  - reply: Finish
-    nextReplic: {fileID: 0}
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: ce8131c783791ff42b68a85ceea052e7, type: 2}
     conditions: []
+  reward: {fileID: 0}

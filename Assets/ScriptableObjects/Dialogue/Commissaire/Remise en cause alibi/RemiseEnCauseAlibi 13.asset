@@ -25,5 +25,6 @@ MonoBehaviour:
     grey areas, and Iris seemed to be trying to get away from someone.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 5c251e3c6461b5743974a05d8c5475d0, type: 2}
+    nextReplic: {fileID: 11400000, guid: 26289ae9267d38146abae602b93a3083, type: 2}
     conditions: []
+  reward: {fileID: 0}

@@ -19,4 +19,8 @@ MonoBehaviour:
   frenchDialogueText: "Des ennemis, peut-\xEAtre ? Quelqu\u2019un qui aurait pu vouloir
     lui faire du mal ?"
   englishDialogueText: Enemies, perhaps? Anyone who might have wanted to hurt him?
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: a9b05ee7910c5574d930e5c08788223c, type: 2}
+    conditions: []
+  reward: {fileID: 0}

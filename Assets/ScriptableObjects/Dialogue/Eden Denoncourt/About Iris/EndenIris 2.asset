@@ -18,4 +18,8 @@ MonoBehaviour:
   characterPostion: 1
   frenchDialogueText: "Tourment\xE9e, comment ?"
   englishDialogueText: How tormented?
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: bbbd064f50a33c14f9aabe7d06195ee4, type: 2}
+    conditions: []
+  reward: {fileID: 0}

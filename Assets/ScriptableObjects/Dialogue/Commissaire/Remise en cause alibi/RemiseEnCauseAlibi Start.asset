@@ -20,5 +20,6 @@ MonoBehaviour:
   englishDialogueText: Ramiro. Have you got any news?
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 1269d97593523ab43972e412b840b4d5, type: 2}
+    nextReplic: {fileID: 11400000, guid: a022cf2c76f78c84da9c088fd2d191e6, type: 2}
     conditions: []
+  reward: {fileID: 0}

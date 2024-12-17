@@ -19,5 +19,8 @@ MonoBehaviour:
   frenchDialogueText: "Ramiro... Vous faites quoi ici ? Vous \xEAtes sur mon enqu\xEAte,
     maintenant ?"
   englishDialogueText: Ramiro... What are you doing here? Are you on my case now?
-  dialogueConditions: 
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 6e137ab87d40cf34094d2779d4c052d9, type: 2}
+    conditions: []
+  reward: {fileID: 0}

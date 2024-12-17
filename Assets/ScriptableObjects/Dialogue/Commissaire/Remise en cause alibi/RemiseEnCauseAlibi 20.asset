@@ -22,5 +22,6 @@ MonoBehaviour:
     You've stepped into a dangerous trap, Detective.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 1269d97593523ab43972e412b840b4d5, type: 2}
+    nextReplic: {fileID: 11400000, guid: c7e95219e6709ed4abd935667421ab6c, type: 2}
     conditions: []
+  reward: {fileID: 0}

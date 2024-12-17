@@ -24,5 +24,6 @@ MonoBehaviour:
     it.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 1269d97593523ab43972e412b840b4d5, type: 2}
+    nextReplic: {fileID: 11400000, guid: cd6b46db10e51824ea5dc8540952504f, type: 2}
     conditions: []
+  reward: {fileID: 0}

@@ -21,5 +21,6 @@ MonoBehaviour:
   englishDialogueText: Yes, him. I discovered several troubling elements.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 5c251e3c6461b5743974a05d8c5475d0, type: 2}
+    nextReplic: {fileID: 11400000, guid: 42586d2b8d697af4d904ca2613783d27, type: 2}
     conditions: []
+  reward: {fileID: 0}

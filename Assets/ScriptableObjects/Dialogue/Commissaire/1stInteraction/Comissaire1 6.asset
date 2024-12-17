@@ -20,5 +20,8 @@ MonoBehaviour:
     qui t\u2019a fait \xE7a, avec ou sans lui."
   englishDialogueText: I'm going to find out who did this to you, with or without
     him.
-  dialogueConditions: 
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Finish
+    nextReplic: {fileID: 0}
+    conditions: []
+  reward: {fileID: 0}

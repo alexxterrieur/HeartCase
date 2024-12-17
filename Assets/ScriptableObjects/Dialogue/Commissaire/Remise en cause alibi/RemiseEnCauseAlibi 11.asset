@@ -22,5 +22,6 @@ MonoBehaviour:
     Dawson was a regular customer of the victim, Iris Ristovski.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 5c251e3c6461b5743974a05d8c5475d0, type: 2}
+    nextReplic: {fileID: 11400000, guid: 0ab17d60ede4df54486307a68c84725f, type: 2}
     conditions: []
+  reward: {fileID: 0}

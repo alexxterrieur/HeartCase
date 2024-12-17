@@ -20,4 +20,8 @@ MonoBehaviour:
     je pr\xE9f\xE8re ne pas me perdre en sp\xE9culations inutiles."
   englishDialogueText: I can't help you there, Detective. And frankly, I'd rather
     not get bogged down in pointless speculation.
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 985a32a3993b5384b912e74ecd4d37cf, type: 2}
+    conditions: []
+  reward: {fileID: 0}

@@ -20,5 +20,6 @@ MonoBehaviour:
   englishDialogueText: What are you going to do?
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 5c251e3c6461b5743974a05d8c5475d0, type: 2}
+    nextReplic: {fileID: 11400000, guid: a26def14dc36ac34a86a8f0d36188217, type: 2}
     conditions: []
+  reward: {fileID: 0}

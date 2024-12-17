@@ -20,5 +20,8 @@ MonoBehaviour:
     pour que je me m\xEAle de ce qui lui est arriv\xE9."
   englishDialogueText: But she wrote to me. But she wrote to me, and that's enough
     for me to get involved in what happened to her.
-  dialogueConditions: 
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: ad18e5ba0b387734992d58678d2ec937, type: 2}
+    conditions: []
+  reward: {fileID: 0}

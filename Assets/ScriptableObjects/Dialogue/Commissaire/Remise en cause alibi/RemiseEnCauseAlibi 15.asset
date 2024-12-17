@@ -26,5 +26,6 @@ MonoBehaviour:
     this point. If Dawson was there that night, he had a reason to hide it.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 5c251e3c6461b5743974a05d8c5475d0, type: 2}
+    nextReplic: {fileID: 11400000, guid: 51cc576a2cd8354408541e2242656713, type: 2}
     conditions: []
+  reward: {fileID: 0}

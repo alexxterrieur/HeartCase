@@ -22,5 +22,8 @@ MonoBehaviour:
   englishDialogueText: Good evening to you too, Commissioner. The victim sent me
     a letter. She wanted to hire me. Nothing specific, but she had a bad feeling.
     Now she's here, under this sheet.
-  dialogueConditions: 
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: d6e7f0b095da84345bee54eacd0a1087, type: 2}
+    conditions: []
+  reward: {fileID: 0}

@@ -20,8 +20,8 @@ MonoBehaviour:
     ici ? Ce n\u2019est pas votre affaire, Ramiro."
   englishDialogueText: And you think that gives you the right to be here? It's not
     your business, Ramiro.
-  dialogueConditions: 
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 5a7ddac8beb260241bc041eca8368556, type: 2}
     conditions: []
+  reward: {fileID: 0}

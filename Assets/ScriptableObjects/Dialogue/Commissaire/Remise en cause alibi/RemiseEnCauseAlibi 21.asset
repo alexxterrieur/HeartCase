@@ -19,6 +19,7 @@ MonoBehaviour:
   frenchDialogueText: "C\u2019est mon boulot, commissaire. Tenez-moi au courant."
   englishDialogueText: That's my job, commissioner. Keep me informed.
   possibleNextReply:
-  - reply: Next
-    nextReplic: {fileID: 11400000, guid: 5c251e3c6461b5743974a05d8c5475d0, type: 2}
+  - reply: Finish
+    nextReplic: {fileID: 0}
     conditions: []
+  reward: {fileID: 0}

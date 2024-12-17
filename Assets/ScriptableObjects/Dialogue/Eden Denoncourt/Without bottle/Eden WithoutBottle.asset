@@ -20,4 +20,8 @@ MonoBehaviour:
     heure."
   englishDialogueText: I don't see anyone without an appointment, especially at this
     time of day.
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Finish
+    nextReplic: {fileID: 0}
+    conditions: []
+  reward: {fileID: 0}

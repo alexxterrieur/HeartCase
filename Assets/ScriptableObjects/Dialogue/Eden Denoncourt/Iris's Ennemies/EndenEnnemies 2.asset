@@ -19,4 +19,8 @@ MonoBehaviour:
   frenchDialogueText: "Rien ni personne qui pourrait expliquer ce qui lui est arriv\xE9
     ?"
   englishDialogueText: Nothing and no one to explain what happened to him?
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 85edc3b9973990f40b102296335814fe, type: 2}
+    conditions: []
+  reward: {fileID: 0}

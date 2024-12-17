@@ -22,4 +22,8 @@ MonoBehaviour:
   englishDialogueText: Iris ... A shooting star, if I may say so. Talented, but...
     tormented. She carried a heavy past on her frail shoulders, more than any young
     woman should have to bear.
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: b6116a10e710be640950e8bc1f368fd3, type: 2}
+    conditions: []
+  reward: {fileID: 0}

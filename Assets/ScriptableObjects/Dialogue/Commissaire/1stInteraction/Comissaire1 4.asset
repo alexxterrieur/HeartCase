@@ -21,5 +21,8 @@ MonoBehaviour:
     hors des clous."
   englishDialogueText: Look, if you're going to play investigator, I won't be here.
     I don't share my information, especially not with someone who's off the grid.
-  dialogueConditions: 
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 982e216e067070f4691d1f08c2a8adac, type: 2}
+    conditions: []
+  reward: {fileID: 0}

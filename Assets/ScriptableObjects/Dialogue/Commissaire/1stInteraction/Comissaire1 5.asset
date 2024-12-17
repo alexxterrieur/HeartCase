@@ -22,5 +22,8 @@ MonoBehaviour:
   englishDialogueText: "You know something? I've got more urgent things to do. We're
     examining the weapons found at the scene, to see if they match the wound. I'll
     leave you to your \u201Cimpressions\u201D, Detective."
-  dialogueConditions: 
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: ba9ea619f098b184890707ce2a914c42, type: 2}
+    conditions: []
+  reward: {fileID: 0}

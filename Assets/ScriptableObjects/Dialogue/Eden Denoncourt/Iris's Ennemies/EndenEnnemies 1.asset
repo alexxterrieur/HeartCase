@@ -20,4 +20,8 @@ MonoBehaviour:
     n\u2019\xE9tait pas du genre \xE0 provoquer des conflits s\xE9rieux."
   englishDialogueText: Not that I know of. Iris had her ups and downs, but she wasn't
     the type to provoke serious conflict.
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 0d8948f4cb1d8704fbb31600daab2bd5, type: 2}
+    conditions: []
+  reward: {fileID: 0}

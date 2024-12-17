@@ -19,4 +19,8 @@ MonoBehaviour:
   frenchDialogueText: Parlez-moi de Iris Ristovski. Que pouvez-vous me dire sur elle
     ?
   englishDialogueText: Tell me about Iris Ristovski. What can you tell me about her?
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 7338343295f8965499538c1497f0e02e, type: 2}
+    conditions: []
+  reward: {fileID: 0}

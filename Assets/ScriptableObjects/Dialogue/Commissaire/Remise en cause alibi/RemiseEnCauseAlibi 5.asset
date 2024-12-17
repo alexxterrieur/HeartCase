@@ -23,5 +23,6 @@ MonoBehaviour:
     stolen after an attack on me. But I was able to check where they came from.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 5c251e3c6461b5743974a05d8c5475d0, type: 2}
+    nextReplic: {fileID: 11400000, guid: 8f227ef831cc60142a40a284d0967bf4, type: 2}
     conditions: []
+  reward: {fileID: 0}

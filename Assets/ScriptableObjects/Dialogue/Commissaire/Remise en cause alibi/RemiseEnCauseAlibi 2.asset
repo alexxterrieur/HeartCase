@@ -20,5 +20,6 @@ MonoBehaviour:
   englishDialogueText: Dawson? The businessman?
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 1269d97593523ab43972e412b840b4d5, type: 2}
+    nextReplic: {fileID: 11400000, guid: 0d155c35831358345a88375b2face96a, type: 2}
     conditions: []
+  reward: {fileID: 0}
