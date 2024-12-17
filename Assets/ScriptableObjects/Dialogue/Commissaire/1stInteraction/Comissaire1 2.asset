@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
-  m_Name: Comissaire 3
+  m_Name: Comissaire1 2
   m_EditorClassIdentifier: 
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
-  characterName: Detective
-  characterPostion: 2
-  frenchDialogueText: "Peut-\xEAtre. Mais elle m\u2019a \xE9crit, et \xE7a suffit
-    pour que je me m\xEAle de ce qui lui est arriv\xE9."
-  englishDialogueText: But she wrote to me. But she wrote to me, and that's enough
-    for me to get involved in what happened to her.
+  characterName: Commissioner
+  characterPostion: 1
+  frenchDialogueText: "Et vous croyez que \xE7a vous donne le droit d\u2019\xEAtre
+    ici ? Ce n\u2019est pas votre affaire, Ramiro."
+  englishDialogueText: And you think that gives you the right to be here? It's not
+    your business, Ramiro.
   dialogueConditions: 
-  possibleNextReply: []
+  possibleNextReply:
+  - reply: Next
+    nextReplic: {fileID: 11400000, guid: 5a7ddac8beb260241bc041eca8368556, type: 2}
+    conditions: []

@@ -21,8 +21,8 @@ MonoBehaviour:
     ne peux rien faire pour vous, mon vieux."
   englishDialogueText: Then we'd better find one. Look at his place of work, they
     must have something. Without that, there's nothing I can do for you, old chap.
-  dialogueConditions: 
   possibleNextReply:
-  - reply: Thank you
+  - reply: I will find one
     nextReplic: {fileID: 0}
     conditions: []
+  reward: {fileID: 0}

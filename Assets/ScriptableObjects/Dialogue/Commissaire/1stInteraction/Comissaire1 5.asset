@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
-  m_Name: Comissaire 4
+  m_Name: Comissaire1 5
   m_EditorClassIdentifier: 
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
-  characterName: Commissioner
-  characterPostion: 1
-  frenchDialogueText: "\xC9coutez, si vous comptez jouer les enqu\xEAteurs, ce sera
-    sans moi. Je ne partage pas mes infos, surtout pas avec quelqu\u2019un qui fouine
-    hors des clous."
-  englishDialogueText: Look, if you're going to play investigator, I won't be here.
-    I don't share my information, especially not with someone who's off the grid.
+  characterName: Detective
+  characterPostion: 2
+  frenchDialogueText: "Vous savez quoi ? J\u2019ai plus urgent \xE0 faire. On examine
+    les armes trouv\xE9es sur place, pour voir si \xE7a colle avec la blessure. Je
+    vous laisse \xE0 vos \"impressions\", d\xE9tective."
+  englishDialogueText: "You know something? I've got more urgent things to do. We're
+    examining the weapons found at the scene, to see if they match the wound. I'll
+    leave you to your \u201Cimpressions\u201D, Detective."
   dialogueConditions: 
   possibleNextReply: []
