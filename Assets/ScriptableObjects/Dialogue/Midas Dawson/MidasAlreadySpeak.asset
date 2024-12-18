@@ -17,7 +17,8 @@ MonoBehaviour:
   characterName: Midas
   characterPostion: 2
   frenchDialogueText: D'autres questions, monsieur ?
-  englishDialogueText: Any other questions, sir?
+  englishDialogueText: I have already told you everything I know; feel free to reach
+    out again if you have any further questions.
   possibleNextReply:
   - reply: No more
     nextReplic: {fileID: 0}
