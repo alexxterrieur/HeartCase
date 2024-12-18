@@ -20,10 +20,10 @@ MonoBehaviour:
     Elle venait souvent ici apr\xE8s son service. Toujours avec cet air m\xE9lancolique,
     comme si elle portait le poids du monde sur ses \xE9paules."
   englishDialogueText: Ah, yes... Now that I see her, it's coming back to me. She
-    often came here after her shift. Always with that melancholy air, as if she carried
-    the weight of the world on her shoulders.
-  dialogueConditions: 
+    often came here after her shift. Always with that melancholic air, as if she
+    carried the weight of the world on her shoulders.
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 99187a9986f6a074293f26369aed8852, type: 2}
     conditions: []
+  reward: {fileID: 0}

@@ -21,10 +21,10 @@ MonoBehaviour:
     elle parlait un peu plus. Mais jamais trop. Je me souviens d\u2019un type qui
     la rejoignait parfois. Parce qu\u2019ils \xE9taient\u2026 proches."
   englishDialogueText: Mostly alone, but not always. She was discreet, except when
-    she had a drink or two up her sleeve... Then she talked a bit more. But never
-    too much. I remember a guy who sometimes joined her. Because they were... close.
-  dialogueConditions: 
+    she had a drink or two... Then she talked a bit more. But never too much. I remember
+    a guy who sometimes joined her. Because they were... close.
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 80bc1150771e45a4da2fe706ceb2638c, type: 2}
     conditions: []
+  reward: {fileID: 0}

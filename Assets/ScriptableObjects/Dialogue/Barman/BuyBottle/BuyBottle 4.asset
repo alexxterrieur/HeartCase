@@ -19,8 +19,9 @@ MonoBehaviour:
   frenchDialogueText: "Vous supposez bien. Et si en prime, \xE7a pouvait l\u2019impressionner
     un peu\u2026"
   englishDialogueText: You guess right. And if, on top of that, it would impress
-    him a bit...
+    her a bit...
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 3f093bdad5673d74dab2f1a7e9f797c6, type: 2}
     conditions: []
+  reward: {fileID: 0}

@@ -19,10 +19,10 @@ MonoBehaviour:
   frenchDialogueText: "Toujours un plaisir de prouver votre m\xE9pris \xE0 moiti\xE9
     fond\xE9. Maintenant, si vous voulez vraiment trouver qui a fait \xE7a, il va
     falloir que vous me laissiez bosser."
-  englishDialogueText: Always a pleasure to prove your half-baked contempt. Now,
-    if you really want to find out who did this, you'll have to let me work.
-  dialogueConditions: 
+  englishDialogueText: Always a pleasure to prove your half-baked contempt wrong.
+    Now, if you really want to find out who did this, you'll have to let me work.
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 73e16cc670d0572429609a76791a288d, type: 2}
     conditions: []
+  reward: {fileID: 0}
