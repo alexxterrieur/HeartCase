@@ -45,6 +45,10 @@ public class RewardGiver : MonoBehaviour
             Assert.IsNotNull(dialogueManager, "dialogueManager is null");
 #endif
             dialogueManager.StartDialogue(rewardSO.dialogue);
+            if(rewardSO.removedItem != null)
+            {
+                Inventory.Instance.RemoveItem(rewardSO.removedItem);
+            }
         }
     }
 

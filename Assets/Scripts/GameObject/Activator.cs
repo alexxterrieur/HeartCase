@@ -6,12 +6,6 @@ public class Activator : MonoBehaviour
     [SerializeField] private List<Condition> forHide;
     [SerializeField] private List<Condition> forShow;
 
-    private void Start()
-    {
-        ActiveOrDesactiveGO();
-    }
-
-
     /// <summary>
     /// Active or desactive the gamobject
     /// </summary>
@@ -28,7 +22,7 @@ public class Activator : MonoBehaviour
         }
 
         print(forShow.Count + " conditions for show");
-        if (forShow.Count > 0 || ToggleActiveByConditions(forShow, true))
+        if ((forShow.Count > 0 && ToggleActiveByConditions(forShow, true)) || forShow.Count == 0)
         {
             gameObject.SetActive(true);
             return;

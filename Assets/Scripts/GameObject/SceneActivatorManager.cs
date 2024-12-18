@@ -8,6 +8,8 @@ public class SceneActivatorManager : MonoBehaviour
     private void Start()
     {
         GameState.Instance.OnStateChange.AddListener(ActivateOrDesactivate);
+
+        ActivateOrDesactivate();
     }
 
     public void ActivateOrDesactivate()
