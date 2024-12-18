@@ -95,7 +95,7 @@ public class DialogueManager : MonoBehaviour
         print(currentDisplayedDialogue.leftInterlocutorSprite);
         if (currentDisplayedDialogue.leftInterlocutorSprite == null)
         {
-            rightInterlocutorImage.gameObject.SetActive(false);
+            leftInterlocutorImage.gameObject.SetActive(false);
         }
         else
         {
