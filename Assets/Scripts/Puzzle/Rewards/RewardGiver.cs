@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RewardGiver : MonoBehaviour
 {
@@ -49,6 +50,11 @@ public class RewardGiver : MonoBehaviour
             {
                 Inventory.Instance.RemoveItem(rewardSO.removedItem);
             }
+        }
+
+        if (rewardSO.isEndGame)
+        {
+            SceneManager.LoadScene("EndGame");
         }
     }
 

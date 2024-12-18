@@ -15,11 +15,11 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
   characterName: Commissioner
-  characterPostion: 1
+  characterPostion: 2
   frenchDialogueText: "Bon... Vous \xEAtes peut-\xEAtre moins inutile que je le pensais."
   englishDialogueText: Well... Maybe you're not as useless as I thought.
-  dialogueConditions: 
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 52b2b263b9da0a547b55ead3fef26ad7, type: 2}
     conditions: []
+  reward: {fileID: 0}

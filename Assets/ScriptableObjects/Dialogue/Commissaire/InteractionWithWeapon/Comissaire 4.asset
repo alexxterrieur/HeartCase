@@ -15,7 +15,7 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
   characterName: Commissioner
-  characterPostion: 1
+  characterPostion: 2
   frenchDialogueText: "\xC9coutez\u2026 Vous voulez parler \xE0 \"la Baronne\", hein
     ? Je vais vous donner un conseil : elle ne d\xE9croche pas un mot si elle n\u2019a
     pas un verre \xE0 la main. Vous d\xE9barquez les mains vides, et elle vous jettera
@@ -24,8 +24,8 @@ MonoBehaviour:
     you? Let me give you a tip: she won't say a word unless she's got a drink in
     her hand. You turn up empty-handed, and she'll throw you out before you can say
     \u201Chello\u201D."
-  dialogueConditions: 
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: e6d6d8509b3d9634cbf50c3d7b6b858b, type: 2}
     conditions: []
+  reward: {fileID: 0}
