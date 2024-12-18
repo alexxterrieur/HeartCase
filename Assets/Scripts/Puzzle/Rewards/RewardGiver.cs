@@ -39,17 +39,18 @@ public class RewardGiver : MonoBehaviour
             GameState.Instance.SetBool(true, rewardSO.boolIndex, rewardSO.boolId);
         }
 
+        if (rewardSO.removedItem != null)
+        {
+            Inventory.Instance.RemoveItem(rewardSO.removedItem);
+        }
+
         if (rewardSO.dialogue.dialogue != null)
         {
 
 #if UNITY_EDITOR
             Assert.IsNotNull(dialogueManager, "dialogueManager is null");
 #endif
-            dialogueManager.StartDialogue(rewardSO.dialogue);
-            if(rewardSO.removedItem != null)
-            {
-                Inventory.Instance.RemoveItem(rewardSO.removedItem);
-            }
+            dialogueManager.StartDialogue(rewardSO.dialogue);      
         }
 
         if (rewardSO.isEndGame)

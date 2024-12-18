@@ -22,3 +22,4 @@ MonoBehaviour:
     conditions: []
     puzzle: {fileID: 0}
     reward: {fileID: 0}
+  removedItem: {fileID: 11400000, guid: 1109dead8dd2e4048beeb56d0c2cd384, type: 2}

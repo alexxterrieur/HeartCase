@@ -57,6 +57,7 @@ public class Inventory : MonoBehaviour
         ItemSlot itemSlot = data.GetItemContainerList()
             .Where(slot => slot.HasItem() && slot.GetItem() == item)
             .FirstOrDefault();
+        print(itemSlot);
         if (itemSlot != null)
         {
             itemSlot.ResetItem();

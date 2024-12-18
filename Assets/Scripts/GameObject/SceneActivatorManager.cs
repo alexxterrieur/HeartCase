@@ -14,7 +14,6 @@ public class SceneActivatorManager : MonoBehaviour
 
     public void ActivateOrDesactivate()
     {
-        print("cherche");
         foreach (Activator activator in interactibleObjects)
         {
             activator.ActiveOrDesactiveGO();

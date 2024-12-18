@@ -286,8 +286,9 @@ public class DialogueManager : MonoBehaviour
 
     private void CallAction()
     {
-            print(currentDisplayedReplic);
-            print(currentDisplayedReplic.reward);
+        print(rewardGived);
+        print(currentDisplayedReplic.reward);
+        print(puzzle);
         SetDialogueUIActive(false);
 
         if (characters != null)
