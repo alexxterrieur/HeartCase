@@ -15,7 +15,7 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
   characterName: Anna Morel
-  characterPostion: 2
+  characterPostion: 1
   frenchDialogueText: "Mais\u2026 vous ne pouvez pas y aller. La Baronne a fait verrouiller
     toutes les portes. Elle ne veut pas qu\u2019on d\xE9range les lieux tant que
     la police n\u2019a pas termin\xE9 son enqu\xEAte, ou c\u2019est ce qu\u2019elle
@@ -27,3 +27,4 @@ MonoBehaviour:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: b15594b7068407146853152325047a3b, type: 2}
     conditions: []
+  reward: {fileID: 0}

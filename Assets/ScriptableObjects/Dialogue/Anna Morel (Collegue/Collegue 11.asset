@@ -15,7 +15,7 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
   characterName: Anna Morel
-  characterPostion: 2
+  characterPostion: 1
   frenchDialogueText: "Eh bien\u2026 il y a un trousseau de clefs . Les techniciens
     l\u2019utilisent pour les livraisons, ils ont d\xFB le laisser quelque part.
     Mais soyez prudent, si la Baronne vous attrape, \xE7a pourrait mal tourner."
@@ -26,3 +26,4 @@ MonoBehaviour:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 47d599616a7005d4fbc6132b1efea022, type: 2}
     conditions: []
+  reward: {fileID: 0}

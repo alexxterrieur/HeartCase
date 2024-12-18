@@ -15,10 +15,11 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
   characterName: Anna Morel
-  characterPostion: 2
+  characterPostion: 1
   frenchDialogueText: "Oui\u2026 Qui \xEAtes-vous ?"
   englishDialogueText: Yes... Who are you?
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 80b5ad3e97c99084db6040598d82f864, type: 2}
     conditions: []
+  reward: {fileID: 0}

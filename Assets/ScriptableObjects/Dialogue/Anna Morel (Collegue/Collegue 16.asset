@@ -15,7 +15,7 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
   characterName: Detective
-  characterPostion: 1
+  characterPostion: 2
   frenchDialogueText: "Je ne sais pas. Iris est rest\xE9e dans les loges, je crois.
     Mais je suis partie avant que quoi que ce soit d\u2019autre n\u2019arrive."
   englishDialogueText: I don't know. I think Iris stayed in the dressing room, I
@@ -24,3 +24,4 @@ MonoBehaviour:
   - reply: Finish
     nextReplic: {fileID: 0}
     conditions: []
+  reward: {fileID: 0}

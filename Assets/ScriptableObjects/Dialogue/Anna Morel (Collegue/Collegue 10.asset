@@ -15,7 +15,7 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
   characterName: Detective
-  characterPostion: 1
+  characterPostion: 2
   frenchDialogueText: "Int\xE9ressant. Mais il doit bien y avoir un moyen d\u2019entrer,
     non ?"
   englishDialogueText: Interesting stuff. But there's got to be a way in, right?
@@ -23,3 +23,4 @@ MonoBehaviour:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 2850babbfcaf28a4db0be5d32a2a4cdb, type: 2}
     conditions: []
+  reward: {fileID: 0}

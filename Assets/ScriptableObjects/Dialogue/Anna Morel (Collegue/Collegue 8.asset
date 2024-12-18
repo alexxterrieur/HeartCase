@@ -15,10 +15,11 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
   characterName: Detective
-  characterPostion: 1
+  characterPostion: 2
   frenchDialogueText: Vous savez si je peux fouiller sa loge?
   englishDialogueText: Do you know if I can search his dressing room?
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: bcae3f96fae883d4f9e28945d0e4d4c9, type: 2}
     conditions: []
+  reward: {fileID: 0}

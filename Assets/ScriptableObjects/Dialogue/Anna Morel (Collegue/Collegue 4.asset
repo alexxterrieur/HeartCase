@@ -15,7 +15,7 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
   characterName: Detective
-  characterPostion: 1
+  characterPostion: 2
   frenchDialogueText: "C\u2019est mon travail, et je suis d\xE9termin\xE9 \xE0 d\xE9couvrir
     la v\xE9rit\xE9. Et pour cela, j\u2019ai besoin de votre aide. Comment vous appelez-vous
     ?"
@@ -25,3 +25,4 @@ MonoBehaviour:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 5c2240058be196148bc2a561a6df382d, type: 2}
     conditions: []
+  reward: {fileID: 0}

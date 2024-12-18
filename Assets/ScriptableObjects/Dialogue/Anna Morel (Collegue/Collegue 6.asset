@@ -15,7 +15,7 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
   characterName: Detective
-  characterPostion: 1
+  characterPostion: 2
   frenchDialogueText: "Bien, Anna. Merci de m\u2019accorder un peu de votre temps.
     Commen\xE7ons par la sc\xE8ne du crime. Savez-vous o\xF9 cela s\u2019est pass\xE9
     ?"
@@ -25,3 +25,4 @@ MonoBehaviour:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 5acc2465fa20af14b8ca7193c44c832e, type: 2}
     conditions: []
+  reward: {fileID: 0}
