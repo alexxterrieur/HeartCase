@@ -77,4 +77,9 @@ public class ClickPuzzle : Puzzle
         lastObjectClicked = clickedObject;
         TryToSolve();
     }
+    
+    public override void InformationSetActive(bool isActive = true)
+    {
+        informationPanel.SetActive(isActive);
+    }
 }
