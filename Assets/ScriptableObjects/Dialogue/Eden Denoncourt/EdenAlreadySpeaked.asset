@@ -17,8 +17,7 @@ MonoBehaviour:
   characterName: Eden Denoncourt
   characterPostion: 2
   frenchDialogueText: Autre chose ?
-  englishDialogueText: I have already told you everything I know; feel free to reach
-    out again if you have any further questions.
+  englishDialogueText: Do you have any question ?
   possibleNextReply:
   - reply: No more
     nextReplic: {fileID: 0}
