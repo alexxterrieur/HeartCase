@@ -3737,7 +3737,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 383447656045231275, guid: 57ecc3a82677882439410e0e3f2b8c78, type: 3}
       propertyPath: maxCooldown
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1202626024435578458, guid: 57ecc3a82677882439410e0e3f2b8c78, type: 3}
       propertyPath: sceneActivatorManager
