@@ -23,15 +23,17 @@ MonoBehaviour:
   - reply: No more
     nextReplic: {fileID: 0}
     conditions: []
-  - reply: What can you tell me about the victim?
-    nextReplic: {fileID: 11400000, guid: 029dcdf1ce5ca754cbd3f28dc5bfe83c, type: 2}
-    conditions: []
-  - reply: Did she have any enemies?
-    nextReplic: {fileID: 11400000, guid: e0833f15ae4af004ea19e72d8c78db5c, type: 2}
+  - reply: I have some question about Iris
+    nextReplic: {fileID: 11400000, guid: 985a32a3993b5384b912e74ecd4d37cf, type: 2}
     conditions: []
   - reply: What's this drug doing in your business?
     nextReplic: {fileID: 11400000, guid: 24b457e282e0ab04b8ee54c388465796, type: 2}
     conditions:
     - boolListIndex: 0
       boolId: 2
+  - reply: About the gloves
+    nextReplic: {fileID: 11400000, guid: c543e3d0c50d6954c86b4b7f3ff6343f, type: 2}
+    conditions:
+    - boolListIndex: 2
+      boolId: 6
   reward: {fileID: 0}

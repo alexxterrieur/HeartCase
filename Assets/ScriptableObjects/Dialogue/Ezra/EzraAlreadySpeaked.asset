@@ -29,4 +29,7 @@ MonoBehaviour:
   - reply: Where were you at the time of the murder?
     nextReplic: {fileID: 11400000, guid: f6c37ec38d59445499eb5e10c59d4997, type: 2}
     conditions: []
+  - reply: About the drug
+    nextReplic: {fileID: 11400000, guid: 82142bc49a8145647924f49c4d2a766d, type: 2}
+    conditions: []
   reward: {fileID: 0}
