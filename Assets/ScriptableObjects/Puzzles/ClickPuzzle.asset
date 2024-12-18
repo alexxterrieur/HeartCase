@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b0ad23faa3e164dac5854f616bad9a, type: 3}
   m_Name: ClickPuzzle
   m_EditorClassIdentifier: 
-  description: Find the Key to the vault
-  background: {fileID: 3105513459563497018, guid: 31a3f3c01872dc34290df3e7505e375f, type: 3}
+  description: Find the weapon of the crime. It was said that the victime was stabbed.
+    The weapon reached the heart.
+  background: {fileID: 21300000, guid: 4e96dbaf6a396064299071c8084df9ba, type: 3}
   puzzlePrefab: {fileID: 8651778905218870154, guid: 6fae20ae4d178fc4ea0a53a6de816ac6, type: 3}
   timePenalty: 60
-  reward: {fileID: 11400000, guid: 6d602798ffbfe7149ace94623bf12143, type: 2}
-  answerPosition: {x: 3.4027472, y: 1.2087053}
-  answerRange: 1
+  rewards:
+  - {fileID: 11400000, guid: 26008d9726afe574fb1ce12ef16765be, type: 2}
