@@ -5,16 +5,18 @@ public class MouseDetection : MonoBehaviour
 {
     [SerializeField] private Texture2D cursorOnOver;
     private DetectClick interaction;
+    private Sprite sprite;
 
     private void Awake()
     {
         interaction = GetComponent<DetectClick>();
+        sprite = GetComponent<Sprite>();
     }
 
     public void OnMouseOver()
     {
         if (interaction.IsPointerOverUI()) return;
-        Cursor.SetCursor(cursorOnOver, new Vector2(cursorOnOver.width / 2, 0), CursorMode.ForceSoftware);
+        Cursor.SetCursor(cursorOnOver, new Vector2(cursorOnOver.width, 0), CursorMode.ForceSoftware);
         interaction.SetIsOnObject(true);
     }
 
