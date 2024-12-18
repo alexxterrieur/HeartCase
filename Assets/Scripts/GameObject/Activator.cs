@@ -11,8 +11,6 @@ public class Activator : MonoBehaviour
     /// </summary>
     public void ActiveOrDesactiveGO()
     {
-        print(gameObject.name + " :");
-        print(forHide.Count + " conditions for hide");
         if (forHide.Count > 0)
         {
             if (ToggleActiveByConditions(forHide, false))
@@ -21,7 +19,6 @@ public class Activator : MonoBehaviour
             }
         }
 
-        print(forShow.Count + " conditions for show");
         if ((forShow.Count > 0 && ToggleActiveByConditions(forShow, true)) || forShow.Count == 0)
         {
             gameObject.SetActive(true);
