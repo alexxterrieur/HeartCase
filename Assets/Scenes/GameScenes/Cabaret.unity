@@ -1158,7 +1158,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 150}
+  m_SizeDelta: {x: 670, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1054902321
 PrefabInstance:
@@ -1182,12 +1182,16 @@ PrefabInstance:
       objectReference: {fileID: 1759780421}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].reward
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: dialogues.Array.data[1].reward
+      value: 
+      objectReference: {fileID: 11400000, guid: 687cec2a72d065e4aa40dfc2e8e62036, type: 2}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].argument
       value: 
@@ -1195,10 +1199,14 @@ PrefabInstance:
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].dialogue
       value: 
+      objectReference: {fileID: 11400000, guid: d8d40e2abd906f6458136c16c8a4b67d, type: 2}
+    - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: dialogues.Array.data[1].dialogue
+      value: 
       objectReference: {fileID: 11400000, guid: 0f8ae80e13ca43542b53bc200264e98e, type: 2}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].conditions.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].leftInterlocutorSprite
@@ -1207,7 +1215,7 @@ PrefabInstance:
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[1].leftInterlocutorSprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
+      objectReference: {fileID: 21300000, guid: ba05774c579fe224aa3cffd6af0b9dd4, type: 3}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].rightInterlocutorSprite
       value: 
@@ -1216,6 +1224,14 @@ PrefabInstance:
       propertyPath: dialogues.Array.data[1].rightInterlocutorSprite
       value: 
       objectReference: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+    - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: dialogues.Array.data[0].conditions.Array.data[0].boolId
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: dialogues.Array.data[0].conditions.Array.data[0].boolListIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1204496994644327002, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: cursorOnOver
       value: 
@@ -1729,7 +1745,7 @@ PrefabInstance:
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].reward
       value: 
-      objectReference: {fileID: 11400000, guid: f1a612a1b03771e43bd52f516ab0e634, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[1].reward
       value: 
@@ -1737,14 +1753,14 @@ PrefabInstance:
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: 3398f509be92a1c48b69f4e4f667445b, type: 2}
+      objectReference: {fileID: 11400000, guid: 6e7ff02f0b1df7540b904a12d2baf9de, type: 2}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[1].dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 3398f509be92a1c48b69f4e4f667445b, type: 2}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].conditions.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogues.Array.data[0].leftInterlocutorSprite
@@ -1762,6 +1778,10 @@ PrefabInstance:
       propertyPath: dialogues.Array.data[1].rightInterlocutorSprite
       value: 
       objectReference: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
+    - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: dialogues.Array.data[0].conditions.Array.data[0].boolListIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1284124735551250345, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.74999994
@@ -2782,17 +2802,25 @@ MonoBehaviour:
     reward: {fileID: 0}
   - rightInterlocutorSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
     leftInterlocutorSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
+    dialogue: {fileID: 11400000, guid: 4b558dd813b5fd44ba18fbe1e6fda94a, type: 2}
+    conditions:
+    - boolListIndex: 0
+      boolId: 8
+    puzzle: {fileID: 0}
+    reward: {fileID: 0}
+  - rightInterlocutorSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+    leftInterlocutorSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
     dialogue: {fileID: 11400000, guid: aabbf6b9d4768c34ba4c7d5eb6175342, type: 2}
     conditions: []
     puzzle: {fileID: 11400000, guid: a8505440e16245049872b8d964a366c9, type: 2}
-    reward: {fileID: 0}
+    reward: {fileID: 11400000, guid: ceaabec45dcd3b24397233cdc4834194, type: 2}
   dialogues:
   - rightInterlocutorSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
     leftInterlocutorSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
     dialogue: {fileID: 11400000, guid: e34213fe6bdee7b4fa1b1aa1ca02d96d, type: 2}
     conditions: []
     puzzle: {fileID: 0}
-    reward: {fileID: 0}
+    reward: {fileID: 11400000, guid: ceaabec45dcd3b24397233cdc4834194, type: 2}
   dialogueManager: {fileID: 1759780421}
 --- !u!1 &1430119851
 GameObject:
@@ -3374,10 +3402,18 @@ MonoBehaviour:
     reward: {fileID: 11400000, guid: 42eb2b2efa15aa74f823618f8eb001b7, type: 2}
   - rightInterlocutorSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
     leftInterlocutorSprite: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
+    dialogue: {fileID: 11400000, guid: 832f49531ef8c20419bd58b42c037b9a, type: 2}
+    conditions:
+    - boolListIndex: 0
+      boolId: 5
+    puzzle: {fileID: 0}
+    reward: {fileID: 0}
+  - rightInterlocutorSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+    leftInterlocutorSprite: {fileID: 21300000, guid: ca90b092ad393c74b98f3e556e99c227, type: 3}
     dialogue: {fileID: 11400000, guid: 7221c28dbbf19a944a3817f1909fd779, type: 2}
     conditions: []
     puzzle: {fileID: 0}
-    reward: {fileID: 0}
+    reward: {fileID: 11400000, guid: 5391c3dc705d33b4788a7751b665db01, type: 2}
   dialogueManager: {fileID: 1759780421}
 --- !u!1 &1769311996
 GameObject:
@@ -3498,7 +3534,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -465}
+  m_AnchoredPosition: {x: 0, y: -455}
   m_SizeDelta: {x: 800, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1954223380
@@ -3521,7 +3557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e1c48745b6939df4eace36cb6dafbbec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3754,6 +3790,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 610823186}
+    - target: {fileID: 4769415799446914861, guid: 57ecc3a82677882439410e0e3f2b8c78, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5602156964780627475, guid: 57ecc3a82677882439410e0e3f2b8c78, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
