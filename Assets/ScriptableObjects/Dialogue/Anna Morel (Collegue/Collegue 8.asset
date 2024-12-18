@@ -17,7 +17,7 @@ MonoBehaviour:
   characterName: Detective
   characterPostion: 2
   frenchDialogueText: Vous savez si je peux fouiller sa loge?
-  englishDialogueText: Do you know if I can search his dressing room?
+  englishDialogueText: Do you know if I can search her dressing room?
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: bcae3f96fae883d4f9e28945d0e4d4c9, type: 2}

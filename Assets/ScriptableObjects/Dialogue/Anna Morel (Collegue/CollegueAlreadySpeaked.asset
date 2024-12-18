@@ -24,4 +24,7 @@ MonoBehaviour:
   - reply: Finish
     nextReplic: {fileID: 0}
     conditions: []
+  - reply: Can you remind me what you told me ?
+    nextReplic: {fileID: 11400000, guid: 5acc2465fa20af14b8ca7193c44c832e, type: 2}
+    conditions: []
   reward: {fileID: 0}

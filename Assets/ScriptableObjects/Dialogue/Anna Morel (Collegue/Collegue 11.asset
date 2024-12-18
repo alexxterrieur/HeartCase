@@ -19,9 +19,9 @@ MonoBehaviour:
   frenchDialogueText: "Eh bien\u2026 il y a un trousseau de clefs . Les techniciens
     l\u2019utilisent pour les livraisons, ils ont d\xFB le laisser quelque part.
     Mais soyez prudent, si la Baronne vous attrape, \xE7a pourrait mal tourner."
-  englishDialogueText: Well... there's a bunch of keys. The technicians use it for
-    deliveries, so they must have left it somewhere. But be careful, if the Baroness
-    catches you, it could get nasty.
+  englishDialogueText: Well... there's keys. The technicians use it for deliveries,
+    so they must have left it somewhere. But be careful, if the Baroness catches
+    you, it could get nasty.
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 47d599616a7005d4fbc6132b1efea022, type: 2}
