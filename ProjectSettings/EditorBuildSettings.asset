@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScenes/Cabaret.unity
     guid: f8c1a9f6cfd5d084bb6d7e4044e1b377
   - enabled: 1
-    path: Assets/Scenes/GameScenes/lodges.unity
-    guid: e5913375b0f43f9448b2074c397b80ca
+    path: Assets/Scenes/GameScenes/Lodges.unity
+    guid: 092c9c10cf802e44193e79783e9fa866
   - enabled: 1
     path: Assets/Scenes/GameScenes/Bar.unity
     guid: e9a56cd79a29fda4f82ba3ba21f8bf98
