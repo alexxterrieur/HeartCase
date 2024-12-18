@@ -1,9 +1,21 @@
+using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RewardGiver : MonoBehaviour
 {
-    [SerializeField] private DropDownController DropDownController;
+    [SerializeField] private DropDownController dropDownController;
+    [SerializeField] private DialogueManager dialogueManager;
+
+    private void Start()
+    {
+        if(dialogueManager == null)
+        {
+            print("cherche");
+            print(GameObject.Find("DialogueManager"));
+            dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
+        }
+    }
 
     public void GiveReward(SO_Reward rewardSO)
     {
@@ -20,12 +32,21 @@ public class RewardGiver : MonoBehaviour
 
         if (rewardSO.boolId >= 0 && rewardSO.boolIndex >= 0)
         {
-            if (rewardSO.boolIndex == 1 && DropDownController)
+            if (rewardSO.boolIndex == 1 && dropDownController)
             {
-                DropDownController.AddOptionByIndex(rewardSO.boolId);
+                dropDownController.AddOptionByIndex(rewardSO.boolId);
                 return;
             }
             GameState.Instance.SetBool(true, rewardSO.boolIndex, rewardSO.boolId);
+        }
+
+        if (rewardSO.dialogue.dialogue != null)
+        {
+
+#if UNITY_EDITOR
+            Assert.IsNotNull(dialogueManager, "dialogueManager is null");
+#endif
+            dialogueManager.StartDialogue(rewardSO.dialogue);
         }
     }
 
@@ -33,6 +54,7 @@ public class RewardGiver : MonoBehaviour
     {
         foreach (SO_Reward reward in _rewards)
         {
+            print(reward.name);
             GiveReward(reward);
         }
     }

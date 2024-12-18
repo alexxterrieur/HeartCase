@@ -11,6 +11,8 @@ public class ItemInspector : MonoBehaviour
     [SerializeField] private Image itemImage;
     [SerializeField] private TextMeshProUGUI itemDescription;
 
+    [SerializeField] private List<GameObject> clickablesObjects = new List<GameObject>();
+
     [HideInInspector] public List<SO_Reward> possibleRewards = new();
     [HideInInspector] public RewardGiver rewardGiver;
 
@@ -18,6 +20,11 @@ public class ItemInspector : MonoBehaviour
 
     public void InspectItem(Item item)
     {
+        foreach(GameObject go in clickablesObjects)
+        {
+            go.SetActive(false);
+        }
+
         itemInspectorGameObject.SetActive(true);
         restOfUI.SetActive(false);
 
@@ -34,12 +41,14 @@ public class ItemInspector : MonoBehaviour
         itemInspectorGameObject.SetActive(false);
         restOfUI.SetActive(true);
 
-        if(possibleRewards.Count > 0)
+        if (possibleRewards.Count > 0)
         {
-            foreach(SO_Reward reward in possibleRewards)
-            {
-                rewardGiver.GiveReward(reward);
-            }
+            rewardGiver.GiveReward(possibleRewards);
+        }
+
+        foreach (GameObject go in clickablesObjects)
+        {
+            go.SetActive(true);
         }
     }
 

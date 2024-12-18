@@ -19,7 +19,7 @@ MonoBehaviour:
   rewards:
   - {fileID: 11400000, guid: 95f042c31f69b854ca4afde8dd6d7937, type: 2}
   - {fileID: 11400000, guid: 001f03bd9e510744d85ed07ccb88ed35, type: 2}
-  - {fileID: 11400000, guid: 59c681bd61dcea945ac182c2983bac49, type: 2}
+  - {fileID: 11400000, guid: e473c3e42a6a74b49a53bf932bc6ffda, type: 2}
   objectsSprites:
   - {fileID: 21300000, guid: a07125e7be2fab441a229d42026b4501, type: 3}
   - {fileID: 21300000, guid: 963ea2928c577c6429d4f92871468b43, type: 3}

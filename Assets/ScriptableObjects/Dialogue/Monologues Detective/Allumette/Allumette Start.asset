@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d897b584c486b040b486b06ae7fecca, type: 3}
   m_Name: Allumette Start
   m_EditorClassIdentifier: 
-  leftCharacterSprite: {fileID: 0}
-  rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
+  leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
+  rightCharacterSprite: {fileID: 0}
   characterName: Detective
   characterPostion: 0
   frenchDialogueText: "Midas Dawson\u2026 Il pr\xE9tendait \xE0 peine la conna\xEEtre.
@@ -26,3 +26,4 @@ MonoBehaviour:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 474cb1fd8c043274d8a5c18ca49f246b, type: 2}
     conditions: []
+  reward: {fileID: 0}

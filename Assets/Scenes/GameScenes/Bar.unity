@@ -1547,6 +1547,9 @@ MonoBehaviour:
   restOfUI: {fileID: 1531556321}
   itemImage: {fileID: 1687647742}
   itemDescription: {fileID: 987267966}
+  clickablesObjects:
+  - {fileID: 601352343}
+  - {fileID: 513638321}
   possibleRewards: []
   rewardGiver: {fileID: 0}
 --- !u!1 &917885308 stripped
@@ -2059,17 +2062,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1657452151 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5907886409334903696, guid: 57ecc3a82677882439410e0e3f2b8c78, type: 3}
-  m_PrefabInstance: {fileID: 3109311160733642690}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7d6abe1531f0654c97bf54da83ee20e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1687647741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,7 +2243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7231339f4de674fb6f2bc65dc3a93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DropDownController: {fileID: 1657452151}
+  dropDownController: {fileID: 0}
+  dialogueManager: {fileID: 0}
 --- !u!1 &1769311996
 GameObject:
   m_ObjectHideFlags: 0
