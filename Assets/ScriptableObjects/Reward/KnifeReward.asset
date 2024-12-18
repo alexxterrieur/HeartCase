@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbcad944bd582474e8458d519b2db91f, type: 3}
   m_Name: KnifeReward
   m_EditorClassIdentifier: 
-  reward: {fileID: 11400000, guid: 77765e1028180e74ea075f8ec51c7e0f, type: 2}
+  reward: {fileID: 11400000, guid: e1442dfcf15ec0d41a58a30f0ed1d9a8, type: 2}
   boolIndex: -1
   boolId: -1
+  dialogue:
+    rightInterlocutorSprite: {fileID: 0}
+    leftInterlocutorSprite: {fileID: 0}
+    dialogue: {fileID: 0}
+    conditions: []
+    puzzle: {fileID: 0}
+    reward: {fileID: 0}

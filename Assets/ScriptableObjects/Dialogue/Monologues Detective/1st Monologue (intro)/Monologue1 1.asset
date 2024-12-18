@@ -21,9 +21,9 @@ MonoBehaviour:
     tout le bureau avec des factures impay\xE9es."
   englishDialogueText: What a rotten day... No customers, no money, and I imagine
     that in this pile of mail, there's enough to reupholster the whole office with
-    unpaid invoices.
-  dialogueConditions: 
+    unpaid taxes.
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: e22b492258c67cc48897f89936f81682, type: 2}
     conditions: []
+  reward: {fileID: 0}

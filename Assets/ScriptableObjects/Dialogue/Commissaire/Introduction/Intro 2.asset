@@ -17,9 +17,9 @@ MonoBehaviour:
   characterName: Detective
   characterPostion: 2
   frenchDialogueText: "faites vite, Il tard et j\u2019allais partir."
-  englishDialogueText: hurry up, it's late and I'm on my way out.
-  dialogueConditions: 
+  englishDialogueText: Hurry up, it's late and I'm on my way out.
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 01b0e855234b5704d8d97ea775b0ee1a, type: 2}
     conditions: []
+  reward: {fileID: 0}

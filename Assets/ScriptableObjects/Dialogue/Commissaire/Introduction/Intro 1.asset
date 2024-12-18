@@ -18,10 +18,9 @@ MonoBehaviour:
   characterPostion: 1
   frenchDialogueText: "C\u2019est le commissaire Dean, il est tard je ne vais pas
     vous retenir longtemps. "
-  englishDialogueText: 'It''s Commissioner Dean, it''s late and I won''t keep you
-    long. '
-  dialogueConditions: 
+  englishDialogueText: 'It''s Commissioner Dean, I won''t keep you long. '
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 5c251e3c6461b5743974a05d8c5475d0, type: 2}
     conditions: []
+  reward: {fileID: 0}

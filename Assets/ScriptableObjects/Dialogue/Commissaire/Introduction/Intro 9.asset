@@ -17,9 +17,9 @@ MonoBehaviour:
   characterName: Commissioner
   characterPostion: 1
   frenchDialogueText: rien de plus ?
-  englishDialogueText: nothing more?
-  dialogueConditions: 
+  englishDialogueText: Nothing more?
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 689a0924243261e4fb53dd3e4c48a8b2, type: 2}
     conditions: []
+  reward: {fileID: 0}

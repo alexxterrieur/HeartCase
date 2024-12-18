@@ -18,10 +18,10 @@ MonoBehaviour:
   characterPostion: 1
   frenchDialogueText: "Facture\u2026 facture\u2026 encore une relance\u2026 ... Tiens,
     une lettre. Et parfum\xE9e, en plus "
-  englishDialogueText: Invoice... invoice... another reminder... ... Here's a letter.
+  englishDialogueText: Taxes... Taxes... another reminder... ... Here's a letter.
     And perfumed, too
-  dialogueConditions: 
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: c8759b3fd0da3b24ba5cc55447ef827d, type: 2}
     conditions: []
+  reward: {fileID: 0}

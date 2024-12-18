@@ -21,10 +21,10 @@ MonoBehaviour:
     avait cass\xE9 la gueule de son fr\xE8re. Elle m\u2019avait engag\xE9 pour arranger
     la situation et j\u2019avais arrang\xE9 la situation."
   englishDialogueText: 'She was a former client, and the last time I''d spoken to
-    her was 5 years ago, when an overzealous bookie had beaten the shit out of her
-    brother. She hired me to fix the situation, and I fixed it. '
-  dialogueConditions: 
+    her was 5 years ago, when an overzealous bookmaker had beaten the shit out of
+    her brother. She hired me to "fix" the situation, and I did. '
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 20206d0ca43b10a4d9aaf3c6440b85d0, type: 2}
     conditions: []
+  reward: {fileID: 0}
