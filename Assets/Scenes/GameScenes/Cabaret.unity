@@ -2989,7 +2989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7231339f4de674fb6f2bc65dc3a93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DropDownController: {fileID: 1657452151}
+  dropDownController: {fileID: 1657452151}
 --- !u!1 &1763711695 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8852919365687263948, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}

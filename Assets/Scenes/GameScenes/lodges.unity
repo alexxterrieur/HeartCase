@@ -1513,7 +1513,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7231339f4de674fb6f2bc65dc3a93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DropDownController: {fileID: 1657452151}
+  dropDownController: {fileID: 1657452151}
+  dialogueManager: {fileID: 1759780421}
 --- !u!1 &1769311996
 GameObject:
   m_ObjectHideFlags: 0

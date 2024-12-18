@@ -34,12 +34,9 @@ public class ItemInspector : MonoBehaviour
         itemInspectorGameObject.SetActive(false);
         restOfUI.SetActive(true);
 
-        if(possibleRewards.Count > 0)
+        if (possibleRewards.Count > 0)
         {
-            foreach(SO_Reward reward in possibleRewards)
-            {
-                rewardGiver.GiveReward(reward);
-            }
+            rewardGiver.GiveReward(possibleRewards);
         }
     }
 

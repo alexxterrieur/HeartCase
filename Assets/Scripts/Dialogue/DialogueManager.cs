@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject characters;
     [SerializeField] private GameObject changeScene;
     [HideInInspector] public bool changeSceneActive = false;
-    
+
     private Dialogue currentDisplayedDialogue;
     private Replic currentDisplayedReplic;
 
@@ -61,12 +61,12 @@ public class DialogueManager : MonoBehaviour
         {
             characters.SetActive(false);
         }
-        
+
         if (changeSceneActive)
         {
             changeScene.SetActive(false);
         }
-        
+
         currentDisplayedDialogue = displayedDialogue;
 
         puzzle = currentDisplayedDialogue.puzzle;
@@ -81,8 +81,27 @@ public class DialogueManager : MonoBehaviour
 
     private void InitializeInterlocutorsSprite()
     {
-        rightInterlocutorImage.sprite = currentDisplayedDialogue.rightInterlocutorSprite;
-        leftInterlocutorImage.sprite = currentDisplayedDialogue.leftInterlocutorSprite;
+        print(currentDisplayedDialogue.rightInterlocutorSprite);
+        if (currentDisplayedDialogue.rightInterlocutorSprite == null)
+        {
+            rightInterlocutorImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            rightInterlocutorImage.gameObject.SetActive(true);
+            rightInterlocutorImage.sprite = currentDisplayedDialogue.rightInterlocutorSprite;
+        }
+
+        print(currentDisplayedDialogue.leftInterlocutorSprite);
+        if (currentDisplayedDialogue.leftInterlocutorSprite == null)
+        {
+            rightInterlocutorImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            leftInterlocutorImage.gameObject.SetActive(true);
+            leftInterlocutorImage.sprite = currentDisplayedDialogue.leftInterlocutorSprite;
+        }
     }
 
     private void SetDialogueUIActive(bool active)
@@ -105,14 +124,14 @@ public class DialogueManager : MonoBehaviour
 
         int currentOptionsActivate = 0;
 
-        if(replic.possibleNextReply.Count == 1 && replic.possibleNextReply[0].reply == "Next")
+        if (replic.possibleNextReply.Count == 1 && replic.possibleNextReply[0].reply == "Next")
         {
             optionsButtons[0].SetActive(true);
         }
 
         for (int i = 0; i < replic.possibleNextReply.Count; i++)
         {
-            if(i == 0 && (replic.possibleNextReply[i].reply == "Next" || replic.possibleNextReply[i].reply == "Finish"))
+            if (i == 0 && (replic.possibleNextReply[i].reply == "Next" || replic.possibleNextReply[i].reply == "Finish"))
             {
                 optionsButtons[0].SetActive(true);
                 continue;
@@ -181,7 +200,7 @@ public class DialogueManager : MonoBehaviour
             {
                 changeScene.SetActive(true);
             }
-            
+
             return;
         }
 
@@ -287,5 +306,5 @@ public class DialogueManager : MonoBehaviour
     private void StartPuzzle(SO_PuzzleBase puzzle)
     {
         puzzleHandler.StartPuzzle(puzzle);
-    } 
+    }
 }

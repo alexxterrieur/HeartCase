@@ -23,5 +23,6 @@ MonoBehaviour:
     unless Iris was there. Or maybe she met someone there.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 052b6ecb9deb8724a998d2cef4853986, type: 2}
+    nextReplic: {fileID: 11400000, guid: c845fd9e99c75204b9336bd3f2c7411c, type: 2}
     conditions: []
+  reward: {fileID: 0}
