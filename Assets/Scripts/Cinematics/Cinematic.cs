@@ -10,6 +10,8 @@ public class Cinematic : MonoBehaviour, IPointerClickHandler
 {
     private Image uiImage;
     
+    [SerializeField] private GameObject cinematicSkip;
+    
     [SerializeField] private UnityEvent OnCinematicFinished;
     
     [SerializeField] private Image skipImage;
@@ -50,6 +52,7 @@ public class Cinematic : MonoBehaviour, IPointerClickHandler
         
         cooldown = maxCooldown;
         cooldownActive = true;
+        cinematicSkip.SetActive(true);        
     }
     
     private void Update()
@@ -66,6 +69,7 @@ public class Cinematic : MonoBehaviour, IPointerClickHandler
     private void DisplayNextCinematicFrame()
     {
         cooldownActive = false;
+        cinematicSkip.SetActive(false);      
         Color c = skipImage.color;
         skipImage.color = new Color(c.r, c.g, c.b, 0);
         cooldown = maxCooldown;
@@ -73,6 +77,11 @@ public class Cinematic : MonoBehaviour, IPointerClickHandler
         StartCoroutine(FadeInNextFrame(1, 50));
     }
 
+    public void SkipCinematic()
+    {
+        EndCinematic();
+    }
+    
     private IEnumerator FadeInNextFrame(float time, int steps)
     {
         if (currentIndex >= cinematicImages.Count || currentIndex >= cinematicTexts.Count)
@@ -109,6 +118,7 @@ public class Cinematic : MonoBehaviour, IPointerClickHandler
         currentIndex++;
         cooldown = maxCooldown;
         cooldownActive = true;
+        cinematicSkip.SetActive(true);      
         Color c = skipImage.color;
         skipImage.color = new Color(c.r, c.g, c.b, 1);
     }
@@ -128,12 +138,14 @@ public class Cinematic : MonoBehaviour, IPointerClickHandler
     private void EndCinematic()
     {
         cooldownActive = false;
+        cinematicSkip.SetActive(false);      
         ResetSelf();
         OnCinematicFinished.Invoke();
     }
     
     private void ResetSelf()
     {
+        cinematicSkip.SetActive(false);
         currentIndex = 0;
         cooldown = maxCooldown;
         Color c = skipImage.color;
