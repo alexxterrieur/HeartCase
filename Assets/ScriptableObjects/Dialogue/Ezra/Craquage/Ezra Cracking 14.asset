@@ -17,8 +17,9 @@ MonoBehaviour:
   characterName: Detective
   characterPostion: 1
   frenchDialogueText: "Quelle enqu\xEAte ?"
-  englishDialogueText: What kind of survey?
+  englishDialogueText: What kind of case?
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: fa3be8d69cab9524cb82ae16fb0b6245, type: 2}
     conditions: []
+  reward: {fileID: 0}
