@@ -17,7 +17,7 @@ MonoBehaviour:
   characterName: Anna Morel
   characterPostion: 1
   frenchDialogueText: "Sur la sc\xE8ne."
-  englishDialogueText: On stage.
+  englishDialogueText: The murder happened on stage.
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 92f4d811b7e7f904aa07997d8b648a8b, type: 2}
