@@ -136,6 +136,14 @@ public class DialogueManager : MonoBehaviour
             }
 
             if (!CanActivateThisReply(replic.possibleNextReply[i])) { continue; }
+
+            if(i + 1 > optionsButtons.Count)
+            {
+                optionsButtons[0].SetActive(true);
+                currentOptionsActivate++;
+                continue;
+            }
+
             optionsButtons[i + 1].SetActive(true);
             optionsButtons[i + 1].GetComponentInChildren<TextMeshProUGUI>().text = replic.possibleNextReply[i].reply;
             currentOptionsActivate++;

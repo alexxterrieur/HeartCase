@@ -21,6 +21,7 @@ MonoBehaviour:
   englishDialogueText: So good luck, detective. But remember, monsters don't always
     hide where you think.
   possibleNextReply:
-  - reply: Next
-    nextReplic: {fileID: 11400000, guid: 985a32a3993b5384b912e74ecd4d37cf, type: 2}
+  - reply: About gloves
+    nextReplic: {fileID: 11400000, guid: c543e3d0c50d6954c86b4b7f3ff6343f, type: 2}
     conditions: []
+  reward: {fileID: 0}

@@ -30,5 +30,7 @@ MonoBehaviour:
     conditions: []
   - reply: About the drug
     nextReplic: {fileID: 11400000, guid: 82142bc49a8145647924f49c4d2a766d, type: 2}
-    conditions: []
+    conditions:
+    - boolListIndex: 2
+      boolId: 4
   reward: {fileID: 0}
