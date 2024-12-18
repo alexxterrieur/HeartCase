@@ -15,11 +15,11 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
   characterName: Detective
-  characterPostion: 2
+  characterPostion: 1
   frenchDialogueText: "Vous avez mon \xE9ternelle gratitude, commissaire."
   englishDialogueText: You have my eternal gratitude, commissioner.
-  dialogueConditions: 
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 7c935dfe13a924548a9baab556c81a7e, type: 2}
     conditions: []
+  reward: {fileID: 0}

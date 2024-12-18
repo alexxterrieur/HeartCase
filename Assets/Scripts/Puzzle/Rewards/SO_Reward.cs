@@ -14,4 +14,6 @@ public class SO_Reward : ScriptableObject
     public Dialogue dialogue;
 
     public Item removedItem;
+    
+    public bool isEndGame = false;
 }

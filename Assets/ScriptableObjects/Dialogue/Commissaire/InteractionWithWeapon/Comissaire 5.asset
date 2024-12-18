@@ -15,13 +15,13 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
   characterName: Commissioner
-  characterPostion: 1
+  characterPostion: 2
   frenchDialogueText: "Et ne me faites pas regretter de vous filer un coup de main,
     Ramiro. Je garde un \u0153il sur vous."
   englishDialogueText: And don't make me regret giving you a hand, Ramiro. I'll be
     keeping an eye on you.
-  dialogueConditions: 
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 9eb151df980d3734ca42ae48fbb4a0bc, type: 2}
     conditions: []
+  reward: {fileID: 0}
