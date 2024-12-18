@@ -17,11 +17,11 @@ MonoBehaviour:
   characterName: Midas
   characterPostion: 2
   frenchDialogueText: "Pas vraiment. Je l\u2019ai crois\xE9e quelques fois ici. Elle
-    chantait "
-  englishDialogueText: 'Not really, no. I bumped into her a few times here. She used
-    to sing  '
-  dialogueConditions: 
+    chantait bien, mais au-del\xE0 de \xE7a, je ne la connaissais pas intimement. "
+  englishDialogueText: Not really, no. I bumped into her a few times here. She sang
+    well, but that's all, i didn't know her intimately.
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: b87fcc89948a118499f332e36b26fc65, type: 2}
     conditions: []
+  reward: {fileID: 0}

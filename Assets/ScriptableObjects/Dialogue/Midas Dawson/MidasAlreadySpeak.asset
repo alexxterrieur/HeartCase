@@ -23,10 +23,10 @@ MonoBehaviour:
   - reply: No more
     nextReplic: {fileID: 0}
     conditions: []
-  - reply: "O\xF9 \xE9tiez-vous ce soir-l\xE0 ?"
+  - reply: Where were you at the time of the murder ?
     nextReplic: {fileID: 11400000, guid: c88fccfce61bbf34dbf6898a8de4fb7d, type: 2}
     conditions: []
-  - reply: connaissiez-vous la victime ?
+  - reply: Did you know the victime ?
     nextReplic: {fileID: 11400000, guid: e70787b6e7dd8fc47b74cf5dedcbc7f4, type: 2}
     conditions:
     - boolListIndex: 0
