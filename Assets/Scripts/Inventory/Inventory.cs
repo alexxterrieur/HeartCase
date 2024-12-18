@@ -52,6 +52,18 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void RemoveItem(Item item)
+    {
+        ItemSlot itemSlot = data.GetItemContainerList()
+            .Where(slot => slot.HasItem() && slot.GetItem() == item)
+            .FirstOrDefault();
+        if (itemSlot != null)
+        {
+            itemSlot.ResetItem();
+            InventorySaver.Instance.DeleteSavedObject(item);
+        }
+    }
+
     public void RestorItem(Item item)
     {
         ItemSlot itemSlot = data.GetItemContainerList()

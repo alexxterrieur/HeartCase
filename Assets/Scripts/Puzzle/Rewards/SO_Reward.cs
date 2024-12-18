@@ -12,4 +12,6 @@ public class SO_Reward : ScriptableObject
 
     [Header("To start Dialogue")]
     public Dialogue dialogue;
+
+    public Item removedItem;
 }

@@ -35,6 +35,11 @@ public class ItemInspector : MonoBehaviour
 
     public void PickItem()
     {
+        foreach (GameObject go in clickablesObjects)
+        {
+            go.SetActive(true);
+        }
+
         Inventory.Instance.AddItem(itemInspected);
         GameState.Instance.SetBool(true, 2, itemInspected.itemID);
 
@@ -44,11 +49,6 @@ public class ItemInspector : MonoBehaviour
         if (possibleRewards.Count > 0)
         {
             rewardGiver.GiveReward(possibleRewards);
-        }
-
-        foreach (GameObject go in clickablesObjects)
-        {
-            go.SetActive(true);
         }
     }
 

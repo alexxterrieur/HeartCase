@@ -19,6 +19,8 @@ public class JournalSystem : MonoBehaviour
     private Transform journal;
     private bool isMoving = false;
     
+    private bool isOpen = false;
+    
     private int maxPage;
     private int currentPage;
     
@@ -55,6 +57,7 @@ public class JournalSystem : MonoBehaviour
         
         //Init the buttons for next and previous page
         ChangePage(0);
+        isOpen = true;
     }
 
     /// <summary>
@@ -71,6 +74,10 @@ public class JournalSystem : MonoBehaviour
     /// </summary>
     public void ChangePage(int _pageIndex)
     {
+        if (isOpen)
+        {
+            AudioManager.Instance.PlaySFX("Book");
+        }
         journalSaver.currentPage = Mathf.Clamp(journalSaver.currentPage + _pageIndex * 2, 0, maxPage - 2);
         currentPage = journalSaver.currentPage;
         

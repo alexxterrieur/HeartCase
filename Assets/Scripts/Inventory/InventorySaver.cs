@@ -32,4 +32,9 @@ public class InventorySaver : MonoBehaviour
     {
         items.Add(item);
     }
+
+    public void DeleteSavedObject(Item item)
+    {
+        items.Remove(item);
+    }
 }
