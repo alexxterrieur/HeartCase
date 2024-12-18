@@ -20,6 +20,6 @@ MonoBehaviour:
   englishDialogueText: Do you have any idea what caused this argument?
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: f5b359c4b8f41aa45beb06872492bf47, type: 2}
+    nextReplic: {fileID: 11400000, guid: ffa320ba75cff744391c37d174ed3868, type: 2}
     conditions: []
   reward: {fileID: 0}

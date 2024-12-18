@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 90ed8662b2c4621448406a396daede64, type: 3}
-  characterName: Anna Morel
-  characterPostion: 1
+  characterName: Detective
+  characterPostion: 2
   frenchDialogueText: "Intense, vous dites ? Et apr\xE8s \xE7a ?"
   englishDialogueText: Intense, you say? And after that?
   possibleNextReply:

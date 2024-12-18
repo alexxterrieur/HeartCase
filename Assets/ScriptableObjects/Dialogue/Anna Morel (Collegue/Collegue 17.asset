@@ -17,9 +17,10 @@ MonoBehaviour:
   characterName: Anna Morel
   characterPostion: 1
   frenchDialogueText: "Intense, vous dites ? Et apr\xE8s \xE7a ?"
-  englishDialogueText: Intense, you say? And after that?
+  englishDialogueText: Well, not really. Iris slammed the door and looked upset,
+    but the Baroness... she was furious.
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: d4a4e48b2cf7b8446a5530373a6b9fb6, type: 2}
+    nextReplic: {fileID: 11400000, guid: f5b359c4b8f41aa45beb06872492bf47, type: 2}
     conditions: []
   reward: {fileID: 0}
