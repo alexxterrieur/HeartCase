@@ -809,6 +809,8 @@ MonoBehaviour:
   restOfUI: {fileID: 1531556321}
   itemImage: {fileID: 1687647742}
   itemDescription: {fileID: 987267966}
+  clickablesObjects:
+  - {fileID: 1971054490}
   possibleRewards: []
   rewardGiver: {fileID: 0}
 --- !u!1 &917885308 stripped

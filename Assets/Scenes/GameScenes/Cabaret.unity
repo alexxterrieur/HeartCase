@@ -597,7 +597,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5496036039117319897, guid: bf74ae379a22fc24fbd4a075189cdedc, type: 3}
   m_PrefabInstance: {fileID: 321112782}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1855853004}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 472146d4bf821e642ab0a4e361c1556b, type: 3}
@@ -994,6 +994,12 @@ MonoBehaviour:
   restOfUI: {fileID: 1531556321}
   itemImage: {fileID: 1687647742}
   itemDescription: {fileID: 987267966}
+  clickablesObjects:
+  - {fileID: 1855853004}
+  - {fileID: 1231879275}
+  - {fileID: 1763711695}
+  - {fileID: 1054902322}
+  - {fileID: 1411476052}
   possibleRewards: []
   rewardGiver: {fileID: 0}
 --- !u!1 &917885308 stripped
@@ -2990,6 +2996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropDownController: {fileID: 1657452151}
+  dialogueManager: {fileID: 0}
 --- !u!1 &1763711695 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8852919365687263948, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
@@ -3415,6 +3422,11 @@ MonoBehaviour:
   - {x: 0.29242802, y: -0.3292141, z: 0}
   - {x: 0.3431273, y: -0.30901638, z: 0}
   - {x: -0.66554976, y: -0.03655243, z: 0}
+--- !u!1 &1855853004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2077577315197083668, guid: bf74ae379a22fc24fbd4a075189cdedc, type: 3}
+  m_PrefabInstance: {fileID: 321112782}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1954223378
 GameObject:
   m_ObjectHideFlags: 0
