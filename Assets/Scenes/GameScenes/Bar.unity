@@ -469,6 +469,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 21f57d5fc8802174b9e39d61611398f7, type: 3}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: itemNeeded
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1759780421}
@@ -556,6 +560,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3496431711298320531, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: forShow.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3496431711298320531, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: forShow.Array.data[0].boolId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4609973650088989072, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 5
@@ -567,6 +579,10 @@ PrefabInstance:
     - target: {fileID: 8852919365687263948, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: m_Name
       value: Policier
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852919365687263948, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4609973650088989072, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
@@ -962,6 +978,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 447310a9c2ad8fb4496acae30193d507, type: 3}
     - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: itemNeeded
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1759780421}
@@ -977,6 +997,14 @@ PrefabInstance:
       propertyPath: dialogues.Array.data[0].conditions.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: dialogues.Array.data[0].leftInterlocutorSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
+    - target: {fileID: 1070450920789652699, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
+      propertyPath: dialogues.Array.data[0].rightInterlocutorSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 447310a9c2ad8fb4496acae30193d507, type: 3}
     - target: {fileID: 1284124735551250345, guid: 826eaf2ec4da4d24d89508c2c2f50ba5, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1

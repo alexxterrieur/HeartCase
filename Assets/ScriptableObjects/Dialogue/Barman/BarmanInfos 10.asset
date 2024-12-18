@@ -19,8 +19,8 @@ MonoBehaviour:
   frenchDialogueText: Faites attention avec ce genre de types. Ils ne parlent pas
     toujours volontiers.
   englishDialogueText: Be careful with these types. They're not always happy to talk.
-  dialogueConditions: 
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 0}
     conditions: []
+  reward: {fileID: 11400000, guid: d2de9b3601cecf54288d5dc5c259cfee, type: 2}

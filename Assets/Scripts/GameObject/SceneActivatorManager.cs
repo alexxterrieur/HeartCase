@@ -12,9 +12,10 @@ public class SceneActivatorManager : MonoBehaviour
 
     public void ActivateOrDesactivate()
     {
-        for (int i = 0; i < interactibleObjects.Count; ++i)
+        print("cherche");
+        foreach (Activator activator in interactibleObjects)
         {
-            interactibleObjects[i].ActiveOrDesactiveGO();
+            activator.ActiveOrDesactiveGO();
         }
     }
 }

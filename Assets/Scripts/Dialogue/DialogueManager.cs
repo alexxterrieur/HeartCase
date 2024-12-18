@@ -81,7 +81,6 @@ public class DialogueManager : MonoBehaviour
 
     private void InitializeInterlocutorsSprite()
     {
-        print(currentDisplayedDialogue.rightInterlocutorSprite);
         if (currentDisplayedDialogue.rightInterlocutorSprite == null)
         {
             rightInterlocutorImage.gameObject.SetActive(false);
@@ -92,7 +91,6 @@ public class DialogueManager : MonoBehaviour
             rightInterlocutorImage.sprite = currentDisplayedDialogue.rightInterlocutorSprite;
         }
 
-        print(currentDisplayedDialogue.leftInterlocutorSprite);
         if (currentDisplayedDialogue.leftInterlocutorSprite == null)
         {
             leftInterlocutorImage.gameObject.SetActive(false);
@@ -175,7 +173,7 @@ public class DialogueManager : MonoBehaviour
     private void DisplayReplicByChoice(int choice)
     {
         //Check dialogue count
-        if (choice < currentDisplayedReplic.possibleNextReply.Count)
+        if (choice < currentDisplayedReplic.possibleNextReply.Count && currentDisplayedReplic.possibleNextReply[choice].nextReplic != null)
         {
             currentDisplayedReplic = currentDisplayedReplic.possibleNextReply[choice].nextReplic;
             SetReplic();
@@ -288,14 +286,27 @@ public class DialogueManager : MonoBehaviour
 
     private void CallAction()
     {
+            print(currentDisplayedReplic);
+            print(currentDisplayedReplic.reward);
         SetDialogueUIActive(false);
+
+        if (characters != null)
+        {
+            characters.SetActive(true);
+        }
+
+        if (changeSceneActive)
+        {
+            changeScene.SetActive(true);
+        }
+
         if (rewardGived != null)
         {
             rewardGiver.GiveReward(rewardGived);
         }
-        else if (CurrentReplic.reward != null)
+        else if (currentDisplayedReplic.reward != null)
         {
-            rewardGiver.GiveReward(CurrentReplic.reward);
+            rewardGiver.GiveReward(currentDisplayedReplic.reward);
         }
         else if (puzzle != null)
         {

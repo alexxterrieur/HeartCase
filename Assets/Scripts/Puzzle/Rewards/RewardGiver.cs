@@ -11,8 +11,6 @@ public class RewardGiver : MonoBehaviour
     {
         if(dialogueManager == null)
         {
-            print("cherche");
-            print(GameObject.Find("DialogueManager"));
             dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
         }
     }
@@ -54,7 +52,6 @@ public class RewardGiver : MonoBehaviour
     {
         foreach (SO_Reward reward in _rewards)
         {
-            print(reward.name);
             GiveReward(reward);
         }
     }
