@@ -14,6 +14,7 @@ public class SceneStateManager : MonoBehaviour
 
     public void ChangeScene()
     {
+        AudioManager.Instance.PlaySFX("Scene-Change");
         SceneManager.LoadScene(sceneName);
     }
 

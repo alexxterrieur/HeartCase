@@ -8,10 +8,6 @@ public class InventoryOpenner : MonoBehaviour
     public void OpenCloseInventory()
     {
         inventory.SetActive(!inventory.activeInHierarchy);
-    }
-
-    public void OpenCloseInvetoryByKeyboard(InputAction.CallbackContext ctx)
-    {
-        OpenCloseInventory();
+        AudioManager.Instance.PlaySFX("Inventory");
     }
 }
