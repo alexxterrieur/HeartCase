@@ -15,3 +15,4 @@ MonoBehaviour:
   _itemName: Key
   _sprite: {fileID: 21300000, guid: a8767331a1844f74696919e8bc85dbeb, type: 3}
   _itemID: 0
+  itemDescription: A key?  It seems to be the key to the lodges.
