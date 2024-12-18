@@ -19,7 +19,7 @@ MonoBehaviour:
   frenchDialogueText: Autre chose ?
   englishDialogueText: Do you have any question ?
   possibleNextReply:
-  - reply: No more
+  - reply: Finish
     nextReplic: {fileID: 0}
     conditions: []
   - reply: I have some question about Iris

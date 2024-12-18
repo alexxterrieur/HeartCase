@@ -19,7 +19,7 @@ MonoBehaviour:
   frenchDialogueText: What ?
   englishDialogueText: other questions ?
   possibleNextReply:
-  - reply: no more questions
+  - reply: Finish
     nextReplic: {fileID: 0}
     conditions: []
   - reply: What is your relationship to the victim?
