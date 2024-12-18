@@ -1270,6 +1270,7 @@ GameObject:
   - component: {fileID: 6999578637317529018}
   - component: {fileID: 3424472966571921023}
   - component: {fileID: 132373199083438516}
+  - component: {fileID: 243329681663773573}
   m_Layer: 5
   m_Name: ClickPuzzle
   m_TagString: Untagged
@@ -1356,3 +1357,17 @@ MonoBehaviour:
   backgroundImage: {fileID: 3424472966571921023}
   objectsToIgnore: {fileID: 4314007643358240618}
   objectifGameObject: {fileID: 4297822971180863055}
+--- !u!114 &243329681663773573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8651778905218870154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7231339f4de674fb6f2bc65dc3a93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropDownController: {fileID: 0}
+  dialogueManager: {fileID: 0}
