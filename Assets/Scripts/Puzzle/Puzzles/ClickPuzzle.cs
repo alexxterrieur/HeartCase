@@ -1,31 +1,25 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class ClickPuzzle : Puzzle
 {
-    [SerializeField] private Image guessedPositionImage;
-    private Vector2 guessedPosition = Vector2.zero;
+    [SerializeField] private GameObject objectsToIgnore;
+    [SerializeField] private GameObject objectifGameObject;
+    private GameObject lastObjectClicked = null;
     
     protected override bool CheckAnswer()
     {
         if (puzzle is SO_ClickPuzzle clickPuzzle)
         {
-            return (clickPuzzle.answerPosition - guessedPosition).magnitude <= clickPuzzle.answerRange;
+            return lastObjectClicked == objectifGameObject;
         }
         throw new ArgumentException("Invalid puzzle type");
     }
     
     protected override bool IsAnswerValid()
     {
-        return guessedPosition != Vector2.zero;
-    }
-
-    public override void SetAsAnswer()
-    {
-        if (puzzle is not SO_ClickPuzzle clickPuzzle) throw new ArgumentException("Invalid puzzle type");
-        clickPuzzle.answerPosition = guessedPosition;
+        return lastObjectClicked != null;
     }
     
     public override void TryToSolve()
@@ -39,12 +33,9 @@ public class ClickPuzzle : Puzzle
         if (CheckAnswer())
         {
             Debug.Log("You answered the puzzle");
-
-            guessedPositionImage.color = Color.green;
             
             if(!rewardGiver) 
             {
-                print("RewardGiver is null, no rewards will be gived");
             }
             else
             {
@@ -52,44 +43,38 @@ public class ClickPuzzle : Puzzle
                 onPuzzleSolved();
             }
             
+            //WIN SOUND HERE
+            
             Destroy(gameObject);
         }
         else
         {
             Debug.Log("Puzzle could not be solved");
             
-            guessedPositionImage.color = Color.red;
+            //LOSE SOUND HERE
+            
+            Destroy(gameObject);
         }
     }
-    
-    public override void OnPointerClick(PointerEventData _)
+
+    public override void OnPointerClick(PointerEventData _eventData)
     {
-        base.OnPointerClick(_);
-        
-        if (puzzle is not SO_ClickPuzzle) throw new ArgumentException("Invalid puzzle type");
-        
-        //Behavior of the Click Puzzle from here
-        
-        guessedPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
-        if (guessedPositionImage == null) return;
-        
-        if (guessedPosition == Vector2.zero)
+        if (informationPanel.activeInHierarchy) //if the info prompt is active and you click, it deactivate
         {
-            guessedPositionImage.gameObject.SetActive(false);
+            informationPanel.SetActive(false);
             return;
         }
-        
-        guessedPositionImage.gameObject.SetActive(true);
-        guessedPositionImage.color = Color.white;
-        guessedPositionImage.rectTransform.anchoredPosition = Input.mousePosition;
-    }
-    
-    public override void InformationSetActive(bool isActive = true)
-    {
-        base.InformationSetActive(isActive);
-        guessedPosition = Vector2.zero;
-        guessedPositionImage.rectTransform.anchoredPosition = Vector2.zero;
-        guessedPositionImage.gameObject.SetActive(false);
+
+        if (puzzle is not SO_ClickPuzzle) throw new ArgumentException("Invalid puzzle type");
+
+        //Behavior of the Click Puzzle from here
+
+        GameObject clickedObject = _eventData.pointerCurrentRaycast.gameObject;
+
+        if (clickedObject == null || clickedObject == gameObject ||
+            clickedObject.transform.IsChildOf(objectsToIgnore.transform)) return;
+
+        lastObjectClicked = clickedObject;
+        TryToSolve();
     }
 }

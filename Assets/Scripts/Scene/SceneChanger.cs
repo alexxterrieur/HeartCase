@@ -14,14 +14,13 @@ public class SceneStateManager : MonoBehaviour
 
     public void ChangeScene()
     {
-        print("scene bar ? " + (SceneManager.GetActiveScene().name == "Bar") + " scene : " + SceneManager.GetActiveScene().name);
-        print("condition 3, 1 faux ? " + GameState.Instance.GetBool(3, 1));
-        print("condition 2, 6 vraie ? " + GameState.Instance.GetBool(2, 6));
         if (SceneManager.GetActiveScene().name == "Bar" && !GameState.Instance.GetBool(3, 1) && GameState.Instance.GetBool(2, 6))
         {
             SceneManager.LoadScene("Outside");
             return;
         }
+
+        AudioManager.Instance.PlaySFX("Scene-Change");
 
         SceneManager.LoadScene(sceneName);
     }

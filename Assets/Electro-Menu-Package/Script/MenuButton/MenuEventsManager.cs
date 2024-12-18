@@ -29,6 +29,7 @@ public class MenuEventsManager : MonoBehaviour
         
         if (_toggleFullScreen != null)
             _toggleFullScreen.isOn = Screen.fullScreen;
+        AudioManager.Instance.PlayMusic("Menu");
     }
     public void OnApplicationQuit()
     {
@@ -68,6 +69,7 @@ public class MenuEventsManager : MonoBehaviour
         {
             Destroy(GameState.Instance.gameObject);
             Destroy(InventorySaver.Instance.gameObject);
+            AudioManager.Instance.PlayMusic("Menu");
         }
         
         if (AudioManager.Instance.IsSoundInList(AudioManager.Instance._musicSounds, name))
