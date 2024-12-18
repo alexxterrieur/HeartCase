@@ -12,6 +12,8 @@ public class Cinematic : MonoBehaviour, IPointerClickHandler
     
     [SerializeField] private UnityEvent OnCinematicFinished;
     
+    [SerializeField] private Image skipImage;
+    
     [SerializeField] private List<Image> cinematicImages = new List<Image>();
     [SerializeField] private List<TextMeshProUGUI> cinematicTexts = new List<TextMeshProUGUI>();
     
@@ -64,6 +66,8 @@ public class Cinematic : MonoBehaviour, IPointerClickHandler
     private void DisplayNextCinematicFrame()
     {
         cooldownActive = false;
+        Color c = skipImage.color;
+        skipImage.color = new Color(c.r, c.g, c.b, 0);
         cooldown = maxCooldown;
         
         StartCoroutine(FadeInNextFrame(1, 50));
@@ -105,6 +109,8 @@ public class Cinematic : MonoBehaviour, IPointerClickHandler
         currentIndex++;
         cooldown = maxCooldown;
         cooldownActive = true;
+        Color c = skipImage.color;
+        skipImage.color = new Color(c.r, c.g, c.b, 1);
     }
     
     private void AddAlpha(Image image, float alphaToAdd)
@@ -130,6 +136,8 @@ public class Cinematic : MonoBehaviour, IPointerClickHandler
     {
         currentIndex = 0;
         cooldown = maxCooldown;
+        Color c = skipImage.color;
+        skipImage.color = new Color(c.r, c.g, c.b, 0);
 
         foreach (Image image in cinematicImages)
         {

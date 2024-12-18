@@ -17,9 +17,9 @@ MonoBehaviour:
   characterName: Commissioner
   characterPostion: 1
   frenchDialogueText: Je vois, si quelque chose vous revient appelez moi.
-  englishDialogueText: I see, if you think of anything, call me.
-  dialogueConditions: 
+  englishDialogueText: I see, if you think of anything else, call me.
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 414e6b9c9a02b7e4e83d9bcd7ddc5e3d, type: 2}
     conditions: []
+  reward: {fileID: 0}

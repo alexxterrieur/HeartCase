@@ -21,11 +21,11 @@ MonoBehaviour:
     Mais elle \xE9tait aussi belle d\u2019apparence que de c\u0153ur. Quel g\xE2chis.
     J\u2019esp\xE8re qu\u2019ils trouveront celui qui lui a fait \xE7a."
   englishDialogueText: 'I remember this girl, a pretty blonde with blue eyes. She
-    didn''t always make the right choices: drugs, prostitution... But she was as
+    didn''t always make the right choices : drugs, prostitution... But she was as
     beautiful in appearance as she was in her heart. What a waste. I hope they find
     whoever did this to her.'
-  dialogueConditions: 
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 6913f2d5357a5ae4abfae2ff728b8d7a, type: 2}
     conditions: []
+  reward: {fileID: 0}

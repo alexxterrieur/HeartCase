@@ -17,9 +17,9 @@ MonoBehaviour:
   characterName: Detective
   characterPostion: 2
   frenchDialogueText: rien.
-  englishDialogueText: nothing.
-  dialogueConditions: 
+  englishDialogueText: Nothing.
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 9cdb63d7fc0ee1d4b9fae2ae3c87b6c8, type: 2}
     conditions: []
+  reward: {fileID: 0}
