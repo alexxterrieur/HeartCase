@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftCharacterSprite: {fileID: 21300000, guid: 21f57d5fc8802174b9e39d61611398f7, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
-  characterName: Ezra
+  characterName: Ezra Radcliff
   characterPostion: 2
   frenchDialogueText: "C\u2019est la seule explication. Elle a d\xFB parler \xE0
     la mauvaise personne, ou quelqu\u2019un l\u2019a vue fouiner pour moi. Ils ont
@@ -26,3 +26,4 @@ MonoBehaviour:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 36e1e0f80ab79354496ee873cef7da04, type: 2}
     conditions: []
+  reward: {fileID: 0}

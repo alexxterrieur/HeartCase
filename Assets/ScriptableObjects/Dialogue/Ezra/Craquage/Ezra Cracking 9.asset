@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftCharacterSprite: {fileID: 21300000, guid: 21f57d5fc8802174b9e39d61611398f7, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
-  characterName: Ezra
+  characterName: Ezra Radcliff
   characterPostion: 2
   frenchDialogueText: "Elle\u2026 Elle n\u2019avait rien \xE0 voir avec \xE7a. Elle
     n\u2019aurait jamais touch\xE9 \xE0 ces trucs-l\xE0."
@@ -24,3 +24,4 @@ MonoBehaviour:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: aa9943361e0a3704d9d8d8b1796603e1, type: 2}
     conditions: []
+  reward: {fileID: 0}
