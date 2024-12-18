@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class InventoryInteractions : MonoBehaviour
 {
@@ -151,6 +152,7 @@ public class InventoryInteractions : MonoBehaviour
         ItemSlot itemSlot = dragingObjectTransform.parent.GetComponent<ItemSlot>();
         if (hit.transform.GetComponent<Interactions>().InteractWithItem(itemSlot.GetItem()))
         {
+            InventorySaver.Instance.DeleteSavedObject(itemSlot.GetItem());
             itemSlot.ResetItem();
             return;
         }
