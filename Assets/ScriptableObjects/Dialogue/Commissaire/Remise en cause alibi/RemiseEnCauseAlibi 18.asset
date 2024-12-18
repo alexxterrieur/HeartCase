@@ -15,7 +15,7 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
   characterName: Commissioner
-  characterPostion: 1
+  characterPostion: 2
   frenchDialogueText: "Nous allons ouvrir une enqu\xEAte approfondie sur Dawson.
     Examiner ses d\xE9placements, interroger ses contacts\u2026 s\u2019il a quoi
     que ce soit \xE0 cacher, nous le d\xE9couvrirons."

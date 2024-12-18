@@ -19,9 +19,10 @@ MonoBehaviour:
   frenchDialogueText: "Exactement. J\u2019\xE9tais surprise qu\u2019il ait laiss\xE9
     quelque chose derri\xE8re lui. Midas n\u2019est pas du genre \xE0 oublier ses
     affaires."
-  englishDialogueText: Exactly. I was surprised that he'd left anything behind. I
-    was surprised he'd left anything behind. Midas isn't the type to forget his things.
+  englishDialogueText: Exactly. I was surprised he'd left anything behind. Midas
+    isn't the type to forget his things.
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 0a6f3feeb7d641148a1e4f3b83ea22f8, type: 2}
     conditions: []
+  reward: {fileID: 0}

@@ -18,9 +18,10 @@ MonoBehaviour:
   characterPostion: 2
   frenchDialogueText: Parce que je ne sais rien. Et parce que, ici, les choses disparaissent
     parfois.
-  englishDialogueText: Because I don't know anything. And because, here, things sometimes
-    disappear.
+  englishDialogueText: Because I don't know anything. And because, around here, sometimes
+    things tend disappear.
   possibleNextReply:
   - reply: Finish
     nextReplic: {fileID: 0}
     conditions: []
+  reward: {fileID: 0}

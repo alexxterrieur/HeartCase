@@ -20,5 +20,6 @@ MonoBehaviour:
   englishDialogueText: The Baroness... Are you sure it's her?
   possibleNextReply:
   - reply: Next
-    nextReplic: {fileID: 11400000, guid: 4271f3c95188e8d4aa02f06cb3caf669, type: 2}
+    nextReplic: {fileID: 11400000, guid: 45da555aa9d74b34dae4c159de64f695, type: 2}
     conditions: []
+  reward: {fileID: 0}

@@ -15,9 +15,9 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
   characterName: Detective
-  characterPostion: 2
+  characterPostion: 1
   frenchDialogueText: "\xC0 Midas Dawson."
-  englishDialogueText: Here's to Midas Dawson.
+  englishDialogueText: Midas Dawson.
   possibleNextReply:
   - reply: Next
     nextReplic: {fileID: 11400000, guid: 16453736e697ece40aaccd32254f836d, type: 2}

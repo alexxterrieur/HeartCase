@@ -15,7 +15,7 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
   characterName: Detective
-  characterPostion: 2
+  characterPostion: 1
   frenchDialogueText: "C\u2019est mon boulot, commissaire. Tenez-moi au courant."
   englishDialogueText: That's my job, commissioner. Keep me informed.
   possibleNextReply:

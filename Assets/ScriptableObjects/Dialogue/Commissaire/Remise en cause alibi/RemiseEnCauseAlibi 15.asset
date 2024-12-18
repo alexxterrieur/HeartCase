@@ -15,7 +15,7 @@ MonoBehaviour:
   leftCharacterSprite: {fileID: 21300000, guid: d74709664eb95ae42aa8d8e1e847e4d5, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
   characterName: Detective
-  characterPostion: 2
+  characterPostion: 1
   frenchDialogueText: "C\u2019estPas enti\xE8rement. Mais elle n\u2019a aucun int\xE9r\xEAt
     \xE0 m\u2019induire en erreur sur ce point. Si Dawson \xE9tait l\xE0 cette nuit-l\xE0,
     il avait une raison de le cacher.un d\xE9but. Sa proximit\xE9 avec la victime
