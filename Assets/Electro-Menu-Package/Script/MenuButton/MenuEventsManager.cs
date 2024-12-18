@@ -38,7 +38,7 @@ public class MenuEventsManager : MonoBehaviour
 
     private void GetResolution()
     {
-        _resolutions = Screen.resolutions.Select(resolutions => new Resolution { width = resolutions.width, height = resolutions.height }).Distinct().ToArray();
+        _resolutions = Screen.resolutions.Where(resolution => (float)resolution.width / (float)resolution.height == (float)Screen.width / (float)Screen.height).Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray();
         _dropdownResolution.ClearOptions();
         List<string> options = new List<string>();
         int currentResolution = 0;

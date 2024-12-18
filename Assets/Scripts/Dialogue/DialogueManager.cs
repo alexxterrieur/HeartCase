@@ -217,7 +217,7 @@ public class DialogueManager : MonoBehaviour
             case Replic.Postion.Right:
                 if (lastPostion == Replic.Postion.Right)
                 {
-                    rightInterlocutorImage.sprite = currentReplic.rightCharacterSprite;
+                    //rightInterlocutorImage.sprite = currentReplic.rightCharacterSprite;
                 }
                 else if (lastPostion == Replic.Postion.Neutral)
                 {
@@ -234,7 +234,7 @@ public class DialogueManager : MonoBehaviour
             case Replic.Postion.Left:
                 if (lastPostion == Replic.Postion.Left)
                 {
-                    leftInterlocutorImage.sprite = currentReplic.leftCharacterSprite;
+                    //leftInterlocutorImage.sprite = currentReplic.leftCharacterSprite;
                 }
                 else if (lastPostion == Replic.Postion.Neutral)
                 {
