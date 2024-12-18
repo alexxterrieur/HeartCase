@@ -304,11 +304,11 @@ public class DialogueManager : MonoBehaviour
         {
             rewardGiver.GiveReward(rewardGived);
         }
-        else if (currentDisplayedReplic.reward != null)
+        if (currentDisplayedReplic.reward != null)
         {
             rewardGiver.GiveReward(currentDisplayedReplic.reward);
         }
-        else if (puzzle != null)
+        if (puzzle != null)
         {
             fade.CallFade(StartPuzzle, puzzle);
         }
