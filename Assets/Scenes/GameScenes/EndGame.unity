@@ -711,9 +711,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 825629312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b5d0014f7d85646b0ec65c38d36daf, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f56a0802b116264a9809e2ddffd0076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dropdownResolution: {fileID: 0}
+  _toggleFullScreen: {fileID: 0}
 --- !u!1 &1406187579
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,15 +800,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 825629317}
-        m_TargetAssemblyTypeName: EndMenu, Assembly-CSharp
-        m_MethodName: MainMenu
-        m_Mode: 1
+        m_TargetAssemblyTypeName: MenuEventsManager, Assembly-CSharp
+        m_MethodName: PlayScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: TemplateMainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1406187582
