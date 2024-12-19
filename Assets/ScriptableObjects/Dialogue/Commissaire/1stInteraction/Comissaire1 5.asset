@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftCharacterSprite: {fileID: 21300000, guid: 0d5bae959e4cd8446b0473fffcfff4aa, type: 3}
   rightCharacterSprite: {fileID: 21300000, guid: d746b1a98810e234d8b89a8e4e99d122, type: 3}
-  characterName: Detective
-  characterPostion: 1
+  characterName: Commissioner
+  characterPostion: 2
   frenchDialogueText: "Vous savez quoi ? J\u2019ai plus urgent \xE0 faire. On examine
     les armes trouv\xE9es sur place, pour voir si \xE7a colle avec la blessure. Je
     vous laisse \xE0 vos \"impressions\", d\xE9tective."
-  englishDialogueText: "You know something? I've got more urgent things to do. We're
+  englishDialogueText: "You know what ? I've got more urgent things to do. We're
     examining the weapons found at the scene, to see if they match the wound. I'll
     leave you to your \u201Cimpressions\u201D, Detective."
   possibleNextReply:

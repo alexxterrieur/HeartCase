@@ -24,15 +24,15 @@ MonoBehaviour:
     nextReplic: {fileID: 0}
     conditions: []
   - reply: Where were you at the time of the murder ?
-    nextReplic: {fileID: 11400000, guid: c88fccfce61bbf34dbf6898a8de4fb7d, type: 2}
+    nextReplic: {fileID: 11400000, guid: 455e173e438816245b17237affd85bef, type: 2}
     conditions: []
   - reply: Did you know the victime ?
-    nextReplic: {fileID: 11400000, guid: e70787b6e7dd8fc47b74cf5dedcbc7f4, type: 2}
+    nextReplic: {fileID: 11400000, guid: c88fccfce61bbf34dbf6898a8de4fb7d, type: 2}
     conditions:
     - boolListIndex: 0
       boolId: 0
   - reply: You were a regular client of the victim
-    nextReplic: {fileID: 11400000, guid: 455e173e438816245b17237affd85bef, type: 2}
+    nextReplic: {fileID: 11400000, guid: e70787b6e7dd8fc47b74cf5dedcbc7f4, type: 2}
     conditions:
     - boolListIndex: 2
       boolId: 3
